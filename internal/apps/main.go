@@ -1,5 +1,3 @@
-// Copyright 2023 GoEdge goedge.cdn@gmail.com. All rights reserved. Official site: https://goedge.cloud .
-
 package apps
 
 import teaconst "git.ovh.im/yeqing/EdgeNode/internal/const"
