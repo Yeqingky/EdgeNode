@@ -5,7 +5,7 @@ package utils
 import (
 	"strings"
 
-	"github.com/TeaOSLab/EdgeNode/internal/utils/zero"
+	"git.ovh.im/yeqing/EdgeNode/internal/utils/zero"
 )
 
 var commonFileExtensionsMap = map[string]zero.Zero{

@@ -2,7 +2,7 @@
 
 package nodes
 
-import "github.com/TeaOSLab/EdgeCommon/pkg/serverconfigs"
+import "git.ovh.im/yeqing/EdgeCommon/pkg/serverconfigs"
 
 type OriginState struct {
 	CountFails   int64

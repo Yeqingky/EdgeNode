@@ -13,10 +13,10 @@ import (
 	"time"
 	"unicode/utf8"
 
-	"github.com/TeaOSLab/EdgeCommon/pkg/rpc/pb"
-	"github.com/TeaOSLab/EdgeNode/internal/nodes"
-	"github.com/TeaOSLab/EdgeNode/internal/rpc"
-	"github.com/TeaOSLab/EdgeNode/internal/utils/testutils"
+	"git.ovh.im/yeqing/EdgeCommon/pkg/rpc/pb"
+	"git.ovh.im/yeqing/EdgeNode/internal/nodes"
+	"git.ovh.im/yeqing/EdgeNode/internal/rpc"
+	"git.ovh.im/yeqing/EdgeNode/internal/utils/testutils"
 	_ "github.com/iwind/TeaGo/bootstrap"
 	"google.golang.org/grpc/status"
 )

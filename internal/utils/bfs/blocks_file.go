@@ -13,7 +13,7 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/TeaOSLab/EdgeNode/internal/utils/zero"
+	"git.ovh.im/yeqing/EdgeNode/internal/utils/zero"
 )
 
 const BFileExt = ".b"

@@ -7,7 +7,7 @@ import (
 	"io"
 	"testing"
 
-	"github.com/TeaOSLab/EdgeNode/internal/compressions"
+	"git.ovh.im/yeqing/EdgeNode/internal/compressions"
 )
 
 func TestDeflateReader(t *testing.T) {

@@ -12,9 +12,9 @@ import (
 	"sync"
 	"time"
 
-	"github.com/TeaOSLab/EdgeCommon/pkg/serverconfigs"
-	"github.com/TeaOSLab/EdgeNode/internal/utils/fasttime"
-	"github.com/TeaOSLab/EdgeNode/internal/utils/goman"
+	"git.ovh.im/yeqing/EdgeCommon/pkg/serverconfigs"
+	"git.ovh.im/yeqing/EdgeNode/internal/utils/fasttime"
+	"git.ovh.im/yeqing/EdgeNode/internal/utils/goman"
 	"github.com/cespare/xxhash/v2"
 	"github.com/pires/go-proxyproto"
 	"golang.org/x/net/http2"

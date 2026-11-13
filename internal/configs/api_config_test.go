@@ -3,7 +3,7 @@ package configs_test
 import (
 	"testing"
 
-	"github.com/TeaOSLab/EdgeNode/internal/configs"
+	"git.ovh.im/yeqing/EdgeNode/internal/configs"
 	_ "github.com/iwind/TeaGo/bootstrap"
 	"gopkg.in/yaml.v3"
 )

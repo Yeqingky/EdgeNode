@@ -8,8 +8,8 @@ import (
 	"runtime"
 	"testing"
 
-	"github.com/TeaOSLab/EdgeNode/internal/utils/bfs"
-	"github.com/TeaOSLab/EdgeNode/internal/utils/fasttime"
+	"git.ovh.im/yeqing/EdgeNode/internal/utils/bfs"
+	"git.ovh.im/yeqing/EdgeNode/internal/utils/fasttime"
 	"github.com/iwind/TeaGo/assert"
 	"github.com/iwind/TeaGo/logs"
 )

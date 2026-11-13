@@ -4,7 +4,7 @@ import (
 	"errors"
 	"io"
 
-	rangeutils "github.com/TeaOSLab/EdgeNode/internal/utils/ranges"
+	rangeutils "git.ovh.im/yeqing/EdgeNode/internal/utils/ranges"
 )
 
 type MemoryReader struct {

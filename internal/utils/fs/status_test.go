@@ -6,7 +6,7 @@ import (
 	"testing"
 	"time"
 
-	fsutils "github.com/TeaOSLab/EdgeNode/internal/utils/fs"
+	fsutils "git.ovh.im/yeqing/EdgeNode/internal/utils/fs"
 )
 
 func TestWaitLoad(t *testing.T) {

@@ -6,7 +6,7 @@ import (
 	"sync"
 	"sync/atomic"
 
-	"github.com/TeaOSLab/EdgeCommon/pkg/serverconfigs"
+	"git.ovh.im/yeqing/EdgeCommon/pkg/serverconfigs"
 )
 
 type BaseTask struct {

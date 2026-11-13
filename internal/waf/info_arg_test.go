@@ -6,7 +6,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/TeaOSLab/EdgeNode/internal/waf"
+	"git.ovh.im/yeqing/EdgeNode/internal/waf"
 	"github.com/iwind/TeaGo/types"
 )
 

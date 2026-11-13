@@ -5,9 +5,9 @@ import (
 	"net/url"
 	"time"
 
-	"github.com/TeaOSLab/EdgeNode/internal/remotelogs"
-	"github.com/TeaOSLab/EdgeNode/internal/utils"
-	"github.com/TeaOSLab/EdgeNode/internal/waf/requests"
+	"git.ovh.im/yeqing/EdgeNode/internal/remotelogs"
+	"git.ovh.im/yeqing/EdgeNode/internal/utils"
+	"git.ovh.im/yeqing/EdgeNode/internal/waf/requests"
 	"github.com/iwind/TeaGo/types"
 )
 

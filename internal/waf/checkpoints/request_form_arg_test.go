@@ -7,7 +7,7 @@ import (
 	"net/url"
 	"testing"
 
-	"github.com/TeaOSLab/EdgeNode/internal/waf/requests"
+	"git.ovh.im/yeqing/EdgeNode/internal/waf/requests"
 )
 
 func TestRequestFormArgCheckpoint_RequestValue(t *testing.T) {

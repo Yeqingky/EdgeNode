@@ -6,7 +6,7 @@ import (
 	"runtime"
 	"testing"
 
-	"github.com/TeaOSLab/EdgeNode/internal/utils/zero"
+	"git.ovh.im/yeqing/EdgeNode/internal/utils/zero"
 )
 
 func TestZero_Chan(t *testing.T) {

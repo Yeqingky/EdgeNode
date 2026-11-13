@@ -5,7 +5,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/TeaOSLab/EdgeNode/internal/utils/testutils"
+	"git.ovh.im/yeqing/EdgeNode/internal/utils/testutils"
 )
 
 func TestRawTicker(t *testing.T) {

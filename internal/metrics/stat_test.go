@@ -5,7 +5,7 @@ package metrics_test
 import (
 	"testing"
 
-	"github.com/TeaOSLab/EdgeNode/internal/metrics"
+	"git.ovh.im/yeqing/EdgeNode/internal/metrics"
 	"github.com/iwind/TeaGo/assert"
 )
 

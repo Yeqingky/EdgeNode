@@ -12,8 +12,8 @@ import (
 	"strconv"
 	"strings"
 
-	rangeutils "github.com/TeaOSLab/EdgeNode/internal/utils/ranges"
-	"github.com/TeaOSLab/EdgeNode/internal/utils/zero"
+	rangeutils "git.ovh.im/yeqing/EdgeNode/internal/utils/ranges"
+	"git.ovh.im/yeqing/EdgeNode/internal/utils/zero"
 	"github.com/cespare/xxhash/v2"
 	"github.com/iwind/TeaGo/Tea"
 	"github.com/iwind/TeaGo/logs"

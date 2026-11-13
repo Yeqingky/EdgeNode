@@ -3,7 +3,7 @@ package events
 import (
 	"sync"
 
-	teaconst "github.com/TeaOSLab/EdgeNode/internal/const"
+	teaconst "git.ovh.im/yeqing/EdgeNode/internal/const"
 )
 
 type Callbacks = []func()

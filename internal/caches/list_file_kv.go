@@ -7,12 +7,12 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/TeaOSLab/EdgeNode/internal/remotelogs"
-	"github.com/TeaOSLab/EdgeNode/internal/utils/fasttime"
-	"github.com/TeaOSLab/EdgeNode/internal/utils/fnv"
-	"github.com/TeaOSLab/EdgeNode/internal/utils/goman"
-	memutils "github.com/TeaOSLab/EdgeNode/internal/utils/mem"
-	"github.com/TeaOSLab/EdgeNode/internal/utils/ttlcache"
+	"git.ovh.im/yeqing/EdgeNode/internal/remotelogs"
+	"git.ovh.im/yeqing/EdgeNode/internal/utils/fasttime"
+	"git.ovh.im/yeqing/EdgeNode/internal/utils/fnv"
+	"git.ovh.im/yeqing/EdgeNode/internal/utils/goman"
+	memutils "git.ovh.im/yeqing/EdgeNode/internal/utils/mem"
+	"git.ovh.im/yeqing/EdgeNode/internal/utils/ttlcache"
 	"github.com/iwind/TeaGo/types"
 )
 

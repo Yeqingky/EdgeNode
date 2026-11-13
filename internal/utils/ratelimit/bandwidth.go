@@ -7,7 +7,7 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/TeaOSLab/EdgeNode/internal/utils/fasttime"
+	"git.ovh.im/yeqing/EdgeNode/internal/utils/fasttime"
 )
 
 // Bandwidth lossy bandwidth limiter

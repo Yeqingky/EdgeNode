@@ -9,8 +9,8 @@ import (
 	"strconv"
 	"strings"
 
-	byteutils "github.com/TeaOSLab/EdgeNode/internal/utils/byte"
-	"github.com/TeaOSLab/EdgeNode/internal/utils/fnv"
+	byteutils "git.ovh.im/yeqing/EdgeNode/internal/utils/byte"
+	"git.ovh.im/yeqing/EdgeNode/internal/utils/fnv"
 )
 
 type Stat struct {

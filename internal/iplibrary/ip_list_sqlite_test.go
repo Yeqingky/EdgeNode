@@ -6,8 +6,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/TeaOSLab/EdgeCommon/pkg/rpc/pb"
-	"github.com/TeaOSLab/EdgeNode/internal/iplibrary"
+	"git.ovh.im/yeqing/EdgeCommon/pkg/rpc/pb"
+	"git.ovh.im/yeqing/EdgeNode/internal/iplibrary"
 	_ "github.com/iwind/TeaGo/bootstrap"
 	"github.com/iwind/TeaGo/logs"
 )

@@ -5,7 +5,7 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/TeaOSLab/EdgeCommon/pkg/serverconfigs"
+	"git.ovh.im/yeqing/EdgeCommon/pkg/serverconfigs"
 )
 
 func (this *HTTPRequest) doRedirectToHTTPS(redirectToHTTPSConfig *serverconfigs.HTTPRedirectToHTTPSConfig) (shouldBreak bool) {

@@ -6,8 +6,8 @@ import (
 	"math/big"
 	"sync"
 
-	memutils "github.com/TeaOSLab/EdgeNode/internal/utils/mem"
-	"github.com/TeaOSLab/EdgeNode/internal/utils/zero"
+	memutils "git.ovh.im/yeqing/EdgeNode/internal/utils/mem"
+	"git.ovh.im/yeqing/EdgeNode/internal/utils/zero"
 )
 
 const HashMapSharding = 31

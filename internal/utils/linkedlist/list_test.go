@@ -7,7 +7,7 @@ import (
 	"strconv"
 	"testing"
 
-	"github.com/TeaOSLab/EdgeNode/internal/utils/linkedlist"
+	"git.ovh.im/yeqing/EdgeNode/internal/utils/linkedlist"
 	"github.com/iwind/TeaGo/types"
 )
 

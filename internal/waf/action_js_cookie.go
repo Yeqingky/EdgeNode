@@ -9,10 +9,10 @@ import (
 	"strings"
 	"time"
 
-	"github.com/TeaOSLab/EdgeCommon/pkg/nodeconfigs"
-	"github.com/TeaOSLab/EdgeCommon/pkg/serverconfigs/firewallconfigs"
-	"github.com/TeaOSLab/EdgeNode/internal/utils/counters"
-	"github.com/TeaOSLab/EdgeNode/internal/waf/requests"
+	"git.ovh.im/yeqing/EdgeCommon/pkg/nodeconfigs"
+	"git.ovh.im/yeqing/EdgeCommon/pkg/serverconfigs/firewallconfigs"
+	"git.ovh.im/yeqing/EdgeNode/internal/utils/counters"
+	"git.ovh.im/yeqing/EdgeNode/internal/waf/requests"
 	"github.com/iwind/TeaGo/types"
 )
 

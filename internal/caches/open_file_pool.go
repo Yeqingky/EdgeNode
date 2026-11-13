@@ -3,8 +3,8 @@
 package caches
 
 import (
-	"github.com/TeaOSLab/EdgeNode/internal/utils/fasttime"
-	"github.com/TeaOSLab/EdgeNode/internal/utils/linkedlist"
+	"git.ovh.im/yeqing/EdgeNode/internal/utils/fasttime"
+	"git.ovh.im/yeqing/EdgeNode/internal/utils/linkedlist"
 )
 
 type OpenFilePool struct {

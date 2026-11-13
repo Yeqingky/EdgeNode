@@ -4,9 +4,9 @@ import (
 	"testing"
 	"time"
 
-	"github.com/TeaOSLab/EdgeCommon/pkg/rpc/pb"
-	"github.com/TeaOSLab/EdgeCommon/pkg/serverconfigs/firewallconfigs"
-	executils "github.com/TeaOSLab/EdgeNode/internal/utils/exec"
+	"git.ovh.im/yeqing/EdgeCommon/pkg/rpc/pb"
+	"git.ovh.im/yeqing/EdgeCommon/pkg/serverconfigs/firewallconfigs"
+	executils "git.ovh.im/yeqing/EdgeNode/internal/utils/exec"
 )
 
 func TestIPTablesAction_AddItem(t *testing.T) {

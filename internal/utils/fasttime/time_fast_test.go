@@ -6,7 +6,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/TeaOSLab/EdgeNode/internal/utils/fasttime"
+	"git.ovh.im/yeqing/EdgeNode/internal/utils/fasttime"
 	timeutil "github.com/iwind/TeaGo/utils/time"
 )
 

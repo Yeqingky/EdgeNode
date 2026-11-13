@@ -8,13 +8,13 @@ import (
 	"testing"
 	"time"
 
-	"github.com/TeaOSLab/EdgeCommon/pkg/rpc/pb"
-	"github.com/TeaOSLab/EdgeNode/internal/events"
-	"github.com/TeaOSLab/EdgeNode/internal/remotelogs"
-	"github.com/TeaOSLab/EdgeNode/internal/utils/fasttime"
-	"github.com/TeaOSLab/EdgeNode/internal/utils/goman"
-	"github.com/TeaOSLab/EdgeNode/internal/utils/idles"
-	"github.com/TeaOSLab/EdgeNode/internal/utils/kvstore"
+	"git.ovh.im/yeqing/EdgeCommon/pkg/rpc/pb"
+	"git.ovh.im/yeqing/EdgeNode/internal/events"
+	"git.ovh.im/yeqing/EdgeNode/internal/remotelogs"
+	"git.ovh.im/yeqing/EdgeNode/internal/utils/fasttime"
+	"git.ovh.im/yeqing/EdgeNode/internal/utils/goman"
+	"git.ovh.im/yeqing/EdgeNode/internal/utils/idles"
+	"git.ovh.im/yeqing/EdgeNode/internal/utils/kvstore"
 )
 
 type KVIPList struct {

@@ -3,7 +3,7 @@ package utils
 import (
 	"time"
 
-	"github.com/TeaOSLab/EdgeNode/internal/utils/goman"
+	"git.ovh.im/yeqing/EdgeNode/internal/utils/goman"
 )
 
 // Every 定时运行某个函数

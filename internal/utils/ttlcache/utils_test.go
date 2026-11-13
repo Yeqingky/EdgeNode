@@ -5,9 +5,9 @@ import (
 	"strconv"
 	"testing"
 
-	"github.com/TeaOSLab/EdgeNode/internal/utils/testutils"
-	"github.com/TeaOSLab/EdgeNode/internal/utils/ttlcache"
-	"github.com/TeaOSLab/EdgeNode/internal/utils/zero"
+	"git.ovh.im/yeqing/EdgeNode/internal/utils/testutils"
+	"git.ovh.im/yeqing/EdgeNode/internal/utils/ttlcache"
+	"git.ovh.im/yeqing/EdgeNode/internal/utils/zero"
 	"github.com/cespare/xxhash/v2"
 )
 

@@ -5,7 +5,7 @@ package ratelimit
 import (
 	"sync"
 
-	"github.com/TeaOSLab/EdgeNode/internal/utils/zero"
+	"git.ovh.im/yeqing/EdgeNode/internal/utils/zero"
 )
 
 type Counter struct {

@@ -5,8 +5,8 @@ package percpu_test
 import (
 	"testing"
 
-	"github.com/TeaOSLab/EdgeNode/internal/utils/percpu"
-	"github.com/TeaOSLab/EdgeNode/internal/utils/zero"
+	"git.ovh.im/yeqing/EdgeNode/internal/utils/percpu"
+	"git.ovh.im/yeqing/EdgeNode/internal/utils/zero"
 )
 
 func TestChan_C(t *testing.T) {

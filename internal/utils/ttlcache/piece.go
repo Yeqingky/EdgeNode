@@ -3,8 +3,8 @@ package ttlcache
 import (
 	"sync"
 
-	"github.com/TeaOSLab/EdgeNode/internal/utils/expires"
-	"github.com/TeaOSLab/EdgeNode/internal/utils/fasttime"
+	"git.ovh.im/yeqing/EdgeNode/internal/utils/expires"
+	"git.ovh.im/yeqing/EdgeNode/internal/utils/fasttime"
 )
 
 type Piece[T any] struct {

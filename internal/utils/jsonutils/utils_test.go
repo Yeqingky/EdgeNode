@@ -5,7 +5,7 @@ package jsonutils_test
 import (
 	"testing"
 
-	"github.com/TeaOSLab/EdgeNode/internal/utils/jsonutils"
+	"git.ovh.im/yeqing/EdgeNode/internal/utils/jsonutils"
 	"github.com/iwind/TeaGo/assert"
 	"github.com/iwind/TeaGo/maps"
 )

@@ -6,7 +6,7 @@ import (
 	"runtime"
 	"testing"
 
-	"github.com/TeaOSLab/EdgeNode/internal/metrics"
+	"git.ovh.im/yeqing/EdgeNode/internal/metrics"
 	timeutil "github.com/iwind/TeaGo/utils/time"
 )
 

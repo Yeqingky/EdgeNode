@@ -6,9 +6,9 @@ import (
 	"runtime"
 	"time"
 
-	"github.com/TeaOSLab/EdgeCommon/pkg/rpc/pb"
-	"github.com/TeaOSLab/EdgeCommon/pkg/serverconfigs/firewallconfigs"
-	executils "github.com/TeaOSLab/EdgeNode/internal/utils/exec"
+	"git.ovh.im/yeqing/EdgeCommon/pkg/rpc/pb"
+	"git.ovh.im/yeqing/EdgeCommon/pkg/serverconfigs/firewallconfigs"
+	executils "git.ovh.im/yeqing/EdgeNode/internal/utils/exec"
 )
 
 // FirewalldAction Firewalld动作管理

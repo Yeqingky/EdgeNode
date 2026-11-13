@@ -3,7 +3,7 @@ package nodes
 import (
 	"testing"
 
-	"github.com/TeaOSLab/EdgeCommon/pkg/serverconfigs"
+	"git.ovh.im/yeqing/EdgeCommon/pkg/serverconfigs"
 )
 
 func TestListener_Listen(t *testing.T) {

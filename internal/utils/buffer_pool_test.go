@@ -7,7 +7,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/TeaOSLab/EdgeNode/internal/utils"
+	"git.ovh.im/yeqing/EdgeNode/internal/utils"
 )
 
 func TestNewBufferPool(t *testing.T) {

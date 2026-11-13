@@ -5,7 +5,7 @@ import (
 	"sync"
 	"sync/atomic"
 
-	"github.com/TeaOSLab/EdgeNode/internal/utils/fasttime"
+	"git.ovh.im/yeqing/EdgeNode/internal/utils/fasttime"
 	"github.com/cespare/xxhash/v2"
 	"github.com/iwind/TeaGo/types"
 )

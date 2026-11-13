@@ -9,8 +9,8 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/TeaOSLab/EdgeNode/internal/utils/re"
-	"github.com/TeaOSLab/EdgeNode/internal/utils/runes"
+	"git.ovh.im/yeqing/EdgeNode/internal/utils/re"
+	"git.ovh.im/yeqing/EdgeNode/internal/utils/runes"
 	"github.com/iwind/TeaGo/assert"
 )
 

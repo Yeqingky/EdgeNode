@@ -6,7 +6,7 @@ import (
 	"bytes"
 	"testing"
 
-	"github.com/TeaOSLab/EdgeNode/internal/utils/bfs"
+	"git.ovh.im/yeqing/EdgeNode/internal/utils/bfs"
 	"github.com/iwind/TeaGo/assert"
 )
 

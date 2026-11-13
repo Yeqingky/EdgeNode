@@ -9,9 +9,9 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/TeaOSLab/EdgeNode/internal/events"
-	"github.com/TeaOSLab/EdgeNode/internal/remotelogs"
-	"github.com/TeaOSLab/EdgeNode/internal/utils/dbs"
+	"git.ovh.im/yeqing/EdgeNode/internal/events"
+	"git.ovh.im/yeqing/EdgeNode/internal/remotelogs"
+	"git.ovh.im/yeqing/EdgeNode/internal/utils/dbs"
 	"github.com/iwind/TeaGo/Tea"
 	"github.com/iwind/TeaGo/types"
 )

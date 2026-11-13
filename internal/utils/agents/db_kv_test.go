@@ -6,7 +6,7 @@ import (
 	"strconv"
 	"testing"
 
-	"github.com/TeaOSLab/EdgeNode/internal/utils/agents"
+	"git.ovh.im/yeqing/EdgeNode/internal/utils/agents"
 )
 
 func TestKVDB_InsertAgentIP(t *testing.T) {

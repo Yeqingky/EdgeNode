@@ -8,8 +8,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/TeaOSLab/EdgeNode/internal/utils/testutils"
-	"github.com/TeaOSLab/EdgeNode/internal/waf"
+	"git.ovh.im/yeqing/EdgeNode/internal/utils/testutils"
+	"git.ovh.im/yeqing/EdgeNode/internal/waf"
 	"github.com/iwind/TeaGo/assert"
 	"github.com/iwind/TeaGo/types"
 )

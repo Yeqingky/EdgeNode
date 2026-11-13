@@ -4,7 +4,7 @@ import (
 	"runtime"
 	"testing"
 
-	"github.com/TeaOSLab/EdgeNode/internal/waf"
+	"git.ovh.im/yeqing/EdgeNode/internal/waf"
 	"github.com/iwind/TeaGo/assert"
 	"github.com/iwind/TeaGo/logs"
 	"github.com/iwind/TeaGo/maps"

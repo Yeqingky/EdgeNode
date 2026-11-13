@@ -10,10 +10,10 @@ import (
 	"testing"
 	"time"
 
-	"github.com/TeaOSLab/EdgeCommon/pkg/configutils"
-	"github.com/TeaOSLab/EdgeCommon/pkg/serverconfigs"
-	"github.com/TeaOSLab/EdgeNode/internal/metrics"
-	"github.com/TeaOSLab/EdgeNode/internal/utils/testutils"
+	"git.ovh.im/yeqing/EdgeCommon/pkg/configutils"
+	"git.ovh.im/yeqing/EdgeCommon/pkg/serverconfigs"
+	"git.ovh.im/yeqing/EdgeNode/internal/metrics"
+	"git.ovh.im/yeqing/EdgeNode/internal/utils/testutils"
 	_ "github.com/iwind/TeaGo/bootstrap"
 	"github.com/iwind/TeaGo/rands"
 )

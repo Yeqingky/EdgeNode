@@ -5,8 +5,8 @@ package kvstore_test
 import (
 	"testing"
 
-	"github.com/TeaOSLab/EdgeNode/internal/utils/kvstore"
-	"github.com/TeaOSLab/EdgeNode/internal/utils/testutils"
+	"git.ovh.im/yeqing/EdgeNode/internal/utils/kvstore"
+	"git.ovh.im/yeqing/EdgeNode/internal/utils/testutils"
 	"github.com/cockroachdb/pebble"
 )
 

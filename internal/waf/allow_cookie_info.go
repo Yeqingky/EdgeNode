@@ -7,7 +7,7 @@ import (
 	"encoding/binary"
 	"errors"
 
-	"github.com/TeaOSLab/EdgeNode/internal/utils"
+	"git.ovh.im/yeqing/EdgeNode/internal/utils"
 )
 
 type AllowCookieInfo struct {

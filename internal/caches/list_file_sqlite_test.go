@@ -8,9 +8,9 @@ import (
 	"testing"
 	"time"
 
-	"github.com/TeaOSLab/EdgeNode/internal/caches"
-	"github.com/TeaOSLab/EdgeNode/internal/utils/goman"
-	"github.com/TeaOSLab/EdgeNode/internal/utils/testutils"
+	"git.ovh.im/yeqing/EdgeNode/internal/caches"
+	"git.ovh.im/yeqing/EdgeNode/internal/utils/goman"
+	"git.ovh.im/yeqing/EdgeNode/internal/utils/testutils"
 	"github.com/iwind/TeaGo/Tea"
 	"github.com/iwind/TeaGo/rands"
 	"github.com/iwind/TeaGo/types"

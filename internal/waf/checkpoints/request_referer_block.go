@@ -5,9 +5,9 @@ package checkpoints
 import (
 	"net/url"
 
-	"github.com/TeaOSLab/EdgeCommon/pkg/configutils"
-	"github.com/TeaOSLab/EdgeNode/internal/waf/requests"
-	"github.com/TeaOSLab/EdgeNode/internal/waf/utils"
+	"git.ovh.im/yeqing/EdgeCommon/pkg/configutils"
+	"git.ovh.im/yeqing/EdgeNode/internal/waf/requests"
+	"git.ovh.im/yeqing/EdgeNode/internal/waf/utils"
 	"github.com/iwind/TeaGo/maps"
 	"github.com/iwind/TeaGo/types"
 )

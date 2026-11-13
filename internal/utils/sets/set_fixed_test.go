@@ -5,7 +5,7 @@ package setutils_test
 import (
 	"testing"
 
-	setutils "github.com/TeaOSLab/EdgeNode/internal/utils/sets"
+	setutils "git.ovh.im/yeqing/EdgeNode/internal/utils/sets"
 	"github.com/iwind/TeaGo/assert"
 	"github.com/iwind/TeaGo/rands"
 )

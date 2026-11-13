@@ -5,7 +5,7 @@ package utils
 import (
 	"os"
 
-	"github.com/TeaOSLab/EdgeNode/internal/events"
+	"git.ovh.im/yeqing/EdgeNode/internal/events"
 )
 
 func Exit() {

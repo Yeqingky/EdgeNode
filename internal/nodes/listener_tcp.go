@@ -7,12 +7,12 @@ import (
 	"strings"
 	"sync/atomic"
 
-	"github.com/TeaOSLab/EdgeCommon/pkg/serverconfigs"
-	"github.com/TeaOSLab/EdgeCommon/pkg/serverconfigs/shared"
-	"github.com/TeaOSLab/EdgeNode/internal/remotelogs"
-	"github.com/TeaOSLab/EdgeNode/internal/stats"
-	"github.com/TeaOSLab/EdgeNode/internal/utils/bytepool"
-	"github.com/TeaOSLab/EdgeNode/internal/utils/goman"
+	"git.ovh.im/yeqing/EdgeCommon/pkg/serverconfigs"
+	"git.ovh.im/yeqing/EdgeCommon/pkg/serverconfigs/shared"
+	"git.ovh.im/yeqing/EdgeNode/internal/remotelogs"
+	"git.ovh.im/yeqing/EdgeNode/internal/stats"
+	"git.ovh.im/yeqing/EdgeNode/internal/utils/bytepool"
+	"git.ovh.im/yeqing/EdgeNode/internal/utils/goman"
 	"github.com/iwind/TeaGo/types"
 	"github.com/pires/go-proxyproto"
 )

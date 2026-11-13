@@ -8,8 +8,8 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/TeaOSLab/EdgeNode/internal/firewalls"
-	"github.com/TeaOSLab/EdgeNode/internal/iplibrary"
+	"git.ovh.im/yeqing/EdgeNode/internal/firewalls"
+	"git.ovh.im/yeqing/EdgeNode/internal/iplibrary"
 )
 
 type BaseClientConn struct {

@@ -6,7 +6,7 @@ import (
 	"encoding/json"
 	"sort"
 
-	"github.com/TeaOSLab/EdgeNode/internal/utils"
+	"git.ovh.im/yeqing/EdgeNode/internal/utils"
 )
 
 type FileHeader struct {

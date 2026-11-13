@@ -4,9 +4,9 @@ import (
 	"net/http"
 	"testing"
 
-	"github.com/TeaOSLab/EdgeCommon/pkg/serverconfigs/firewallconfigs"
-	"github.com/TeaOSLab/EdgeNode/internal/waf"
-	"github.com/TeaOSLab/EdgeNode/internal/waf/requests"
+	"git.ovh.im/yeqing/EdgeCommon/pkg/serverconfigs/firewallconfigs"
+	"git.ovh.im/yeqing/EdgeNode/internal/waf"
+	"git.ovh.im/yeqing/EdgeNode/internal/waf/requests"
 	"github.com/iwind/TeaGo/assert"
 	"github.com/iwind/TeaGo/maps"
 )

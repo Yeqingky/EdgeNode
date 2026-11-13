@@ -6,10 +6,10 @@ import (
 	"path"
 	"strings"
 
-	"github.com/TeaOSLab/EdgeCommon/pkg/serverconfigs"
-	"github.com/TeaOSLab/EdgeNode/internal/remotelogs"
-	"github.com/TeaOSLab/EdgeNode/internal/utils"
-	"github.com/TeaOSLab/EdgeNode/internal/utils/bytepool"
+	"git.ovh.im/yeqing/EdgeCommon/pkg/serverconfigs"
+	"git.ovh.im/yeqing/EdgeNode/internal/remotelogs"
+	"git.ovh.im/yeqing/EdgeNode/internal/utils"
+	"git.ovh.im/yeqing/EdgeNode/internal/utils/bytepool"
 	"github.com/iwind/TeaGo/Tea"
 )
 

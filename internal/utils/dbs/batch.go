@@ -6,7 +6,7 @@ import (
 	"database/sql"
 	"time"
 
-	"github.com/TeaOSLab/EdgeNode/internal/remotelogs"
+	"git.ovh.im/yeqing/EdgeNode/internal/remotelogs"
 )
 
 type batchItem struct {

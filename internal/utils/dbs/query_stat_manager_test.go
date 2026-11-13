@@ -6,7 +6,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/TeaOSLab/EdgeNode/internal/utils/dbs"
+	"git.ovh.im/yeqing/EdgeNode/internal/utils/dbs"
 	"github.com/iwind/TeaGo/logs"
 )
 

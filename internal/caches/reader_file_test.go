@@ -4,8 +4,8 @@ import (
 	"os"
 	"testing"
 
-	"github.com/TeaOSLab/EdgeCommon/pkg/serverconfigs"
-	fsutils "github.com/TeaOSLab/EdgeNode/internal/utils/fs"
+	"git.ovh.im/yeqing/EdgeCommon/pkg/serverconfigs"
+	fsutils "git.ovh.im/yeqing/EdgeNode/internal/utils/fs"
 	"github.com/iwind/TeaGo/Tea"
 )
 

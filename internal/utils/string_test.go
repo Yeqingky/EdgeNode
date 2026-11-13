@@ -4,7 +4,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/TeaOSLab/EdgeNode/internal/utils"
+	"git.ovh.im/yeqing/EdgeNode/internal/utils"
 	"github.com/iwind/TeaGo/assert"
 	"github.com/iwind/TeaGo/types"
 )

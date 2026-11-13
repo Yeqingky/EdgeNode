@@ -5,7 +5,7 @@ package nodes
 import (
 	"testing"
 
-	"github.com/TeaOSLab/EdgeNode/internal/utils/testutils"
+	"git.ovh.im/yeqing/EdgeNode/internal/utils/testutils"
 	_ "github.com/iwind/TeaGo/bootstrap"
 )
 

@@ -9,7 +9,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/TeaOSLab/EdgeNode/internal/utils/testutils"
+	"git.ovh.im/yeqing/EdgeNode/internal/utils/testutils"
 	"github.com/dchest/captcha"
 )
 

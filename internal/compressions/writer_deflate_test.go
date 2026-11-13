@@ -7,7 +7,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/TeaOSLab/EdgeNode/internal/compressions"
+	"git.ovh.im/yeqing/EdgeNode/internal/compressions"
 )
 
 func BenchmarkDeflateWriter_Write(b *testing.B) {

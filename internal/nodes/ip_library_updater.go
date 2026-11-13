@@ -7,9 +7,9 @@ import (
 	"io"
 	"os"
 
-	"github.com/TeaOSLab/EdgeCommon/pkg/rpc/pb"
-	"github.com/TeaOSLab/EdgeNode/internal/remotelogs"
-	"github.com/TeaOSLab/EdgeNode/internal/rpc"
+	"git.ovh.im/yeqing/EdgeCommon/pkg/rpc/pb"
+	"git.ovh.im/yeqing/EdgeNode/internal/remotelogs"
+	"git.ovh.im/yeqing/EdgeNode/internal/rpc"
 	"github.com/iwind/TeaGo/Tea"
 	"github.com/iwind/TeaGo/types"
 )

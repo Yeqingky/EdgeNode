@@ -6,8 +6,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/TeaOSLab/EdgeNode/internal/utils/agents"
-	"github.com/TeaOSLab/EdgeNode/internal/utils/testutils"
+	"git.ovh.im/yeqing/EdgeNode/internal/utils/agents"
+	"git.ovh.im/yeqing/EdgeNode/internal/utils/testutils"
 	"github.com/iwind/TeaGo/assert"
 	_ "github.com/iwind/TeaGo/bootstrap"
 )

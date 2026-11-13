@@ -8,9 +8,9 @@ import (
 	"testing"
 	"time"
 
-	"github.com/TeaOSLab/EdgeNode/internal/utils/bfs"
-	"github.com/TeaOSLab/EdgeNode/internal/utils/fasttime"
-	"github.com/TeaOSLab/EdgeNode/internal/utils/testutils"
+	"git.ovh.im/yeqing/EdgeNode/internal/utils/bfs"
+	"git.ovh.im/yeqing/EdgeNode/internal/utils/fasttime"
+	"git.ovh.im/yeqing/EdgeNode/internal/utils/testutils"
 	"github.com/iwind/TeaGo/logs"
 )
 

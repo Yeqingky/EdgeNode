@@ -3,7 +3,7 @@
 package counters
 
 import (
-	"github.com/TeaOSLab/EdgeNode/internal/utils/fasttime"
+	"git.ovh.im/yeqing/EdgeNode/internal/utils/fasttime"
 )
 
 const spanMaxValue = 10_000_000

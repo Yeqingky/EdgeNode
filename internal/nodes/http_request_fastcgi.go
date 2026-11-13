@@ -12,9 +12,9 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/TeaOSLab/EdgeCommon/pkg/serverconfigs"
-	teaconst "github.com/TeaOSLab/EdgeNode/internal/const"
-	"github.com/TeaOSLab/EdgeNode/internal/remotelogs"
+	"git.ovh.im/yeqing/EdgeCommon/pkg/serverconfigs"
+	teaconst "git.ovh.im/yeqing/EdgeNode/internal/const"
+	"git.ovh.im/yeqing/EdgeNode/internal/remotelogs"
 	"github.com/iwind/TeaGo/Tea"
 	"github.com/iwind/TeaGo/maps"
 	"github.com/iwind/TeaGo/rands"

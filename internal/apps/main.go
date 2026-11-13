@@ -2,7 +2,7 @@
 
 package apps
 
-import teaconst "github.com/TeaOSLab/EdgeNode/internal/const"
+import teaconst "git.ovh.im/yeqing/EdgeNode/internal/const"
 
 func RunMain(f func()) {
 	if teaconst.IsMain {

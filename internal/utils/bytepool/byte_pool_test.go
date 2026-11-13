@@ -6,7 +6,7 @@ import (
 	"sync"
 	"testing"
 
-	"github.com/TeaOSLab/EdgeNode/internal/utils/bytepool"
+	"git.ovh.im/yeqing/EdgeNode/internal/utils/bytepool"
 )
 
 func TestBytePool_Memory(t *testing.T) {

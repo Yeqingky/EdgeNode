@@ -1,7 +1,7 @@
 package nodes
 
 import (
-	"github.com/TeaOSLab/EdgeNode/internal/stats"
+	"git.ovh.im/yeqing/EdgeNode/internal/stats"
 )
 
 // 统计

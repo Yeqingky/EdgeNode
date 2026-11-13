@@ -5,8 +5,8 @@ package clock_test
 import (
 	"testing"
 
-	"github.com/TeaOSLab/EdgeNode/internal/utils/clock"
-	"github.com/TeaOSLab/EdgeNode/internal/utils/testutils"
+	"git.ovh.im/yeqing/EdgeNode/internal/utils/clock"
+	"git.ovh.im/yeqing/EdgeNode/internal/utils/testutils"
 )
 
 func TestReadServer(t *testing.T) {

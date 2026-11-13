@@ -5,7 +5,7 @@ package maputils_test
 import (
 	"testing"
 
-	maputils "github.com/TeaOSLab/EdgeNode/internal/utils/maps"
+	maputils "git.ovh.im/yeqing/EdgeNode/internal/utils/maps"
 )
 
 func TestNewFixedMap(t *testing.T) {

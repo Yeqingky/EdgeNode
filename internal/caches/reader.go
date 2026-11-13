@@ -3,7 +3,7 @@ package caches
 import (
 	"io"
 
-	"github.com/TeaOSLab/EdgeNode/internal/utils/ranges"
+	"git.ovh.im/yeqing/EdgeNode/internal/utils/ranges"
 )
 
 type ReaderFunc func(n int) (goNext bool, err error)

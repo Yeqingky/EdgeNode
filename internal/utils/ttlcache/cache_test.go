@@ -9,9 +9,9 @@ import (
 	"testing"
 	"time"
 
-	"github.com/TeaOSLab/EdgeNode/internal/utils/fasttime"
-	memutils "github.com/TeaOSLab/EdgeNode/internal/utils/mem"
-	"github.com/TeaOSLab/EdgeNode/internal/utils/testutils"
+	"git.ovh.im/yeqing/EdgeNode/internal/utils/fasttime"
+	memutils "git.ovh.im/yeqing/EdgeNode/internal/utils/mem"
+	"git.ovh.im/yeqing/EdgeNode/internal/utils/testutils"
 	"github.com/iwind/TeaGo/assert"
 	"github.com/iwind/TeaGo/rands"
 	"github.com/iwind/TeaGo/types"

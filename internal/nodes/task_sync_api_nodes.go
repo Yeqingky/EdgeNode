@@ -3,14 +3,14 @@ package nodes
 import (
 	"time"
 
-	"github.com/TeaOSLab/EdgeCommon/pkg/rpc/pb"
-	"github.com/TeaOSLab/EdgeNode/internal/configs"
-	teaconst "github.com/TeaOSLab/EdgeNode/internal/const"
-	"github.com/TeaOSLab/EdgeNode/internal/events"
-	"github.com/TeaOSLab/EdgeNode/internal/rpc"
-	"github.com/TeaOSLab/EdgeNode/internal/utils"
-	"github.com/TeaOSLab/EdgeNode/internal/utils/goman"
-	"github.com/TeaOSLab/EdgeNode/internal/utils/trackers"
+	"git.ovh.im/yeqing/EdgeCommon/pkg/rpc/pb"
+	"git.ovh.im/yeqing/EdgeNode/internal/configs"
+	teaconst "git.ovh.im/yeqing/EdgeNode/internal/const"
+	"git.ovh.im/yeqing/EdgeNode/internal/events"
+	"git.ovh.im/yeqing/EdgeNode/internal/rpc"
+	"git.ovh.im/yeqing/EdgeNode/internal/utils"
+	"git.ovh.im/yeqing/EdgeNode/internal/utils/goman"
+	"git.ovh.im/yeqing/EdgeNode/internal/utils/trackers"
 	"github.com/iwind/TeaGo/Tea"
 	"github.com/iwind/TeaGo/logs"
 )

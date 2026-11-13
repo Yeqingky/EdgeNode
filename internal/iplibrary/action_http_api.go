@@ -6,9 +6,9 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/TeaOSLab/EdgeCommon/pkg/rpc/pb"
-	"github.com/TeaOSLab/EdgeCommon/pkg/serverconfigs/firewallconfigs"
-	teaconst "github.com/TeaOSLab/EdgeNode/internal/const"
+	"git.ovh.im/yeqing/EdgeCommon/pkg/rpc/pb"
+	"git.ovh.im/yeqing/EdgeCommon/pkg/serverconfigs/firewallconfigs"
+	teaconst "git.ovh.im/yeqing/EdgeNode/internal/const"
 	"github.com/iwind/TeaGo/maps"
 )
 

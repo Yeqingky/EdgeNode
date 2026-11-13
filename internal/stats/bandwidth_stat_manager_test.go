@@ -7,8 +7,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/TeaOSLab/EdgeCommon/pkg/rpc/pb"
-	"github.com/TeaOSLab/EdgeNode/internal/stats"
+	"git.ovh.im/yeqing/EdgeCommon/pkg/rpc/pb"
+	"git.ovh.im/yeqing/EdgeNode/internal/stats"
 )
 
 func TestBandwidthStatManager_Add(t *testing.T) {

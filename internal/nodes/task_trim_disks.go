@@ -7,10 +7,10 @@ import (
 	"runtime"
 	"time"
 
-	"github.com/TeaOSLab/EdgeNode/internal/remotelogs"
-	executils "github.com/TeaOSLab/EdgeNode/internal/utils/exec"
-	"github.com/TeaOSLab/EdgeNode/internal/utils/idles"
-	"github.com/TeaOSLab/EdgeNode/internal/utils/trackers"
+	"git.ovh.im/yeqing/EdgeNode/internal/remotelogs"
+	executils "git.ovh.im/yeqing/EdgeNode/internal/utils/exec"
+	"git.ovh.im/yeqing/EdgeNode/internal/utils/idles"
+	"git.ovh.im/yeqing/EdgeNode/internal/utils/trackers"
 )
 
 // TrimDisksTask trim ssd disks automatically

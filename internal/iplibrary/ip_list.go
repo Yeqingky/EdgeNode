@@ -4,9 +4,9 @@ import (
 	"sort"
 	"sync"
 
-	"github.com/TeaOSLab/EdgeCommon/pkg/iputils"
-	"github.com/TeaOSLab/EdgeNode/internal/utils/expires"
-	"github.com/TeaOSLab/EdgeNode/internal/utils/fasttime"
+	"git.ovh.im/yeqing/EdgeCommon/pkg/iputils"
+	"git.ovh.im/yeqing/EdgeNode/internal/utils/expires"
+	"git.ovh.im/yeqing/EdgeNode/internal/utils/fasttime"
 )
 
 var GlobalBlackIPList = NewIPList()

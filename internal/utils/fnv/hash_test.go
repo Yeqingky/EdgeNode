@@ -5,7 +5,7 @@ package fnv_test
 import (
 	"testing"
 
-	"github.com/TeaOSLab/EdgeNode/internal/utils/fnv"
+	"git.ovh.im/yeqing/EdgeNode/internal/utils/fnv"
 	"github.com/iwind/TeaGo/types"
 )
 

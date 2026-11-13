@@ -6,12 +6,12 @@ import (
 	"time"
 	"unicode/utf8"
 
-	"github.com/TeaOSLab/EdgeCommon/pkg/rpc/pb"
-	"github.com/TeaOSLab/EdgeNode/internal/remotelogs"
-	"github.com/TeaOSLab/EdgeNode/internal/rpc"
-	"github.com/TeaOSLab/EdgeNode/internal/utils"
-	"github.com/TeaOSLab/EdgeNode/internal/utils/goman"
-	memutils "github.com/TeaOSLab/EdgeNode/internal/utils/mem"
+	"git.ovh.im/yeqing/EdgeCommon/pkg/rpc/pb"
+	"git.ovh.im/yeqing/EdgeNode/internal/remotelogs"
+	"git.ovh.im/yeqing/EdgeNode/internal/rpc"
+	"git.ovh.im/yeqing/EdgeNode/internal/utils"
+	"git.ovh.im/yeqing/EdgeNode/internal/utils/goman"
+	memutils "git.ovh.im/yeqing/EdgeNode/internal/utils/mem"
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/status"
 )

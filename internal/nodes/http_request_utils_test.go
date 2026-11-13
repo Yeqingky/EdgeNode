@@ -6,8 +6,8 @@ import (
 	"testing"
 	"time"
 
-	teaconst "github.com/TeaOSLab/EdgeNode/internal/const"
-	"github.com/TeaOSLab/EdgeNode/internal/utils/zero"
+	teaconst "git.ovh.im/yeqing/EdgeNode/internal/const"
+	"git.ovh.im/yeqing/EdgeNode/internal/utils/zero"
 	"github.com/iwind/TeaGo/assert"
 )
 

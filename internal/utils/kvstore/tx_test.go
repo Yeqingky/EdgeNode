@@ -6,7 +6,7 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/TeaOSLab/EdgeNode/internal/utils/kvstore"
+	"git.ovh.im/yeqing/EdgeNode/internal/utils/kvstore"
 )
 
 func TestTable_ReadTx(t *testing.T) {

@@ -7,7 +7,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/TeaOSLab/EdgeNode/internal/compressions"
+	"git.ovh.im/yeqing/EdgeNode/internal/compressions"
 )
 
 func TestNewZSTDWriter_Level0(t *testing.T) {

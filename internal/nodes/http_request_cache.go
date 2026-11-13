@@ -10,13 +10,13 @@ import (
 	"strings"
 	"time"
 
-	"github.com/TeaOSLab/EdgeCommon/pkg/configutils"
-	"github.com/TeaOSLab/EdgeNode/internal/caches"
-	"github.com/TeaOSLab/EdgeNode/internal/compressions"
-	"github.com/TeaOSLab/EdgeNode/internal/remotelogs"
-	"github.com/TeaOSLab/EdgeNode/internal/utils"
-	"github.com/TeaOSLab/EdgeNode/internal/utils/fasttime"
-	rangeutils "github.com/TeaOSLab/EdgeNode/internal/utils/ranges"
+	"git.ovh.im/yeqing/EdgeCommon/pkg/configutils"
+	"git.ovh.im/yeqing/EdgeNode/internal/caches"
+	"git.ovh.im/yeqing/EdgeNode/internal/compressions"
+	"git.ovh.im/yeqing/EdgeNode/internal/remotelogs"
+	"git.ovh.im/yeqing/EdgeNode/internal/utils"
+	"git.ovh.im/yeqing/EdgeNode/internal/utils/fasttime"
+	rangeutils "git.ovh.im/yeqing/EdgeNode/internal/utils/ranges"
 	"github.com/iwind/TeaGo/types"
 )
 

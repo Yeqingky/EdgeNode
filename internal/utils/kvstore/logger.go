@@ -5,7 +5,7 @@ package kvstore
 import (
 	"fmt"
 
-	"github.com/TeaOSLab/EdgeNode/internal/remotelogs"
+	"git.ovh.im/yeqing/EdgeNode/internal/remotelogs"
 )
 
 type Logger struct {

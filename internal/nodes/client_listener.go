@@ -5,10 +5,10 @@ package nodes
 import (
 	"net"
 
-	"github.com/TeaOSLab/EdgeCommon/pkg/serverconfigs/firewallconfigs"
-	"github.com/TeaOSLab/EdgeNode/internal/firewalls"
-	"github.com/TeaOSLab/EdgeNode/internal/iplibrary"
-	"github.com/TeaOSLab/EdgeNode/internal/waf"
+	"git.ovh.im/yeqing/EdgeCommon/pkg/serverconfigs/firewallconfigs"
+	"git.ovh.im/yeqing/EdgeNode/internal/firewalls"
+	"git.ovh.im/yeqing/EdgeNode/internal/iplibrary"
+	"git.ovh.im/yeqing/EdgeNode/internal/waf"
 )
 
 // ClientListener 客户端网络监听

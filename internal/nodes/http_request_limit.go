@@ -5,7 +5,7 @@ package nodes
 import (
 	"net/http"
 
-	"github.com/TeaOSLab/EdgeNode/internal/iplibrary"
+	"git.ovh.im/yeqing/EdgeNode/internal/iplibrary"
 )
 
 func (this *HTTPRequest) doRequestLimit() (shouldStop bool) {

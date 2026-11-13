@@ -5,7 +5,7 @@ package utils_test
 import (
 	"testing"
 
-	"github.com/TeaOSLab/EdgeNode/internal/utils"
+	"git.ovh.im/yeqing/EdgeNode/internal/utils"
 )
 
 func TestParseAddrHost(t *testing.T) {

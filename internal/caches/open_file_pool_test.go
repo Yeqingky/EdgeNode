@@ -6,7 +6,7 @@ import (
 	"sync"
 	"testing"
 
-	"github.com/TeaOSLab/EdgeNode/internal/caches"
+	"git.ovh.im/yeqing/EdgeNode/internal/caches"
 	"github.com/iwind/TeaGo/rands"
 )
 

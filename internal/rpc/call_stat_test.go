@@ -5,7 +5,7 @@ package rpc_test
 import (
 	"testing"
 
-	"github.com/TeaOSLab/EdgeNode/internal/rpc"
+	"git.ovh.im/yeqing/EdgeNode/internal/rpc"
 )
 
 func TestNewCallStat(t *testing.T) {

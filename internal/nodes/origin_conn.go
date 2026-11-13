@@ -7,10 +7,10 @@ import (
 	"sync"
 	"time"
 
-	teaconst "github.com/TeaOSLab/EdgeNode/internal/const"
-	"github.com/TeaOSLab/EdgeNode/internal/utils/fasttime"
-	"github.com/TeaOSLab/EdgeNode/internal/utils/goman"
-	"github.com/TeaOSLab/EdgeNode/internal/utils/zero"
+	teaconst "git.ovh.im/yeqing/EdgeNode/internal/const"
+	"git.ovh.im/yeqing/EdgeNode/internal/utils/fasttime"
+	"git.ovh.im/yeqing/EdgeNode/internal/utils/goman"
+	"git.ovh.im/yeqing/EdgeNode/internal/utils/zero"
 )
 
 const originConnCloseDelaySeconds = 3

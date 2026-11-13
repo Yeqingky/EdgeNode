@@ -5,8 +5,8 @@ package metrics_test
 import (
 	"testing"
 
-	"github.com/TeaOSLab/EdgeCommon/pkg/serverconfigs"
-	"github.com/TeaOSLab/EdgeNode/internal/metrics"
+	"git.ovh.im/yeqing/EdgeCommon/pkg/serverconfigs"
+	"git.ovh.im/yeqing/EdgeNode/internal/metrics"
 )
 
 func TestNewManager(t *testing.T) {

@@ -3,8 +3,8 @@ package nodes
 import (
 	"testing"
 
-	"github.com/TeaOSLab/EdgeCommon/pkg/nodeconfigs"
-	"github.com/TeaOSLab/EdgeCommon/pkg/serverconfigs"
+	"git.ovh.im/yeqing/EdgeCommon/pkg/nodeconfigs"
+	"git.ovh.im/yeqing/EdgeCommon/pkg/serverconfigs"
 )
 
 func TestListenerManager_Listen(t *testing.T) {

@@ -6,7 +6,7 @@ import (
 	"regexp"
 	"testing"
 
-	"github.com/TeaOSLab/EdgeNode/internal/utils/re"
+	"git.ovh.im/yeqing/EdgeNode/internal/utils/re"
 	"github.com/iwind/TeaGo/assert"
 )
 

@@ -8,8 +8,8 @@ import (
 	"net/http"
 	"runtime"
 
-	"github.com/TeaOSLab/EdgeCommon/pkg/serverconfigs"
-	memutils "github.com/TeaOSLab/EdgeNode/internal/utils/mem"
+	"git.ovh.im/yeqing/EdgeCommon/pkg/serverconfigs"
+	memutils "git.ovh.im/yeqing/EdgeNode/internal/utils/mem"
 )
 
 type ContentEncoding = string

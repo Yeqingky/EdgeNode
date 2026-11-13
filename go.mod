@@ -1,11 +1,11 @@
-module github.com/TeaOSLab/EdgeNode
+module git.ovh.im/yeqing/EdgeNode
 
 go 1.27.4
 
-replace github.com/TeaOSLab/EdgeCommon => ../EdgeCommon
+replace git.ovh.im/yeqing/EdgeCommon => ../EdgeCommon
 
 require (
-	github.com/TeaOSLab/EdgeCommon v1.3.9
+	git.ovh.im/yeqing/EdgeCommon v1.3.9
 	github.com/andybalholm/brotli v1.3.0
 	github.com/biessek/golang-ico v0.0.0-20250805151044-6d8ea19fb761
 	github.com/cespare/xxhash/v2 v2.3.0

@@ -6,7 +6,7 @@ import (
 	"runtime"
 	"testing"
 
-	"github.com/TeaOSLab/EdgeNode/internal/utils/goman"
+	"git.ovh.im/yeqing/EdgeNode/internal/utils/goman"
 )
 
 func TestNewTaskGroup(t *testing.T) {

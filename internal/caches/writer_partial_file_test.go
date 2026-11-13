@@ -7,8 +7,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/TeaOSLab/EdgeNode/internal/caches"
-	fsutils "github.com/TeaOSLab/EdgeNode/internal/utils/fs"
+	"git.ovh.im/yeqing/EdgeNode/internal/caches"
+	fsutils "git.ovh.im/yeqing/EdgeNode/internal/utils/fs"
 	"github.com/iwind/TeaGo/types"
 )
 

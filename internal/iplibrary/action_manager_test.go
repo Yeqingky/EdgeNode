@@ -3,7 +3,7 @@ package iplibrary
 import (
 	"testing"
 
-	"github.com/TeaOSLab/EdgeCommon/pkg/serverconfigs/firewallconfigs"
+	"git.ovh.im/yeqing/EdgeCommon/pkg/serverconfigs/firewallconfigs"
 	"github.com/iwind/TeaGo/maps"
 )
 

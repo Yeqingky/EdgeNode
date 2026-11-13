@@ -6,8 +6,8 @@ import (
 	"sync"
 	"time"
 
-	"github.com/TeaOSLab/EdgeNode/internal/utils/goman"
-	"github.com/TeaOSLab/EdgeNode/internal/utils/zero"
+	"git.ovh.im/yeqing/EdgeNode/internal/utils/goman"
+	"git.ovh.im/yeqing/EdgeNode/internal/utils/zero"
 )
 
 var SharedManager = NewManager()

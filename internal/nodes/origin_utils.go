@@ -6,9 +6,9 @@ import (
 	"net"
 	"strconv"
 
-	"github.com/TeaOSLab/EdgeCommon/pkg/configutils"
-	"github.com/TeaOSLab/EdgeCommon/pkg/serverconfigs"
-	"github.com/TeaOSLab/EdgeNode/internal/remotelogs"
+	"git.ovh.im/yeqing/EdgeCommon/pkg/configutils"
+	"git.ovh.im/yeqing/EdgeCommon/pkg/serverconfigs"
+	"git.ovh.im/yeqing/EdgeNode/internal/remotelogs"
 	"github.com/iwind/TeaGo/types"
 )
 

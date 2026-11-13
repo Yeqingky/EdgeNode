@@ -6,10 +6,10 @@ import (
 	"strings"
 	"time"
 
-	"github.com/TeaOSLab/EdgeCommon/pkg/rpc/pb"
-	"github.com/TeaOSLab/EdgeCommon/pkg/serverconfigs/firewallconfigs"
-	"github.com/TeaOSLab/EdgeNode/internal/utils"
-	executils "github.com/TeaOSLab/EdgeNode/internal/utils/exec"
+	"git.ovh.im/yeqing/EdgeCommon/pkg/rpc/pb"
+	"git.ovh.im/yeqing/EdgeCommon/pkg/serverconfigs/firewallconfigs"
+	"git.ovh.im/yeqing/EdgeNode/internal/utils"
+	executils "git.ovh.im/yeqing/EdgeNode/internal/utils/exec"
 )
 
 // IPTablesAction IPTables动作

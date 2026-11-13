@@ -6,7 +6,7 @@ import (
 	"bytes"
 	"testing"
 
-	"github.com/TeaOSLab/EdgeNode/internal/compressions"
+	"git.ovh.im/yeqing/EdgeNode/internal/compressions"
 )
 
 func BenchmarkGzipWriter_Write(b *testing.B) {

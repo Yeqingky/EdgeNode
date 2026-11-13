@@ -7,7 +7,7 @@ import (
 	"errors"
 	"testing"
 
-	"github.com/TeaOSLab/EdgeNode/internal/utils/readers"
+	"git.ovh.im/yeqing/EdgeNode/internal/utils/readers"
 )
 
 func TestNewFilterReader(t *testing.T) {

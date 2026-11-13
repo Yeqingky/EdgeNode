@@ -6,7 +6,7 @@ import (
 	"net"
 	"strings"
 
-	"github.com/TeaOSLab/EdgeCommon/pkg/configutils"
+	"git.ovh.im/yeqing/EdgeCommon/pkg/configutils"
 )
 
 func ParseHost(key string) string {

@@ -7,10 +7,10 @@ import (
 	"strings"
 	"time"
 
-	"github.com/TeaOSLab/EdgeNode/internal/conns"
-	"github.com/TeaOSLab/EdgeNode/internal/remotelogs"
-	executils "github.com/TeaOSLab/EdgeNode/internal/utils/exec"
-	"github.com/TeaOSLab/EdgeNode/internal/utils/goman"
+	"git.ovh.im/yeqing/EdgeNode/internal/conns"
+	"git.ovh.im/yeqing/EdgeNode/internal/remotelogs"
+	executils "git.ovh.im/yeqing/EdgeNode/internal/utils/exec"
+	"git.ovh.im/yeqing/EdgeNode/internal/utils/goman"
 	"github.com/iwind/TeaGo/types"
 )
 

@@ -6,7 +6,7 @@ import (
 	"io"
 	"runtime"
 
-	"github.com/TeaOSLab/EdgeNode/internal/utils/percpu"
+	"git.ovh.im/yeqing/EdgeNode/internal/utils/percpu"
 	"github.com/klauspost/compress/gzip"
 )
 

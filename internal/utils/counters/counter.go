@@ -6,10 +6,10 @@ import (
 	"sync"
 	"time"
 
-	"github.com/TeaOSLab/EdgeNode/internal/utils/fasttime"
-	"github.com/TeaOSLab/EdgeNode/internal/utils/goman"
-	memutils "github.com/TeaOSLab/EdgeNode/internal/utils/mem"
-	syncutils "github.com/TeaOSLab/EdgeNode/internal/utils/sync"
+	"git.ovh.im/yeqing/EdgeNode/internal/utils/fasttime"
+	"git.ovh.im/yeqing/EdgeNode/internal/utils/goman"
+	memutils "git.ovh.im/yeqing/EdgeNode/internal/utils/mem"
+	syncutils "git.ovh.im/yeqing/EdgeNode/internal/utils/sync"
 	"github.com/cespare/xxhash/v2"
 )
 

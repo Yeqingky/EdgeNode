@@ -8,7 +8,7 @@ import (
 	"net/http"
 	"net/url"
 
-	"github.com/TeaOSLab/EdgeNode/internal/utils/bytepool"
+	"git.ovh.im/yeqing/EdgeNode/internal/utils/bytepool"
 )
 
 // WebsocketResponseReader Websocket响应Reader

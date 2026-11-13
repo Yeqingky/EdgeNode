@@ -3,7 +3,7 @@ package encrypt_test
 import (
 	"testing"
 
-	"github.com/TeaOSLab/EdgeNode/internal/utils/encrypt"
+	"git.ovh.im/yeqing/EdgeNode/internal/utils/encrypt"
 )
 
 func TestFindMethodInstance(t *testing.T) {

@@ -3,7 +3,7 @@ package utils
 import (
 	"testing"
 
-	teaconst "github.com/TeaOSLab/EdgeNode/internal/const"
+	teaconst "git.ovh.im/yeqing/EdgeNode/internal/const"
 )
 
 func TestServiceManager_Log(t *testing.T) {

@@ -7,8 +7,8 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/TeaOSLab/EdgeCommon/pkg/serverconfigs/firewallconfigs"
-	"github.com/TeaOSLab/EdgeNode/internal/utils/re"
+	"git.ovh.im/yeqing/EdgeCommon/pkg/serverconfigs/firewallconfigs"
+	"git.ovh.im/yeqing/EdgeNode/internal/utils/re"
 	"github.com/iwind/TeaGo/assert"
 )
 

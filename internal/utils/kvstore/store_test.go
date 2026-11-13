@@ -7,7 +7,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/TeaOSLab/EdgeNode/internal/utils/kvstore"
+	"git.ovh.im/yeqing/EdgeNode/internal/utils/kvstore"
 	"github.com/cockroachdb/pebble"
 	"github.com/iwind/TeaGo/Tea"
 	"github.com/iwind/TeaGo/assert"

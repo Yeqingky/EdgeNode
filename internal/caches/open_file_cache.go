@@ -9,9 +9,9 @@ import (
 	"sync"
 	"time"
 
-	"github.com/TeaOSLab/EdgeNode/internal/utils/goman"
-	"github.com/TeaOSLab/EdgeNode/internal/utils/linkedlist"
-	memutils "github.com/TeaOSLab/EdgeNode/internal/utils/mem"
+	"git.ovh.im/yeqing/EdgeNode/internal/utils/goman"
+	"git.ovh.im/yeqing/EdgeNode/internal/utils/linkedlist"
+	memutils "git.ovh.im/yeqing/EdgeNode/internal/utils/mem"
 	"github.com/fsnotify/fsnotify"
 	"github.com/iwind/TeaGo/logs"
 	"github.com/iwind/TeaGo/types"

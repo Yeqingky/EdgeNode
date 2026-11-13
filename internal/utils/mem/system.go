@@ -5,8 +5,8 @@ package memutils
 import (
 	"time"
 
-	teaconst "github.com/TeaOSLab/EdgeNode/internal/const"
-	"github.com/TeaOSLab/EdgeNode/internal/utils/goman"
+	teaconst "git.ovh.im/yeqing/EdgeNode/internal/const"
+	"git.ovh.im/yeqing/EdgeNode/internal/utils/goman"
 	"github.com/shirou/gopsutil/v3/mem"
 )
 

@@ -3,9 +3,9 @@
 package nodes
 
 import (
-	"github.com/TeaOSLab/EdgeCommon/pkg/nodeutils"
-	"github.com/TeaOSLab/EdgeCommon/pkg/serverconfigs"
-	"github.com/TeaOSLab/EdgeNode/internal/remotelogs"
+	"git.ovh.im/yeqing/EdgeCommon/pkg/nodeutils"
+	"git.ovh.im/yeqing/EdgeCommon/pkg/serverconfigs"
+	"git.ovh.im/yeqing/EdgeNode/internal/remotelogs"
 )
 
 // 健康检查

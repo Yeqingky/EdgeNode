@@ -7,10 +7,10 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/TeaOSLab/EdgeNode/internal/utils"
-	"github.com/TeaOSLab/EdgeNode/internal/utils/counters"
-	"github.com/TeaOSLab/EdgeNode/internal/waf/requests"
-	wafutils "github.com/TeaOSLab/EdgeNode/internal/waf/utils"
+	"git.ovh.im/yeqing/EdgeNode/internal/utils"
+	"git.ovh.im/yeqing/EdgeNode/internal/utils/counters"
+	"git.ovh.im/yeqing/EdgeNode/internal/waf/requests"
+	wafutils "git.ovh.im/yeqing/EdgeNode/internal/waf/utils"
 	"github.com/iwind/TeaGo/maps"
 	"github.com/iwind/TeaGo/types"
 )

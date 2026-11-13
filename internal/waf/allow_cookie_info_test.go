@@ -5,8 +5,8 @@ package waf_test
 import (
 	"testing"
 
-	"github.com/TeaOSLab/EdgeNode/internal/utils/fasttime"
-	"github.com/TeaOSLab/EdgeNode/internal/waf"
+	"git.ovh.im/yeqing/EdgeNode/internal/utils/fasttime"
+	"git.ovh.im/yeqing/EdgeNode/internal/waf"
 	"github.com/iwind/TeaGo/assert"
 	"github.com/iwind/TeaGo/types"
 )

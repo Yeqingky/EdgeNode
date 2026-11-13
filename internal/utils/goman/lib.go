@@ -7,7 +7,7 @@ import (
 	"sync"
 	"time"
 
-	teaconst "github.com/TeaOSLab/EdgeNode/internal/const"
+	teaconst "git.ovh.im/yeqing/EdgeNode/internal/const"
 )
 
 var locker = &sync.Mutex{}

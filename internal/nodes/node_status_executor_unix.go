@@ -6,8 +6,8 @@ import (
 	"runtime"
 	"runtime/debug"
 
-	"github.com/TeaOSLab/EdgeCommon/pkg/nodeconfigs"
-	"github.com/TeaOSLab/EdgeNode/internal/monitor"
+	"git.ovh.im/yeqing/EdgeCommon/pkg/nodeconfigs"
+	"git.ovh.im/yeqing/EdgeNode/internal/monitor"
 	"github.com/iwind/TeaGo/maps"
 	"github.com/shirou/gopsutil/v3/load"
 	"github.com/shirou/gopsutil/v3/mem"

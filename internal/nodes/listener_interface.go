@@ -1,6 +1,6 @@
 package nodes
 
-import "github.com/TeaOSLab/EdgeCommon/pkg/serverconfigs"
+import "git.ovh.im/yeqing/EdgeCommon/pkg/serverconfigs"
 
 // ListenerInterface 各协议监听器的接口
 type ListenerInterface interface {

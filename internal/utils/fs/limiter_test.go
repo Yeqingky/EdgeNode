@@ -8,8 +8,8 @@ import (
 	"testing"
 	"time"
 
-	fsutils "github.com/TeaOSLab/EdgeNode/internal/utils/fs"
-	"github.com/TeaOSLab/EdgeNode/internal/utils/testutils"
+	fsutils "git.ovh.im/yeqing/EdgeNode/internal/utils/fs"
+	"git.ovh.im/yeqing/EdgeNode/internal/utils/testutils"
 	"github.com/iwind/TeaGo/assert"
 )
 

@@ -5,7 +5,7 @@ package metrics
 import (
 	"time"
 
-	"github.com/TeaOSLab/EdgeCommon/pkg/serverconfigs"
+	"git.ovh.im/yeqing/EdgeCommon/pkg/serverconfigs"
 )
 
 type Task interface {

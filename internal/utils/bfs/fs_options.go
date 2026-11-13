@@ -5,8 +5,8 @@ package bfs
 import (
 	"time"
 
-	fsutils "github.com/TeaOSLab/EdgeNode/internal/utils/fs"
-	memutils "github.com/TeaOSLab/EdgeNode/internal/utils/mem"
+	fsutils "git.ovh.im/yeqing/EdgeNode/internal/utils/fs"
+	memutils "git.ovh.im/yeqing/EdgeNode/internal/utils/mem"
 )
 
 type FSOptions struct {

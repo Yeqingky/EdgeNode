@@ -15,8 +15,8 @@ import (
 	"strings"
 	"unsafe"
 
-	"github.com/TeaOSLab/EdgeNode/internal/utils/fasttime"
-	"github.com/TeaOSLab/EdgeNode/internal/waf/utils"
+	"git.ovh.im/yeqing/EdgeNode/internal/utils/fasttime"
+	"git.ovh.im/yeqing/EdgeNode/internal/waf/utils"
 	"github.com/cespare/xxhash/v2"
 )
 

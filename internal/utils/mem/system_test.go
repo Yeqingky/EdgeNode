@@ -5,7 +5,7 @@ package memutils_test
 import (
 	"testing"
 
-	"github.com/TeaOSLab/EdgeNode/internal/utils/mem"
+	"git.ovh.im/yeqing/EdgeNode/internal/utils/mem"
 )
 
 func TestSystemMemoryGB(t *testing.T) {

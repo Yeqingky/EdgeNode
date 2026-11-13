@@ -5,7 +5,7 @@ package compressions
 import (
 	"io"
 
-	teaconst "github.com/TeaOSLab/EdgeNode/internal/const"
+	teaconst "git.ovh.im/yeqing/EdgeNode/internal/const"
 )
 
 var sharedZSTDWriterPool *WriterPool

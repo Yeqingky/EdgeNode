@@ -5,7 +5,7 @@ package compressions_test
 import (
 	"testing"
 
-	"github.com/TeaOSLab/EdgeNode/internal/compressions"
+	"git.ovh.im/yeqing/EdgeNode/internal/compressions"
 	"github.com/iwind/TeaGo/assert"
 )
 

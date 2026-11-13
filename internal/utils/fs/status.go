@@ -7,8 +7,8 @@ import (
 	"os"
 	"time"
 
-	teaconst "github.com/TeaOSLab/EdgeNode/internal/const"
-	"github.com/TeaOSLab/EdgeNode/internal/utils/goman"
+	teaconst "git.ovh.im/yeqing/EdgeNode/internal/const"
+	"git.ovh.im/yeqing/EdgeNode/internal/utils/goman"
 	"github.com/iwind/TeaGo/Tea"
 	"github.com/shirou/gopsutil/v3/load"
 )

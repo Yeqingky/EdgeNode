@@ -3,7 +3,7 @@
 
 package nodes
 
-import "github.com/TeaOSLab/EdgeNode/internal/rpc"
+import "git.ovh.im/yeqing/EdgeNode/internal/rpc"
 
 func (this *Node) execScriptsChangedTask() error {
 	// stub

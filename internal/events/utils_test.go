@@ -3,7 +3,7 @@ package events_test
 import (
 	"testing"
 
-	"github.com/TeaOSLab/EdgeNode/internal/events"
+	"git.ovh.im/yeqing/EdgeNode/internal/events"
 )
 
 func TestOn(t *testing.T) {

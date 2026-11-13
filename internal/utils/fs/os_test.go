@@ -6,7 +6,7 @@ import (
 	"os"
 	"testing"
 
-	fsutils "github.com/TeaOSLab/EdgeNode/internal/utils/fs"
+	fsutils "git.ovh.im/yeqing/EdgeNode/internal/utils/fs"
 	"github.com/iwind/TeaGo/assert"
 )
 

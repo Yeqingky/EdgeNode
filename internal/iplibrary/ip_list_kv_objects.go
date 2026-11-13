@@ -7,7 +7,7 @@ import (
 	"errors"
 	"math"
 
-	"github.com/TeaOSLab/EdgeCommon/pkg/rpc/pb"
+	"git.ovh.im/yeqing/EdgeCommon/pkg/rpc/pb"
 	"google.golang.org/protobuf/proto"
 )
 

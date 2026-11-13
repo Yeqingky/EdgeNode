@@ -5,8 +5,8 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/TeaOSLab/EdgeNode/internal/remotelogs"
-	"github.com/TeaOSLab/EdgeNode/internal/utils"
+	"git.ovh.im/yeqing/EdgeNode/internal/remotelogs"
+	"git.ovh.im/yeqing/EdgeNode/internal/utils"
 	"github.com/iwind/TeaGo/logs"
 )
 

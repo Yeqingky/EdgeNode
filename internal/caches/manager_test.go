@@ -3,9 +3,9 @@ package caches_test
 import (
 	"testing"
 
-	"github.com/TeaOSLab/EdgeCommon/pkg/serverconfigs"
-	"github.com/TeaOSLab/EdgeCommon/pkg/serverconfigs/shared"
-	"github.com/TeaOSLab/EdgeNode/internal/caches"
+	"git.ovh.im/yeqing/EdgeCommon/pkg/serverconfigs"
+	"git.ovh.im/yeqing/EdgeCommon/pkg/serverconfigs/shared"
+	"git.ovh.im/yeqing/EdgeNode/internal/caches"
 	"github.com/iwind/TeaGo/Tea"
 )
 

@@ -5,7 +5,7 @@ package rangeutils_test
 import (
 	"testing"
 
-	rangeutils "github.com/TeaOSLab/EdgeNode/internal/utils/ranges"
+	rangeutils "git.ovh.im/yeqing/EdgeNode/internal/utils/ranges"
 	"github.com/iwind/TeaGo/assert"
 )
 

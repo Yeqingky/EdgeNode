@@ -8,7 +8,7 @@ import (
 	"testing"
 	"time"
 
-	syncutils "github.com/TeaOSLab/EdgeNode/internal/utils/sync"
+	syncutils "git.ovh.im/yeqing/EdgeNode/internal/utils/sync"
 )
 
 func TestNewRWMutex(t *testing.T) {

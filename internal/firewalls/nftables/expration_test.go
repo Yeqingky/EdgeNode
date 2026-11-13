@@ -7,7 +7,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/TeaOSLab/EdgeNode/internal/firewalls/nftables"
+	"git.ovh.im/yeqing/EdgeNode/internal/firewalls/nftables"
 	"github.com/iwind/TeaGo/rands"
 	"github.com/iwind/TeaGo/types"
 )

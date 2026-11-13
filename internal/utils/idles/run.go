@@ -10,9 +10,9 @@ import (
 	"sort"
 	"time"
 
-	teaconst "github.com/TeaOSLab/EdgeNode/internal/const"
-	fsutils "github.com/TeaOSLab/EdgeNode/internal/utils/fs"
-	"github.com/TeaOSLab/EdgeNode/internal/utils/goman"
+	teaconst "git.ovh.im/yeqing/EdgeNode/internal/const"
+	fsutils "git.ovh.im/yeqing/EdgeNode/internal/utils/fs"
+	"git.ovh.im/yeqing/EdgeNode/internal/utils/goman"
 	"github.com/iwind/TeaGo/Tea"
 	"github.com/shirou/gopsutil/v3/load"
 )

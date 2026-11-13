@@ -8,13 +8,13 @@ import (
 	"runtime"
 	"time"
 
-	"github.com/TeaOSLab/EdgeCommon/pkg/nodeconfigs"
-	teaconst "github.com/TeaOSLab/EdgeNode/internal/const"
-	"github.com/TeaOSLab/EdgeNode/internal/events"
-	"github.com/TeaOSLab/EdgeNode/internal/remotelogs"
-	"github.com/TeaOSLab/EdgeNode/internal/utils"
-	executils "github.com/TeaOSLab/EdgeNode/internal/utils/exec"
-	"github.com/TeaOSLab/EdgeNode/internal/utils/goman"
+	"git.ovh.im/yeqing/EdgeCommon/pkg/nodeconfigs"
+	teaconst "git.ovh.im/yeqing/EdgeNode/internal/const"
+	"git.ovh.im/yeqing/EdgeNode/internal/events"
+	"git.ovh.im/yeqing/EdgeNode/internal/remotelogs"
+	"git.ovh.im/yeqing/EdgeNode/internal/utils"
+	executils "git.ovh.im/yeqing/EdgeNode/internal/utils/exec"
+	"git.ovh.im/yeqing/EdgeNode/internal/utils/goman"
 	"github.com/iwind/TeaGo/maps"
 )
 

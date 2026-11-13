@@ -6,7 +6,7 @@ import (
 	"net/url"
 	"testing"
 
-	"github.com/TeaOSLab/EdgeNode/internal/utils/dbs"
+	"git.ovh.im/yeqing/EdgeNode/internal/utils/dbs"
 )
 
 func TestParseDSN(t *testing.T) {

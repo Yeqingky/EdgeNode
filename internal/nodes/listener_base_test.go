@@ -7,8 +7,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/TeaOSLab/EdgeCommon/pkg/nodeconfigs"
-	"github.com/TeaOSLab/EdgeCommon/pkg/serverconfigs"
+	"git.ovh.im/yeqing/EdgeCommon/pkg/nodeconfigs"
+	"git.ovh.im/yeqing/EdgeCommon/pkg/serverconfigs"
 	"github.com/iwind/TeaGo/types"
 )
 

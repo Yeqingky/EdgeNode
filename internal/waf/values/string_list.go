@@ -5,7 +5,7 @@ package values
 import (
 	"strings"
 
-	"github.com/TeaOSLab/EdgeNode/internal/utils/zero"
+	"git.ovh.im/yeqing/EdgeNode/internal/utils/zero"
 )
 
 type StringList struct {

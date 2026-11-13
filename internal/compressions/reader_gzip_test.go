@@ -8,7 +8,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/TeaOSLab/EdgeNode/internal/compressions"
+	"git.ovh.im/yeqing/EdgeNode/internal/compressions"
 	"github.com/iwind/TeaGo/rands"
 	"github.com/iwind/TeaGo/types"
 )

@@ -7,8 +7,8 @@ import (
 	"runtime"
 	"testing"
 
-	"github.com/TeaOSLab/EdgeNode/internal/waf"
-	"github.com/TeaOSLab/EdgeNode/internal/waf/requests"
+	"git.ovh.im/yeqing/EdgeNode/internal/waf"
+	"git.ovh.im/yeqing/EdgeNode/internal/waf/requests"
 	"github.com/cespare/xxhash/v2"
 	"github.com/iwind/TeaGo/assert"
 	"github.com/iwind/TeaGo/maps"

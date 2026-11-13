@@ -6,12 +6,12 @@ import (
 	"sync"
 	"time"
 
-	"github.com/TeaOSLab/EdgeCommon/pkg/serverconfigs"
-	teaconst "github.com/TeaOSLab/EdgeNode/internal/const"
-	"github.com/TeaOSLab/EdgeNode/internal/events"
-	"github.com/TeaOSLab/EdgeNode/internal/remotelogs"
-	"github.com/TeaOSLab/EdgeNode/internal/utils/goman"
-	"github.com/TeaOSLab/EdgeNode/internal/utils/trackers"
+	"git.ovh.im/yeqing/EdgeCommon/pkg/serverconfigs"
+	teaconst "git.ovh.im/yeqing/EdgeNode/internal/const"
+	"git.ovh.im/yeqing/EdgeNode/internal/events"
+	"git.ovh.im/yeqing/EdgeNode/internal/remotelogs"
+	"git.ovh.im/yeqing/EdgeNode/internal/utils/goman"
+	"git.ovh.im/yeqing/EdgeNode/internal/utils/trackers"
 	"github.com/iwind/TeaGo/Tea"
 )
 

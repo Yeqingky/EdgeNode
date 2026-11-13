@@ -1,8 +1,8 @@
 package iplibrary
 
 import (
-	"github.com/TeaOSLab/EdgeCommon/pkg/iputils"
-	"github.com/TeaOSLab/EdgeNode/internal/utils/fasttime"
+	"git.ovh.im/yeqing/EdgeCommon/pkg/iputils"
+	"git.ovh.im/yeqing/EdgeNode/internal/utils/fasttime"
 )
 
 type IPItemType = string

@@ -7,7 +7,7 @@ import (
 	"errors"
 	"fmt"
 
-	byteutils "github.com/TeaOSLab/EdgeNode/internal/utils/byte"
+	byteutils "git.ovh.im/yeqing/EdgeNode/internal/utils/byte"
 )
 
 type DataType = int

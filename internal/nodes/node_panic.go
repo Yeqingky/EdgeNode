@@ -9,7 +9,7 @@ import (
 	"os"
 	"syscall"
 
-	"github.com/TeaOSLab/EdgeNode/internal/remotelogs"
+	"git.ovh.im/yeqing/EdgeNode/internal/remotelogs"
 	"github.com/iwind/TeaGo/Tea"
 	"github.com/iwind/TeaGo/logs"
 )

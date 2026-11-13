@@ -10,9 +10,9 @@ import (
 	"encoding/json"
 	"errors"
 
-	"github.com/TeaOSLab/EdgeCommon/pkg/nodeconfigs"
-	teaconst "github.com/TeaOSLab/EdgeNode/internal/const"
-	"github.com/TeaOSLab/EdgeNode/internal/events"
+	"git.ovh.im/yeqing/EdgeCommon/pkg/nodeconfigs"
+	teaconst "git.ovh.im/yeqing/EdgeNode/internal/const"
+	"git.ovh.im/yeqing/EdgeNode/internal/events"
 	"github.com/iwind/TeaGo/logs"
 	"github.com/iwind/TeaGo/maps"
 	"github.com/iwind/TeaGo/rands"

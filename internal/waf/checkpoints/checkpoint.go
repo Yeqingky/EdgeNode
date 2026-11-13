@@ -3,7 +3,7 @@ package checkpoints
 import (
 	"net/http"
 
-	"github.com/TeaOSLab/EdgeNode/internal/waf/requests"
+	"git.ovh.im/yeqing/EdgeNode/internal/waf/requests"
 )
 
 type Checkpoint struct {

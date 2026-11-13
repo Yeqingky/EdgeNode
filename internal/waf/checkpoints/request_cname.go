@@ -1,8 +1,8 @@
 package checkpoints
 
 import (
-	"github.com/TeaOSLab/EdgeNode/internal/waf/requests"
-	"github.com/TeaOSLab/EdgeNode/internal/waf/utils"
+	"git.ovh.im/yeqing/EdgeNode/internal/waf/requests"
+	"git.ovh.im/yeqing/EdgeNode/internal/waf/utils"
 	"github.com/iwind/TeaGo/maps"
 )
 

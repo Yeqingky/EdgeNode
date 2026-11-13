@@ -5,7 +5,7 @@ package expires_test
 import (
 	"testing"
 
-	"github.com/TeaOSLab/EdgeNode/internal/utils/expires"
+	"git.ovh.im/yeqing/EdgeNode/internal/utils/expires"
 	"github.com/iwind/TeaGo/assert"
 	"github.com/iwind/TeaGo/logs"
 )

@@ -6,7 +6,7 @@ import (
 	"net/http"
 	"testing"
 
-	"github.com/TeaOSLab/EdgeNode/internal/waf/requests"
+	"git.ovh.im/yeqing/EdgeNode/internal/waf/requests"
 )
 
 func TestResponseBodyCheckpoint_ResponseValue(t *testing.T) {

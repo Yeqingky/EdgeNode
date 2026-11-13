@@ -6,7 +6,7 @@ import (
 	"os"
 	"strings"
 
-	"github.com/TeaOSLab/EdgeCommon/pkg/nodeconfigs"
+	"git.ovh.im/yeqing/EdgeCommon/pkg/nodeconfigs"
 )
 
 var (

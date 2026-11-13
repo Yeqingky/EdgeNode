@@ -12,12 +12,12 @@ import (
 	"strings"
 	"time"
 
-	teaconst "github.com/TeaOSLab/EdgeNode/internal/const"
-	"github.com/TeaOSLab/EdgeNode/internal/remotelogs"
-	"github.com/TeaOSLab/EdgeNode/internal/utils/dbs"
-	"github.com/TeaOSLab/EdgeNode/internal/utils/fasttime"
-	fsutils "github.com/TeaOSLab/EdgeNode/internal/utils/fs"
-	memutils "github.com/TeaOSLab/EdgeNode/internal/utils/mem"
+	teaconst "git.ovh.im/yeqing/EdgeNode/internal/const"
+	"git.ovh.im/yeqing/EdgeNode/internal/remotelogs"
+	"git.ovh.im/yeqing/EdgeNode/internal/utils/dbs"
+	"git.ovh.im/yeqing/EdgeNode/internal/utils/fasttime"
+	fsutils "git.ovh.im/yeqing/EdgeNode/internal/utils/fs"
+	memutils "git.ovh.im/yeqing/EdgeNode/internal/utils/mem"
 	"github.com/iwind/TeaGo/logs"
 	"github.com/iwind/TeaGo/types"
 )

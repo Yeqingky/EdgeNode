@@ -5,7 +5,7 @@ package agents
 import (
 	"sync"
 
-	"github.com/TeaOSLab/EdgeNode/internal/utils/zero"
+	"git.ovh.im/yeqing/EdgeNode/internal/utils/zero"
 )
 
 type IPCacheMap struct {

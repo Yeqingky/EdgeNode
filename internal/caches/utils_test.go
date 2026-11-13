@@ -7,7 +7,7 @@ import (
 	"strconv"
 	"testing"
 
-	"github.com/TeaOSLab/EdgeNode/internal/caches"
+	"git.ovh.im/yeqing/EdgeNode/internal/caches"
 	"github.com/cespare/xxhash/v2"
 	"github.com/iwind/TeaGo/types"
 )

@@ -6,7 +6,7 @@ import (
 	"runtime"
 	"testing"
 
-	"github.com/TeaOSLab/EdgeNode/internal/utils/bfs"
+	"git.ovh.im/yeqing/EdgeNode/internal/utils/bfs"
 )
 
 func TestNewLazyFileHeaderFromData(t *testing.T) {

@@ -6,8 +6,8 @@ import (
 	"context"
 	"testing"
 
-	"github.com/TeaOSLab/EdgeNode/internal/utils/ratelimit"
-	"github.com/TeaOSLab/EdgeNode/internal/utils/testutils"
+	"git.ovh.im/yeqing/EdgeNode/internal/utils/ratelimit"
+	"git.ovh.im/yeqing/EdgeNode/internal/utils/testutils"
 )
 
 func TestBandwidth(t *testing.T) {

@@ -10,14 +10,14 @@ import (
 	"sync"
 	"time"
 
-	"github.com/TeaOSLab/EdgeNode/internal/remotelogs"
-	"github.com/TeaOSLab/EdgeNode/internal/utils/dbs"
-	"github.com/TeaOSLab/EdgeNode/internal/utils/fasttime"
-	"github.com/TeaOSLab/EdgeNode/internal/utils/fnv"
-	fsutils "github.com/TeaOSLab/EdgeNode/internal/utils/fs"
-	"github.com/TeaOSLab/EdgeNode/internal/utils/goman"
-	"github.com/TeaOSLab/EdgeNode/internal/utils/ttlcache"
-	"github.com/TeaOSLab/EdgeNode/internal/utils/zero"
+	"git.ovh.im/yeqing/EdgeNode/internal/remotelogs"
+	"git.ovh.im/yeqing/EdgeNode/internal/utils/dbs"
+	"git.ovh.im/yeqing/EdgeNode/internal/utils/fasttime"
+	"git.ovh.im/yeqing/EdgeNode/internal/utils/fnv"
+	fsutils "git.ovh.im/yeqing/EdgeNode/internal/utils/fs"
+	"git.ovh.im/yeqing/EdgeNode/internal/utils/goman"
+	"git.ovh.im/yeqing/EdgeNode/internal/utils/ttlcache"
+	"git.ovh.im/yeqing/EdgeNode/internal/utils/zero"
 	"github.com/iwind/TeaGo/types"
 )
 

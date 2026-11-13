@@ -7,7 +7,7 @@ import (
 	"fmt"
 	"os/exec"
 
-	teaconst "github.com/TeaOSLab/EdgeNode/internal/const"
+	teaconst "git.ovh.im/yeqing/EdgeNode/internal/const"
 	"github.com/iwind/TeaGo/Tea"
 	"golang.org/x/sys/windows"
 	"golang.org/x/sys/windows/svc"

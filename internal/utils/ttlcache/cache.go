@@ -3,8 +3,8 @@ package ttlcache
 import (
 	"runtime"
 
-	"github.com/TeaOSLab/EdgeNode/internal/utils/fasttime"
-	memutils "github.com/TeaOSLab/EdgeNode/internal/utils/mem"
+	"git.ovh.im/yeqing/EdgeNode/internal/utils/fasttime"
+	memutils "git.ovh.im/yeqing/EdgeNode/internal/utils/mem"
 )
 
 var SharedInt64Cache = NewBigCache[int64]()

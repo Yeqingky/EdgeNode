@@ -6,10 +6,10 @@ import (
 	"strconv"
 	"sync"
 
-	"github.com/TeaOSLab/EdgeCommon/pkg/serverconfigs"
-	teaconst "github.com/TeaOSLab/EdgeNode/internal/const"
-	"github.com/TeaOSLab/EdgeNode/internal/events"
-	"github.com/TeaOSLab/EdgeNode/internal/remotelogs"
+	"git.ovh.im/yeqing/EdgeCommon/pkg/serverconfigs"
+	teaconst "git.ovh.im/yeqing/EdgeNode/internal/const"
+	"git.ovh.im/yeqing/EdgeNode/internal/events"
+	"git.ovh.im/yeqing/EdgeNode/internal/remotelogs"
 )
 
 var SharedManager = NewManager()

@@ -5,7 +5,7 @@ import (
 	"reflect"
 	"sync/atomic"
 
-	"github.com/TeaOSLab/EdgeNode/internal/remotelogs"
+	"git.ovh.im/yeqing/EdgeNode/internal/remotelogs"
 	"github.com/iwind/TeaGo/maps"
 )
 

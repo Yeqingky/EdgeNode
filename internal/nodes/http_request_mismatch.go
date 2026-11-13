@@ -6,12 +6,12 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/TeaOSLab/EdgeCommon/pkg/nodeutils"
-	"github.com/TeaOSLab/EdgeCommon/pkg/serverconfigs"
-	"github.com/TeaOSLab/EdgeCommon/pkg/serverconfigs/firewallconfigs"
-	"github.com/TeaOSLab/EdgeNode/internal/utils"
-	"github.com/TeaOSLab/EdgeNode/internal/utils/ttlcache"
-	"github.com/TeaOSLab/EdgeNode/internal/waf"
+	"git.ovh.im/yeqing/EdgeCommon/pkg/nodeutils"
+	"git.ovh.im/yeqing/EdgeCommon/pkg/serverconfigs"
+	"git.ovh.im/yeqing/EdgeCommon/pkg/serverconfigs/firewallconfigs"
+	"git.ovh.im/yeqing/EdgeNode/internal/utils"
+	"git.ovh.im/yeqing/EdgeNode/internal/utils/ttlcache"
+	"git.ovh.im/yeqing/EdgeNode/internal/waf"
 	"github.com/iwind/TeaGo/types"
 )
 

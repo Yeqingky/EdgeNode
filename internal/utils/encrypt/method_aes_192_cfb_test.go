@@ -5,7 +5,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/TeaOSLab/EdgeNode/internal/utils/encrypt"
+	"git.ovh.im/yeqing/EdgeNode/internal/utils/encrypt"
 )
 
 func TestAES192CFBMethod_Encrypt(t *testing.T) {

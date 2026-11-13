@@ -1,7 +1,7 @@
 package caches
 
 import (
-	"github.com/TeaOSLab/EdgeCommon/pkg/serverconfigs"
+	"git.ovh.im/yeqing/EdgeCommon/pkg/serverconfigs"
 )
 
 // StorageInterface 缓存存储接口

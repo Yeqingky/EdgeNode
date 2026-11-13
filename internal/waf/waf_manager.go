@@ -4,9 +4,9 @@ import (
 	"strconv"
 	"sync"
 
-	"github.com/TeaOSLab/EdgeCommon/pkg/serverconfigs/firewallconfigs"
-	"github.com/TeaOSLab/EdgeNode/internal/errors"
-	"github.com/TeaOSLab/EdgeNode/internal/remotelogs"
+	"git.ovh.im/yeqing/EdgeCommon/pkg/serverconfigs/firewallconfigs"
+	"git.ovh.im/yeqing/EdgeNode/internal/errors"
+	"git.ovh.im/yeqing/EdgeNode/internal/remotelogs"
 )
 
 var SharedWAFManager = NewWAFManager()

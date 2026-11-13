@@ -5,8 +5,8 @@ package waf
 import (
 	"net/url"
 
-	"github.com/TeaOSLab/EdgeNode/internal/utils"
-	"github.com/TeaOSLab/EdgeNode/internal/utils/fasttime"
+	"git.ovh.im/yeqing/EdgeNode/internal/utils"
+	"git.ovh.im/yeqing/EdgeNode/internal/utils/fasttime"
 )
 
 type InfoArg struct {

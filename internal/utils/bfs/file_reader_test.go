@@ -9,7 +9,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/TeaOSLab/EdgeNode/internal/utils/bfs"
+	"git.ovh.im/yeqing/EdgeNode/internal/utils/bfs"
 )
 
 func TestFileReader_Read_SmallBuf(t *testing.T) {

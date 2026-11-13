@@ -5,12 +5,12 @@ package caches
 import (
 	"sync"
 
-	teaconst "github.com/TeaOSLab/EdgeNode/internal/const"
-	"github.com/TeaOSLab/EdgeNode/internal/remotelogs"
-	"github.com/TeaOSLab/EdgeNode/internal/utils/fnv"
-	fsutils "github.com/TeaOSLab/EdgeNode/internal/utils/fs"
-	"github.com/TeaOSLab/EdgeNode/internal/utils/goman"
-	memutils "github.com/TeaOSLab/EdgeNode/internal/utils/mem"
+	teaconst "git.ovh.im/yeqing/EdgeNode/internal/const"
+	"git.ovh.im/yeqing/EdgeNode/internal/remotelogs"
+	"git.ovh.im/yeqing/EdgeNode/internal/utils/fnv"
+	fsutils "git.ovh.im/yeqing/EdgeNode/internal/utils/fs"
+	"git.ovh.im/yeqing/EdgeNode/internal/utils/goman"
+	memutils "git.ovh.im/yeqing/EdgeNode/internal/utils/mem"
 )
 
 var SharedPartialRangesQueue = NewPartialRangesQueue()

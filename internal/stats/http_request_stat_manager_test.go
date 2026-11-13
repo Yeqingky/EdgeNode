@@ -3,7 +3,7 @@ package stats
 import (
 	"testing"
 
-	iplib "github.com/TeaOSLab/EdgeCommon/pkg/iplibrary"
+	iplib "git.ovh.im/yeqing/EdgeCommon/pkg/iplibrary"
 	_ "github.com/iwind/TeaGo/bootstrap"
 	"github.com/iwind/TeaGo/logs"
 )

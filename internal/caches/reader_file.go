@@ -6,8 +6,8 @@ import (
 	"io"
 	"os"
 
-	fsutils "github.com/TeaOSLab/EdgeNode/internal/utils/fs"
-	rangeutils "github.com/TeaOSLab/EdgeNode/internal/utils/ranges"
+	fsutils "git.ovh.im/yeqing/EdgeNode/internal/utils/fs"
+	rangeutils "git.ovh.im/yeqing/EdgeNode/internal/utils/ranges"
 	"github.com/iwind/TeaGo/types"
 )
 

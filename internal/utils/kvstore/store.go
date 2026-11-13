@@ -11,10 +11,10 @@ import (
 	"strings"
 	"sync"
 
-	"github.com/TeaOSLab/EdgeNode/internal/events"
-	"github.com/TeaOSLab/EdgeNode/internal/remotelogs"
-	fsutils "github.com/TeaOSLab/EdgeNode/internal/utils/fs"
-	memutils "github.com/TeaOSLab/EdgeNode/internal/utils/mem"
+	"git.ovh.im/yeqing/EdgeNode/internal/events"
+	"git.ovh.im/yeqing/EdgeNode/internal/remotelogs"
+	fsutils "git.ovh.im/yeqing/EdgeNode/internal/utils/fs"
+	memutils "git.ovh.im/yeqing/EdgeNode/internal/utils/mem"
 	"github.com/cockroachdb/pebble"
 	"github.com/iwind/TeaGo/Tea"
 )

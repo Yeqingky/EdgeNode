@@ -5,7 +5,7 @@ package fsutils_test
 import (
 	"testing"
 
-	"github.com/TeaOSLab/EdgeNode/internal/utils/fs"
+	"git.ovh.im/yeqing/EdgeNode/internal/utils/fs"
 )
 
 func TestLocker_Lock(t *testing.T) {
