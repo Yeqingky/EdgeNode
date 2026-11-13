@@ -122,8 +122,8 @@ func (this *TCPListener) handleConn(server *serverconfigs.ServerConfig, conn net
 		}
 		_ = conn.Close()
 
-		// TODO 使用系统防火墙drop当前端口的数据包一段时间（1分钟）
-		// 不能使用阻止IP的方法，因为边缘节点只上有可能还有别的代理服务
+		// TODO 使用系统防火墙drop当前端口的数据包一段时间(1分钟)
+		// 不能使用阻止IP的方法,因为边缘节点只上有可能还有别的代理服务
 
 		return nil
 	}

@@ -40,7 +40,7 @@ func NewValueQueue() *ValueQueue {
 
 // Start 启动队列
 func (this *ValueQueue) Start() {
-	// 这里单次循环就行，因为Loop里已经使用了Range通道
+	// 这里单次循环就行,因为Loop里已经使用了Range通道
 	err := this.Loop()
 	if err != nil {
 		remotelogs.ErrorObject("MONITOR_QUEUE", err)

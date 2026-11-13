@@ -15,7 +15,7 @@ var (
 )
 
 // CapacityError 容量错误
-// 独立出来是为了可以在有些场合下可以忽略，防止产生没必要的错误提示数量太多
+// 独立出来是为了可以在有些场合下可以忽略,防止产生没必要的错误提示数量太多
 type CapacityError struct {
 	err string
 }

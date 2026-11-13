@@ -77,7 +77,7 @@ func NewIPList(listType IPListType) *IPList {
 	list.expireList = e
 
 	e.OnGC(func(itemId uint64) {
-		list.remove(itemId) // TODO 使用异步，防止阻塞GC
+		list.remove(itemId) // TODO 使用异步,防止阻塞GC
 	})
 
 	return list
@@ -178,7 +178,7 @@ func (this *IPList) Contains(ipType string, scope firewallconfigs.FirewallScope,
 	return ok
 }
 
-// ContainsExpires 判断是否有某个IP，并返回过期时间
+// ContainsExpires 判断是否有某个IP,并返回过期时间
 func (this *IPList) ContainsExpires(ipType string, scope firewallconfigs.FirewallScope, serverId int64, ip string) (expiresAt int64, ok bool) {
 	switch scope {
 	case firewallconfigs.FirewallScopeGlobal:

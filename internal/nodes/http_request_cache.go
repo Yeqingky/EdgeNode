@@ -171,7 +171,7 @@ func (this *HTTPRequest) doCacheRead(useStale bool) (shouldStop bool) {
 	}
 	this.writer.cacheStorage = storage
 
-	// 如果正在预热，则不读取缓存，等待下一个步骤重新生成
+	// 如果正在预热,则不读取缓存,等待下一个步骤重新生成
 	if (strings.HasPrefix(this.RawReq.RemoteAddr, "127.") || strings.HasPrefix(this.RawReq.RemoteAddr, "[::1]")) && this.RawReq.Header.Get("X-Edge-Cache-Action") == "fetch" {
 		return
 	}
@@ -316,7 +316,7 @@ func (this *HTTPRequest) doCacheRead(useStale bool) (shouldStop bool) {
 
 		if err != nil {
 			if errors.Is(err, caches.ErrNotFound) {
-				// 移除请求中的 If-None-Match 和 If-Modified-Since，防止源站返回304而无法缓存
+				// 移除请求中的 If-None-Match 和 If-Modified-Since,防止源站返回304而无法缓存
 				if this.reverseProxy != nil {
 					this.RawReq.Header.Del("If-None-Match")
 					this.RawReq.Header.Del("If-Modified-Since")
@@ -743,7 +743,7 @@ func (this *HTTPRequest) tryPartialReader(storage caches.StorageInterface, key s
 	}
 
 	// 检查范围
-	// 这里 **切记不要** 为末尾位置指定一个中间值，因为部分软件客户端不支持
+	// 这里 **切记不要** 为末尾位置指定一个中间值,因为部分软件客户端不支持
 	for index, r := range ranges {
 		r1, ok := r.Convert(partialReader.MaxLength())
 		if !ok {

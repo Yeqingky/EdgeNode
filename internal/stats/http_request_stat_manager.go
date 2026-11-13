@@ -35,13 +35,13 @@ type StatItem struct {
 var SharedHTTPRequestStatManager = NewHTTPRequestStatManager()
 
 // HTTPRequestStatManager HTTP请求相关的统计
-// 这里的统计是一个辅助统计，注意不要因为统计而影响服务工作性能
+// 这里的统计是一个辅助统计,注意不要因为统计而影响服务工作性能
 type HTTPRequestStatManager struct {
 	ipChan                chan string
 	userAgentChan         chan string
 	firewallRuleGroupChan chan string
 
-	cityMap     map[string]*StatItem // serverId@country@province@city => *StatItem ，不需要加锁，因为我们是使用channel依次执行的
+	cityMap     map[string]*StatItem // serverId@country@province@city => *StatItem ,不需要加锁,因为我们是使用channel依次执行的
 	providerMap map[string]int64     // serverId@provider => count
 	systemMap   map[string]int64     // serverId@system@version => count
 	browserMap  map[string]int64     // serverId@browser@version => count
@@ -96,7 +96,7 @@ func (this *HTTPRequestStatManager) Start() {
 
 	this.uploadTicker = time.NewTicker(30 * time.Minute)
 	if Tea.IsTesting() {
-		this.uploadTicker = time.NewTicker(10 * time.Second) // 在测试环境下缩短Ticker时间，以方便我们调试
+		this.uploadTicker = time.NewTicker(10 * time.Second) // 在测试环境下缩短Ticker时间,以方便我们调试
 	}
 	remotelogs.Println("HTTP_REQUEST_STAT_MANAGER", "start ...")
 	events.OnKey(events.EventQuit, this, func() {
@@ -166,7 +166,7 @@ func (this *HTTPRequestStatManager) AddRemoteAddr(serverId int64, remoteAddr str
 
 // AddUserAgent 添加UserAgent
 func (this *HTTPRequestStatManager) AddUserAgent(serverId int64, userAgent string, ip string) {
-	if len(userAgent) == 0 || strings.ContainsRune(userAgent, '@') /** 非常重要，防止后面组合字符串时出现异常 **/ {
+	if len(userAgent) == 0 || strings.ContainsRune(userAgent, '@') /** 非常重要,防止后面组合字符串时出现异常 **/ {
 		return
 	}
 
@@ -219,11 +219,11 @@ func (this *HTTPRequestStatManager) Loop() error {
 				stat, ok := this.cityMap[key]
 				if !ok {
 					// 检查数量
-					if this.serverCityCountMap[serverIdString] > 128 { // 限制单个服务的城市数量，防止数量过多
+					if this.serverCityCountMap[serverIdString] > 128 { // 限制单个服务的城市数量,防止数量过多
 						this.locker.Unlock()
 						return nil
 					}
-					this.serverCityCountMap[serverIdString]++ // 需要放在限制之后，因为使用的是int16
+					this.serverCityCountMap[serverIdString]++ // 需要放在限制之后,因为使用的是int16
 
 					stat = &StatItem{}
 					this.cityMap[key] = stat
@@ -263,7 +263,7 @@ func (this *HTTPRequestStatManager) Loop() error {
 			var systemKey = serverIdString + "@" + osInfo.Name + "@" + osInfo.Version
 			_, ok := this.systemMap[systemKey]
 			if !ok {
-				if this.serverSystemCountMap[serverIdString] < 128 { // 限制最大数据，防止攻击
+				if this.serverSystemCountMap[serverIdString] < 128 { // 限制最大数据,防止攻击
 					this.serverSystemCountMap[serverIdString]++
 					ok = true
 				}
@@ -285,7 +285,7 @@ func (this *HTTPRequestStatManager) Loop() error {
 			var browserKey = serverIdString + "@" + browser + "@" + browserVersion
 			_, ok := this.browserMap[browserKey]
 			if !ok {
-				if this.serverBrowserCountMap[serverIdString] < 256 { // 限制最大数据，防止攻击
+				if this.serverBrowserCountMap[serverIdString] < 256 { // 限制最大数据,防止攻击
 					this.serverBrowserCountMap[serverIdString]++
 					ok = true
 				}

@@ -44,7 +44,7 @@ func (this *Manager) init() {
 				this.locker.Unlock()
 			}
 		} else {
-			// 如果过去的时间比现在大，则从这一秒重新开始
+			// 如果过去的时间比现在大,则从这一秒重新开始
 			for i := currentTime; i <= currentTime; i++ {
 				this.locker.Lock()
 				for list := range this.listMap {

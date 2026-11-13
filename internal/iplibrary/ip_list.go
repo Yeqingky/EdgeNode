@@ -119,7 +119,7 @@ func (this *IPList) ContainsExpires(ipBytes []byte) (expiresAt int64, ok bool) {
 	return item.ExpiredAt, true
 }
 
-// ContainsIPStrings 是否包含一组IP中的任意一个，并返回匹配的第一个Item
+// ContainsIPStrings 是否包含一组IP中的任意一个,并返回匹配的第一个Item
 func (this *IPList) ContainsIPStrings(ipStrings []string) (item *IPItem, found bool) {
 	if this.isDeleted {
 		return
@@ -306,7 +306,7 @@ func (this *IPList) lookupIP(ipBytes []byte) *IPItem {
 }
 
 // 在不加锁的情况下删除某个Item
-// 将会被别的方法引用，切记不能加锁
+// 将会被别的方法引用,切记不能加锁
 func (this *IPList) deleteItem(itemId uint64) {
 	// 从buffer中删除
 	delete(this.bufferItemsMap, itemId)

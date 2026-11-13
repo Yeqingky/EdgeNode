@@ -140,7 +140,7 @@ func (this *JSCookieAction) increaseFails(req requests.Request, policyId int64, 
 	if maxFails <= 0 {
 		maxFails = 10 // 默认10次
 	} else if maxFails <= 5 {
-		maxFails = 5 // 不能小于3，防止意外刷新出现
+		maxFails = 5 // 不能小于3,防止意外刷新出现
 	}
 	if failBlockTimeout <= 0 {
 		failBlockTimeout = 1800 // 默认1800s

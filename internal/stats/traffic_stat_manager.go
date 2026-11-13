@@ -85,7 +85,7 @@ func (this *TrafficStatManager) Start() {
 	// 上传统计数据
 	var duration = 5 * time.Minute
 	if Tea.IsTesting() {
-		// 测试环境缩短上传时间，方便我们调试
+		// 测试环境缩短上传时间,方便我们调试
 		duration = 30 * time.Second
 	}
 	var ticker = time.NewTicker(duration)
@@ -223,7 +223,7 @@ func (this *TrafficStatManager) Upload() error {
 	const maxDomainsPerServer = 20
 	var pbDomainStats = []*pb.UploadServerDailyStatsRequest_DomainStat{}
 	for serverId, serverDomainMap := range domainMap {
-		// 如果超过单个服务最大值，则只取前N个
+		// 如果超过单个服务最大值,则只取前N个
 		var shouldTrim = len(serverDomainMap) > maxDomainsPerServer
 		var tempItems []*pb.UploadServerDailyStatsRequest_DomainStat
 

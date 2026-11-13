@@ -190,7 +190,7 @@ func (this *ClientConn) Write(b []byte) (n int, err error) {
 		// 统计当前服务带宽
 		if this.serverId > 0 {
 			// TODO 需要加入在serverId绑定之前的带宽
-			if !this.isNoStat || Tea.IsTesting() { // 环路不统计带宽，避免缓存预热等行为产生带宽
+			if !this.isNoStat || Tea.IsTesting() { // 环路不统计带宽,避免缓存预热等行为产生带宽
 				atomic.AddUint64(&teaconst.OutTrafficBytes, uint64(n))
 
 				var cost = time.Since(before).Seconds()
@@ -203,7 +203,7 @@ func (this *ClientConn) Write(b []byte) (n int, err error) {
 		}
 	}
 
-	// 如果是写入超时，则立即关闭连接
+	// 如果是写入超时,则立即关闭连接
 	if err != nil && os.IsTimeout(err) {
 		// TODO 考虑对多次慢连接的IP做出惩罚
 		conn, ok := this.rawConn.(LingerConn)
@@ -223,7 +223,7 @@ func (this *ClientConn) Close() error {
 	err := this.rawConn.Close()
 
 	// 单个服务并发数限制
-	// 不能加条件限制，因为服务配置随时有变化
+	// 不能加条件限制,因为服务配置随时有变化
 	sharedClientConnLimiter.Remove(this.rawConn.RemoteAddr().String())
 
 	// 从conn map中移除
@@ -245,7 +245,7 @@ func (this *ClientConn) SetDeadline(t time.Time) error {
 }
 
 func (this *ClientConn) SetReadDeadline(t time.Time) error {
-	// 如果开启了HTTP自动读超时选项，则自动控制超时时间
+	// 如果开启了HTTP自动读超时选项,则自动控制超时时间
 	if this.isHTTP && !this.isPersistent && this.autoReadTimeout {
 		this.isShortReading = false
 
@@ -301,7 +301,7 @@ func (this *ClientConn) increaseSYNFlood(synFloodConfig *firewallconfigs.SYNFloo
 			minAttempts = 5
 		}
 		if !this.isTLS {
-			// 非TLS，设置为两倍，防止误封
+			// 非TLS,设置为两倍,防止误封
 			minAttempts = 2 * minAttempts
 		}
 		if result >= types.Uint32(minAttempts) {
@@ -314,7 +314,7 @@ func (this *ClientConn) increaseSYNFlood(synFloodConfig *firewallconfigs.SYNFloo
 			_ = this.SetLinger(0)
 			_ = this.Close()
 
-			waf.SharedIPBlackList.RecordIP(waf.IPTypeAll, firewallconfigs.FirewallScopeGlobal, 0, ip, fasttime.Now().Unix()+int64(timeout), 0, true, 0, 0, "疑似SYN Flood攻击，当前1分钟"+types.String(result)+"次空连接")
+			waf.SharedIPBlackList.RecordIP(waf.IPTypeAll, firewallconfigs.FirewallScopeGlobal, 0, ip, fasttime.Now().Unix()+int64(timeout), 0, true, 0, 0, "疑似SYN Flood攻击,当前1分钟"+types.String(result)+"次空连接")
 		}
 	}
 }

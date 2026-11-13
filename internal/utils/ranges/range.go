@@ -45,7 +45,7 @@ func (this Range) Convert(total int64) (newRange Range, ok bool) {
 }
 
 // ComposeContentRangeHeader 组合Content-Range Header
-// totalSize 可能是一个数字，也可能是一个星号（*）
+// totalSize 可能是一个数字,也可能是一个星号(*)
 func (this Range) ComposeContentRangeHeader(totalSize string) string {
 	return "bytes " + strconv.FormatInt(this[0], 10) + "-" + strconv.FormatInt(this[1], 10) + "/" + totalSize
 }

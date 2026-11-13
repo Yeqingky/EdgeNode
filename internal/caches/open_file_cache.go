@@ -78,7 +78,7 @@ func (this *OpenFileCache) Get(filename string) *OpenFile {
 			this.count--
 			this.usedSize -= consumedSize
 
-			// pool如果为空，也不需要从列表中删除，避免put时需要重新创建
+			// pool如果为空,也不需要从列表中删除,避免put时需要重新创建
 
 			this.locker.Unlock()
 		}
@@ -98,7 +98,7 @@ func (this *OpenFileCache) Put(filename string, file *OpenFile) {
 	this.locker.Lock()
 	defer this.locker.Unlock()
 
-	// 如果超过当前容量，则关闭最早的
+	// 如果超过当前容量,则关闭最早的
 	if this.count >= this.maxCount || this.usedSize+file.size >= this.capacitySize {
 		this.consumeHead()
 		return
@@ -143,7 +143,7 @@ func (this *OpenFileCache) Close(filename string) {
 
 	this.locker.Unlock()
 
-	// 在locker之外，提升性能
+	// 在locker之外,提升性能
 	if ok {
 		pool.Close()
 	}

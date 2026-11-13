@@ -73,7 +73,7 @@ func (this *ActionManager) UpdateActions(actions []*firewallconfigs.FirewallActi
 				_ = oldInstance.Close()
 
 				// 重新创建
-				// 之所以要重新创建，是因为前后的动作类型可能有变化，完全重建可以避免不必要的麻烦
+				// 之所以要重新创建,是因为前后的动作类型可能有变化,完全重建可以避免不必要的麻烦
 				newInstance, err := this.createInstance(newAction)
 				if err != nil {
 					remotelogs.Error("IPLIBRARY/ACTION_MANAGER", "reload action "+strconv.FormatInt(newAction.Id, 10)+", type:"+newAction.Type+": "+err.Error())
@@ -163,7 +163,7 @@ func (this *ActionManager) createInstance(config *firewallconfigs.FirewallAction
 	}
 	err := instance.Init(config)
 	if err != nil {
-		// 如果是警告错误，我们只是提示
+		// 如果是警告错误,我们只是提示
 		if !IsFatalError(err) {
 			remotelogs.Error("IPLIBRARY/ACTION_MANAGER/CREATE_INSTANCE", "init '"+config.Type+"' failed: "+err.Error())
 		} else {

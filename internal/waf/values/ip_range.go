@@ -11,7 +11,7 @@ type IPRangeType = string
 const (
 	IPRangeTypeCIDR    IPRangeType = "cidr"     // CIDR
 	IPRangeTypeSingeIP IPRangeType = "singleIP" // 单个IP
-	IPRangeTypeRange   IPRangeType = "range"    // IP范围，IP1-IP2
+	IPRangeTypeRange   IPRangeType = "range"    // IP范围,IP1-IP2
 )
 
 type IPRange struct {

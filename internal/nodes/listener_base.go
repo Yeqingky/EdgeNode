@@ -98,7 +98,7 @@ func (this *BaseListener) matchSSL(domains []string) (*sslconfigs.SSLPolicy, *tl
 		globalServerConfig = sharedNodeConfig.GlobalServerConfig
 	}
 
-	// 如果域名为空，则取第一个
+	// 如果域名为空,则取第一个
 	// 通常域名为空是因为是直接通过IP访问的
 	if len(domains) == 0 {
 		if group.IsHTTPS() && globalServerConfig != nil && globalServerConfig.HTTPAll.MatchDomainStrictly {
@@ -137,8 +137,8 @@ func (this *BaseListener) matchSSL(domains []string) (*sslconfigs.SSLPolicy, *tl
 	}
 
 	if server == nil {
-		// 找不到或者此时的服务没有配置证书，需要搜索所有的Server，通过SSL证书内容中的DNSName匹配
-		// 此功能仅为了兼容以往版本（v1.0.4），不应该作为常态启用
+		// 找不到或者此时的服务没有配置证书,需要搜索所有的Server,通过SSL证书内容中的DNSName匹配
+		// 此功能仅为了兼容以往版本(v1.0.4),不应该作为常态启用
 		if globalServerConfig != nil && globalServerConfig.HTTPAll.MatchCertFromAllServers {
 			for _, searchingServer := range group.Servers() {
 				if searchingServer.SSLPolicy() == nil || !searchingServer.SSLPolicy().IsOn {
@@ -154,8 +154,8 @@ func (this *BaseListener) matchSSL(domains []string) (*sslconfigs.SSLPolicy, *tl
 		return nil, nil, errors.New("no server found for '" + firstDomain + "'")
 	}
 	if server.SSLPolicy() == nil || !server.SSLPolicy().IsOn {
-		// 找不到或者此时的服务没有配置证书，需要搜索所有的Server，通过SSL证书内容中的DNSName匹配
-		// 此功能仅为了兼容以往版本（v1.0.4），不应该作为常态启用
+		// 找不到或者此时的服务没有配置证书,需要搜索所有的Server,通过SSL证书内容中的DNSName匹配
+		// 此功能仅为了兼容以往版本(v1.0.4),不应该作为常态启用
 		if globalServerConfig != nil && globalServerConfig.HTTPAll.MatchCertFromAllServers {
 			for _, searchingServer := range group.Servers() {
 				if searchingServer.SSLPolicy() == nil || !searchingServer.SSLPolicy().IsOn {
@@ -216,7 +216,7 @@ func (this *BaseListener) findNamedServer(name string, exactly bool) (serverConf
 	}
 
 	if !exactly {
-		// 如果没有找到，则匹配到第一个
+		// 如果没有找到,则匹配到第一个
 		var group = this.Group
 		var currentServers = group.Servers()
 		var countServers = len(currentServers)
@@ -244,7 +244,7 @@ func (this *BaseListener) findNamedServerMatched(name string) (serverConfig *ser
 	// 是否严格匹配域名
 	var matchDomainStrictly = sharedNodeConfig.GlobalServerConfig != nil && sharedNodeConfig.GlobalServerConfig.HTTPAll.MatchDomainStrictly
 
-	// 如果只有一个server，则默认为这个
+	// 如果只有一个server,则默认为这个
 	var currentServers = group.Servers()
 	var countServers = len(currentServers)
 	if countServers == 1 && !matchDomainStrictly {

@@ -455,7 +455,7 @@ func (this *APIStream) handleChangeAPINode(message *pb.NodeStreamMessage) error 
 	this.replyOk(message.RequestId, "")
 
 	goman.New(func() {
-		// 延后生效，防止变更前的API无法读取到状态
+		// 延后生效,防止变更前的API无法读取到状态
 		time.Sleep(1 * time.Second)
 
 		rpcClient, err := rpc.SharedRPC()

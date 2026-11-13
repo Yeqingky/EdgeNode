@@ -137,7 +137,7 @@ func (this *SQLiteFileList) Exist(hash string) (bool, int64, error) {
 		return false, -1, nil
 	}
 
-	// 如果Hash列表里不存在，那么必然不存在
+	// 如果Hash列表里不存在,那么必然不存在
 	if !db.hashMap.Exist(hash) {
 		return false, -1, nil
 	}
@@ -201,7 +201,7 @@ func (this *SQLiteFileList) CleanPrefix(prefix string) error {
 	return nil
 }
 
-// CleanMatchKey 清理通配符匹配的缓存数据，类似于 https://*.example.com/hello
+// CleanMatchKey 清理通配符匹配的缓存数据,类似于 https://*.example.com/hello
 func (this *SQLiteFileList) CleanMatchKey(key string) error {
 	if len(key) == 0 {
 		return nil
@@ -221,7 +221,7 @@ func (this *SQLiteFileList) CleanMatchKey(key string) error {
 	return nil
 }
 
-// CleanMatchPrefix 清理通配符匹配的缓存数据，类似于 https://*.example.com/prefix/
+// CleanMatchPrefix 清理通配符匹配的缓存数据,类似于 https://*.example.com/prefix/
 func (this *SQLiteFileList) CleanMatchPrefix(prefix string) error {
 	if len(prefix) == 0 {
 		return nil
@@ -247,7 +247,7 @@ func (this *SQLiteFileList) Remove(hash string) error {
 }
 
 // Purge 清理过期的缓存
-// count 每次遍历的最大数量，控制此数字可以保证每次清理的时候不用花太多时间
+// count 每次遍历的最大数量,控制此数字可以保证每次清理的时候不用花太多时间
 // callback 每次发现过期key的调用
 func (this *SQLiteFileList) Purge(count int, callback func(hash string) error) (int, error) {
 	count /= CountFileDB
@@ -348,7 +348,7 @@ func (this *SQLiteFileList) Stat(check func(hash string) bool) (*Stat, error) {
 			return &Stat{}, nil
 		}
 
-		// 这里不设置过期时间、不使用 check 函数，目的是让查询更快速一些
+		// 这里不设置过期时间,不使用 check 函数,目的是让查询更快速一些
 		_ = check
 
 		var row = db.statStmt.QueryRow()
@@ -369,7 +369,7 @@ func (this *SQLiteFileList) Stat(check func(hash string) bool) (*Stat, error) {
 }
 
 // Count 总数量
-// 常用的方法，所以避免直接查询数据库
+// 常用的方法,所以避免直接查询数据库
 func (this *SQLiteFileList) Count() (int64, error) {
 	var total int64
 	for _, db := range this.dbList {
@@ -444,7 +444,7 @@ func (this *SQLiteFileList) remove(hash string, isDeleted bool) (notFound bool, 
 		return false, nil
 	}
 
-	// HashMap中不存在，则确定不存在
+	// HashMap中不存在,则确定不存在
 	if !db.hashMap.Exist(hash) {
 		return true, nil
 	}

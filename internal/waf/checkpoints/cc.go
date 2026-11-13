@@ -170,7 +170,7 @@ func (this *CCCheckpoint) Options() []OptionInterface {
 	// user field
 	{
 		option := NewFieldOption("用户识别字段", "userField")
-		option.Comment = "识别用户的唯一性字段，在用户读取来源不是IP时使用"
+		option.Comment = "识别用户的唯一性字段,在用户读取来源不是IP时使用"
 		options = append(options, option)
 	}
 
@@ -179,7 +179,7 @@ func (this *CCCheckpoint) Options() []OptionInterface {
 		option := NewFieldOption("字段读取位置", "userIndex")
 		option.Size = 5
 		option.MaxLength = 5
-		option.Comment = "读取用户识别字段的位置，从0开始，比如user12345的数字ID 12345的位置就是5，在用户读取来源不是IP时使用"
+		option.Comment = "读取用户识别字段的位置,从0开始,比如user12345的数字ID 12345的位置就是5,在用户读取来源不是IP时使用"
 		options = append(options, option)
 	}
 

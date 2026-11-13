@@ -9,7 +9,7 @@ import (
 )
 
 func (this *HTTPRequest) doACME() (shouldStop bool) {
-	// TODO 对请求进行校验，防止恶意攻击
+	// TODO 对请求进行校验,防止恶意攻击
 
 	var token = filepath.Base(this.RawReq.URL.Path)
 	if token == "acme-challenge" || len(token) <= 32 {

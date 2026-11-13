@@ -121,7 +121,7 @@ func (this *PartialFileReader) ContainsRange(r rangeutils.Range) (r2 rangeutils.
 		// 考虑可配置
 		const minSpan = 128 << 10
 
-		// 这里限制返回的最小缓存，防止因为返回的内容过小而导致请求过多
+		// 这里限制返回的最小缓存,防止因为返回的内容过小而导致请求过多
 		if r2.Length() < r.Length() && r2.Length() < minSpan {
 			ok = false
 		}

@@ -372,7 +372,7 @@ func (this *MemoryStorage) UpdatePolicy(newPolicy *serverconfigs.HTTPCachePolicy
 		this.initPurgeTicker()
 	}
 
-	// 如果是空的，则清空
+	// 如果是空的,则清空
 	if newPolicy.CapacityBytes() == 0 {
 		_ = this.CleanAll()
 	}
@@ -413,7 +413,7 @@ func (this *MemoryStorage) TotalMemorySize() int64 {
 	return atomic.LoadInt64(&this.usedSize)
 }
 
-// IgnoreKey 忽略某个Key，即不缓存某个Key
+// IgnoreKey 忽略某个Key,即不缓存某个Key
 func (this *MemoryStorage) IgnoreKey(key string, maxSize int64) {
 	this.ignoreKeys.Push(types.String(maxSize) + "$" + key)
 }
@@ -473,12 +473,12 @@ func (this *MemoryStorage) purgeLoop() {
 		if total > 0 {
 			var count = types.Int(math.Ceil(float64(total) * float64(lfuFreePercent*2) / 100))
 			if count > 0 {
-				// 限制单次清理的条数，防止占用太多系统资源
+				// 限制单次清理的条数,防止占用太多系统资源
 				if count > 2000 {
 					count = 2000
 				}
 
-				// 这里不提示LFU，因为此事件将会非常频繁
+				// 这里不提示LFU,因为此事件将会非常频繁
 
 				err := this.list.PurgeLFU(count, func(hash string) error {
 					uintHash, err := strconv.ParseUint(hash, 10, 64)
@@ -535,7 +535,7 @@ func (this *MemoryStorage) flushItem(fullKey string) {
 	item, ok := this.valuesMap[hash]
 	this.locker.RUnlock()
 
-	// 从内存中移除，并确保无论如何都会执行
+	// 从内存中移除,并确保无论如何都会执行
 	defer func() {
 		_ = this.Delete(key)
 	}()
@@ -552,7 +552,7 @@ func (this *MemoryStorage) flushItem(fullKey string) {
 		return
 	}
 
-	// 检查是否在列表中，防止未加入列表时就开始flush
+	// 检查是否在列表中,防止未加入列表时就开始flush
 	isInList, _, err := this.list.Exist(types.String(hash))
 	if err != nil {
 		remotelogs.Error("CACHE", "flush items failed: "+err.Error())

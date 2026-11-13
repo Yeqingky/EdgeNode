@@ -70,7 +70,7 @@ func (this *SQLiteFileListDB) Open(dbPath string) error {
 	}
 
 	// write db
-	// 这里不能加 EXCLUSIVE 锁，不然异步事务可能会失败
+	// 这里不能加 EXCLUSIVE 锁,不然异步事务可能会失败
 	writeDB, err := dbs.OpenWriter("file:" + dbPath + "?cache=private&mode=rwc&_journal_mode=WAL&_sync=" + dbs.SyncMode + "&_cache_size=" + types.String(cacheSize) + "&_secure_delete=FAST")
 	if err != nil {
 		return fmt.Errorf("open write database failed: %w", err)
@@ -80,7 +80,7 @@ func (this *SQLiteFileListDB) Open(dbPath string) error {
 
 	this.writeDB = writeDB
 
-	// TODO 耗时过长，暂时不整理数据库
+	// TODO 耗时过长,暂时不整理数据库
 	// TODO 需要根据行数来判断是否VACUUM
 	// TODO 注意VACUUM反而可能让数据库文件变大
 	/**_, err = db.Exec("VACUUM")
@@ -89,7 +89,7 @@ func (this *SQLiteFileListDB) Open(dbPath string) error {
 	}**/
 
 	// 检查是否损坏
-	// TODO 暂时屏蔽，因为用时过长
+	// TODO 暂时屏蔽,因为用时过长
 
 	var recoverEnv, _ = os.LookupEnv("EdgeRecover")
 	if len(recoverEnv) > 0 && this.shouldRecover() {
@@ -311,7 +311,7 @@ func (this *SQLiteFileListDB) CleanPrefix(prefix string) error {
 		return nil
 	}
 	var count = int64(10000)
-	var unixTime = fasttime.Now().Unix() // 只删除当前的，不删除新的
+	var unixTime = fasttime.Now().Unix() // 只删除当前的,不删除新的
 	for {
 		result, err := this.writeDB.Exec(`UPDATE "`+this.itemsTableName+`" SET expiredAt=0,staleAt=? WHERE id IN (SELECT id FROM "`+this.itemsTableName+`" WHERE expiredAt>0 AND createdAt<=? AND INSTR("key", ?)=1 LIMIT `+types.String(count)+`)`, unixTime+DefaultStaleCacheSeconds, unixTime, prefix)
 		if err != nil {
@@ -357,7 +357,7 @@ func (this *SQLiteFileListDB) CleanMatchKey(key string) error {
 	queryKey = strings.Replace(queryKey, "*", "%", 1)
 
 	// TODO 检查大批量数据下的操作性能
-	var unixTime = fasttime.Now().Unix() // 只删除当前的，不删除新的
+	var unixTime = fasttime.Now().Unix() // 只删除当前的,不删除新的
 
 	_, err = this.writeDB.Exec(`UPDATE "`+this.itemsTableName+`" SET "expiredAt"=0, "staleAt"=? WHERE "host" GLOB ? AND "host" NOT GLOB ? AND "key" LIKE ? ESCAPE '\'`, unixTime+DefaultStaleCacheSeconds, host, "*."+host, queryKey)
 	if err != nil {
@@ -398,7 +398,7 @@ func (this *SQLiteFileListDB) CleanMatchPrefix(prefix string) error {
 	queryPrefix += "%"
 
 	// TODO 检查大批量数据下的操作性能
-	var unixTime = fasttime.Now().Unix() // 只删除当前的，不删除新的
+	var unixTime = fasttime.Now().Unix() // 只删除当前的,不删除新的
 
 	_, err = this.writeDB.Exec(`UPDATE "`+this.itemsTableName+`" SET "expiredAt"=0, "staleAt"=? WHERE "host" GLOB ? AND "host" NOT GLOB ? AND "key" LIKE ? ESCAPE '\'`, unixTime+DefaultStaleCacheSeconds, host, "*."+host, queryPrefix)
 	return err
@@ -491,9 +491,9 @@ func (this *SQLiteFileListDB) HashMapIsLoaded() bool {
 // 初始化
 func (this *SQLiteFileListDB) initTables(times int) error {
 	{
-		// expiredAt - 过期时间，用来判断有无过期
-		// staleAt - 过时缓存最大时间，用来清理缓存
-		// 不对 hash 增加 unique 参数，是尽可能避免产生 malformed 错误
+		// expiredAt - 过期时间,用来判断有无过期
+		// staleAt - 过时缓存最大时间,用来清理缓存
+		// 不对 hash 增加 unique 参数,是尽可能避免产生 malformed 错误
 		_, err := this.writeDB.Exec(`CREATE TABLE IF NOT EXISTS "` + this.itemsTableName + `" (
   "id" integer NOT NULL PRIMARY KEY AUTOINCREMENT,
   "hash" varchar(32),

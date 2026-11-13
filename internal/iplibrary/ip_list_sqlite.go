@@ -202,7 +202,7 @@ func (this *SQLiteIPList) AddItem(item *pb.IPItem) error {
 		return err
 	}
 
-	// 如果是删除，则不再创建新记录
+	// 如果是删除,则不再创建新记录
 	if item.IsDeleted {
 		return this.UpdateMaxVersion(item.Version)
 	}

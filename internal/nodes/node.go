@@ -151,7 +151,7 @@ func (this *Node) Start() {
 	if err != nil {
 		_, err = nodeconfigs.SharedNodeConfig()
 		if err != nil {
-			// 无本地数据时，会尝试多次读取
+			// 无本地数据时,会尝试多次读取
 			tryTimes := 0
 			for {
 				err = this.syncConfig(0)
@@ -388,7 +388,7 @@ func (this *Node) syncConfig(taskVersion int64) error {
 	teaconst.BypassMobile = nodeConfig.BypassMobile
 
 	// 检查时间是否一致
-	// 这个需要在 teaconst.NodeId 设置之后，因为上报到API节点的时候需要节点ID
+	// 这个需要在 teaconst.NodeId 设置之后,因为上报到API节点的时候需要节点ID
 	if configResp.Timestamp > 0 {
 		var timestampDelta = configResp.Timestamp - time.Now().Unix()
 		if timestampDelta > 60 || timestampDelta < -60 {
@@ -634,7 +634,7 @@ func (this *Node) listenSock() error {
 				events.Notify(events.EventQuit)
 				events.Notify(events.EventTerminated)
 
-				// 监控连接数，如果连接数为0，则退出进程
+				// 监控连接数,如果连接数为0,则退出进程
 				goman.New(func() {
 					for {
 						countActiveConnections := sharedListenerManager.TotalActiveConnections()
@@ -929,7 +929,7 @@ func (this *Node) onReload(config *nodeconfigs.NodeConfig, reloadAll bool) {
 	}
 
 	// WAF策略
-	// 包含了服务里的WAF策略，所以需要整体更新
+	// 包含了服务里的WAF策略,所以需要整体更新
 	var allFirewallPolicies = config.FindAllFirewallPolicies()
 	if !jsonutils.Equal(allFirewallPolicies, this.oldHTTPFirewallPolicies) {
 		// copy
@@ -1041,7 +1041,7 @@ func (this *Node) onReload(config *nodeconfigs.NodeConfig, reloadAll bool) {
 			}
 		}
 
-		// API Node地址，这里不限制是否为空，因为在为空时仍然要有对应的处理
+		// API Node地址,这里不限制是否为空,因为在为空时仍然要有对应的处理
 		this.changeAPINodeAddrs(config.APINodeAddrs)
 	}
 
@@ -1219,14 +1219,14 @@ func (this *Node) changeAPINodeAddrs(apiNodeAddrs []*serverconfigs.NetworkAddres
 		this.lastAPINodeVersion++
 		var v = this.lastAPINodeVersion
 
-		// 异步检测，防止阻塞
+		// 异步检测,防止阻塞
 		go func(v int64) {
 			// 测试新的API节点地址
 			if rpcClient.TestEndpoints(addrs) {
 				config.RPCEndpoints = addrs
 			} else {
 				config.RPCEndpoints = oldEndpoints
-				this.lastAPINodeAddrs = nil // 恢复为空，以便于下次更新重试
+				this.lastAPINodeAddrs = nil // 恢复为空,以便于下次更新重试
 			}
 
 			// 检查测试中间有无新的变更

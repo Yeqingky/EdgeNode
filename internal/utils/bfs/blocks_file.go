@@ -79,7 +79,7 @@ func NewBlocksFileWithRawFile(fp *os.File, options *BlockFileOptions) (*BlocksFi
 }
 
 func OpenBlocksFile(filename string, options *BlockFileOptions) (*BlocksFile, error) {
-	// TODO 考虑是否使用flock锁定，防止多进程写冲突
+	// TODO 考虑是否使用flock锁定,防止多进程写冲突
 	fp, err := os.OpenFile(filename, os.O_CREATE|os.O_WRONLY, 0666)
 	if err != nil {
 		if os.IsNotExist(err) {
@@ -184,7 +184,7 @@ func (this *BlocksFile) OpenFileReader(fileHash string, isPartial bool) (*FileRe
 		return nil, os.ErrNotExist
 	}
 
-	// TODO 对于partial content，需要传入ranges，用来判断是否有交集
+	// TODO 对于partial content,需要传入ranges,用来判断是否有交集
 
 	if header.IsWriting {
 		return nil, ErrFileIsWriting

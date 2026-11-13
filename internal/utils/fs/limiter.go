@@ -89,7 +89,7 @@ func (this *Limiter) Release() {
 	select {
 	case this.threads <- struct{}{}:
 	default:
-		// 由于容量可能有变化，这里忽略多余的thread
+		// 由于容量可能有变化,这里忽略多余的thread
 	}
 }
 

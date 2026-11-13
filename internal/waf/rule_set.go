@@ -189,7 +189,7 @@ func (this *RuleSet) PerformActions(waf *WAF, group *RuleGroup, req requests.Req
 
 	// 再执行block|verify
 	for _, instance := range this.actionInstances {
-		// 只执行第一个可能改变请求的动作，其余的都会被忽略
+		// 只执行第一个可能改变请求的动作,其余的都会被忽略
 		if instance.WillChange() {
 			continueRequest = req.WAFOnAction(instance)
 			if !continueRequest {
@@ -316,7 +316,7 @@ func (this *RuleSet) MatchResponse(req requests.Request, resp *requests.Response
 		return true, hasRequestBody, nil
 	case RuleConnectorOr:
 		for _, rule := range this.Rules {
-			// 对于OR连接符，只需要判断最先匹配的一条规则中的hasRequestBody即可
+			// 对于OR连接符,只需要判断最先匹配的一条规则中的hasRequestBody即可
 			b1, hasCheckRequestBody, err1 := rule.MatchResponse(req, resp)
 			if err1 != nil {
 				return false, hasCheckRequestBody, err1

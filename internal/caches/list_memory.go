@@ -68,7 +68,7 @@ func (this *MemoryList) Add(hash string, item *Item) error {
 		this.itemMaps[prefix] = itemMap
 	}
 
-	// 先删除，为了可以正确触发统计
+	// 先删除,为了可以正确触发统计
 	oldItem, ok := itemMap[hash]
 	if ok {
 		// 回调
@@ -112,7 +112,7 @@ func (this *MemoryList) CleanPrefix(prefix string) error {
 	this.locker.RLock()
 	defer this.locker.RUnlock()
 
-	// TODO 需要优化性能，支持千万级数据低于1s的处理速度
+	// TODO 需要优化性能,支持千万级数据低于1s的处理速度
 	for _, itemMap := range this.itemMaps {
 		for _, item := range itemMap {
 			if strings.HasPrefix(item.Key, prefix) {
@@ -123,7 +123,7 @@ func (this *MemoryList) CleanPrefix(prefix string) error {
 	return nil
 }
 
-// CleanMatchKey 清理通配符匹配的缓存数据，类似于 https://*.example.com/hello
+// CleanMatchKey 清理通配符匹配的缓存数据,类似于 https://*.example.com/hello
 func (this *MemoryList) CleanMatchKey(key string) error {
 	if strings.Contains(key, SuffixAll) {
 		return nil
@@ -148,7 +148,7 @@ func (this *MemoryList) CleanMatchKey(key string) error {
 	this.locker.RLock()
 	defer this.locker.RUnlock()
 
-	// TODO 需要优化性能，支持千万级数据低于1s的处理速度
+	// TODO 需要优化性能,支持千万级数据低于1s的处理速度
 	for _, itemMap := range this.itemMaps {
 		for _, item := range itemMap {
 			if configutils.MatchDomain(host, item.Host) {
@@ -163,7 +163,7 @@ func (this *MemoryList) CleanMatchKey(key string) error {
 	return nil
 }
 
-// CleanMatchPrefix 清理通配符匹配的缓存数据，类似于 https://*.example.com/prefix/
+// CleanMatchPrefix 清理通配符匹配的缓存数据,类似于 https://*.example.com/prefix/
 func (this *MemoryList) CleanMatchPrefix(prefix string) error {
 	u, err := url.Parse(prefix)
 	if err != nil {
@@ -184,7 +184,7 @@ func (this *MemoryList) CleanMatchPrefix(prefix string) error {
 	this.locker.RLock()
 	defer this.locker.RUnlock()
 
-	// TODO 需要优化性能，支持千万级数据低于1s的处理速度
+	// TODO 需要优化性能,支持千万级数据低于1s的处理速度
 	for _, itemMap := range this.itemMaps {
 		for _, item := range itemMap {
 			if configutils.MatchDomain(host, item.Host) {
@@ -223,7 +223,7 @@ func (this *MemoryList) Remove(hash string) error {
 }
 
 // Purge 清理过期的缓存
-// count 每次遍历的最大数量，控制此数字可以保证每次清理的时候不用花太多时间
+// count 每次遍历的最大数量,控制此数字可以保证每次清理的时候不用花太多时间
 // callback 每次发现过期key的调用
 func (this *MemoryList) Purge(count int, callback func(hash string) error) (int, error) {
 	this.locker.Lock()
@@ -350,7 +350,7 @@ func (this *MemoryList) Stat(check func(hash string) bool) (*Stat, error) {
 	for _, itemMap := range this.itemMaps {
 		for hash, item := range itemMap {
 			if !item.IsExpired() {
-				// 检查文件是否存在、内容是否正确等
+				// 检查文件是否存在,内容是否正确等
 				if check != nil && check(hash) {
 					result.Count++
 					result.ValueSize += item.Size()

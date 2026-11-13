@@ -18,13 +18,13 @@ const (
 	CaptchaPageCodeSubmit CaptchaPageCode = "submit"
 )
 
-// CaptchaIncreaseFails 增加Captcha失败次数，以便后续操作
+// CaptchaIncreaseFails 增加Captcha失败次数,以便后续操作
 func CaptchaIncreaseFails(req requests.Request, actionConfig *CaptchaAction, policyId int64, groupId int64, setId int64, pageCode CaptchaPageCode, useLocalFirewall bool) (goNext bool) {
 	var maxFails = actionConfig.MaxFails
 	var failBlockTimeout = actionConfig.FailBlockTimeout
 	if maxFails > 0 && failBlockTimeout > 0 {
 		if maxFails <= 3 {
-			maxFails = 3 // 不能小于3，防止意外刷新出现
+			maxFails = 3 // 不能小于3,防止意外刷新出现
 		}
 		var countFails = counters.SharedCounter.IncreaseKey(CaptchaCacheKey(req, pageCode), 300)
 		if int(countFails) >= maxFails {

@@ -10,13 +10,13 @@ func (this *HTTPRequest) doTrafficLimit(status *serverconfigs.TrafficLimitStatus
 		return false
 	}
 
-	// 如果是网站单独设置的流量限制，则检查是否已关闭
+	// 如果是网站单独设置的流量限制,则检查是否已关闭
 	var config = this.ReqServer.TrafficLimit
 	if (config == nil || !config.IsOn) && status.PlanId == 0 {
 		return false
 	}
 
-	// 如果是套餐设置的流量限制，即使套餐变更了（变更套餐或者变更套餐的限制），仍然会提示流量超限
+	// 如果是套餐设置的流量限制,即使套餐变更了(变更套餐或者变更套餐的限制),仍然会提示流量超限
 
 	this.tags = append(this.tags, "trafficLimit")
 

@@ -323,7 +323,7 @@ func (this *FS) openBFile(bPath string, bName string) (*BlocksFile, error) {
 		return bFile, nil
 	}
 
-	// TODO 不要把 OpenBlocksFile 放入到 mu 中？
+	// TODO 不要把 OpenBlocksFile 放入到 mu 中?
 	bFile, err = OpenBlocksFile(bPath, &BlockFileOptions{
 		BytesPerSync: this.opt.BytesPerSync,
 	})

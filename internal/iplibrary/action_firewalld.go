@@ -12,10 +12,10 @@ import (
 )
 
 // FirewalldAction Firewalld动作管理
-// 常用命令：
-//   - 查询列表： firewall-cmd --list-all
-//   - 添加IP：firewall-cmd --add-rich-rule="rule family='ipv4' source address='192.168.2.32' reject" --timeout=30s
-//   - 删除IP：firewall-cmd --remove-rich-rule="rule family='ipv4' source address='192.168.2.32' reject" --timeout=30s
+// 常用命令:
+//   - 查询列表: firewall-cmd --list-all
+//   - 添加IP:firewall-cmd --add-rich-rule="rule family='ipv4' source address='192.168.2.32' reject" --timeout=30s
+//   - 删除IP:firewall-cmd --remove-rich-rule="rule family='ipv4' source address='192.168.2.32' reject" --timeout=30s
 type FirewalldAction struct {
 	BaseAction
 
@@ -136,7 +136,7 @@ func (this *FirewalldAction) runActionSingleIP(action string, listType IPListTyp
 		if item.ExpiredAt > timestamp {
 			args = append(args, "--timeout="+fmt.Sprintf("%d", item.ExpiredAt-timestamp)+"s")
 		} else {
-			// TODO 思考是否需要permanent，不然--reload之后会丢失
+			// TODO 思考是否需要permanent,不然--reload之后会丢失
 		}
 	}
 

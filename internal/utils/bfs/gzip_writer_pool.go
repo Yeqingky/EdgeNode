@@ -49,7 +49,7 @@ func (this *GzipWriterPool) Put(writer *gzip.Writer) {
 	select {
 	case this.getC() <- writer:
 	default:
-		// 不需要close，因为已经在使用的时候调用了
+		// 不需要close,因为已经在使用的时候调用了
 	}
 }
 

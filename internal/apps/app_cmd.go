@@ -228,13 +228,13 @@ func (this *AppCmd) runStop() {
 		systemctl, _ := executils.LookPath("systemctl")
 		if len(systemctl) > 0 {
 			go func() {
-				// 有可能会长时间执行，这里不阻塞进程
+				// 有可能会长时间执行,这里不阻塞进程
 				_ = exec.Command(systemctl, "stop", teaconst.SystemdServiceName).Run()
 			}()
 		}
 	}
 
-	// 如果仍在运行，则发送停止指令
+	// 如果仍在运行,则发送停止指令
 	_, _ = this.sock.SendTimeout(&gosock.Command{Code: "stop"}, 1*time.Second)
 
 	fmt.Println(this.product+" stopped ok, pid:", types.String(pid))

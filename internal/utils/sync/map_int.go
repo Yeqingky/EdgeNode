@@ -49,7 +49,7 @@ func (this *IntMap[K, V]) Put(k K, v V) {
 func (this *IntMap[K, V]) PutCompact(k K, v V, compactFunc func(oldV V, newV V) V) {
 	var index = this.index(k)
 	this.lockers[index].Lock()
-	// 再次检查是否已经存在，如果已经存在则合并
+	// 再次检查是否已经存在,如果已经存在则合并
 	oldV, ok := this.m[index][k]
 	if ok {
 		this.m[index][k] = compactFunc(oldV, v)

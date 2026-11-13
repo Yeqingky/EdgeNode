@@ -23,7 +23,7 @@ func (this *List[T]) Push(item *Item[T]) {
 		return
 	}
 
-	// 如果已经在末尾了，则do nothing
+	// 如果已经在末尾了,则do nothing
 	if this.end == item {
 		return
 	}

@@ -44,7 +44,7 @@ func NewSQLiteFileListHashMap() *SQLiteFileListHashMap {
 }
 
 func (this *SQLiteFileListHashMap) Load(db *SQLiteFileListDB) error {
-	// 如果系统内存过小，我们不缓存
+	// 如果系统内存过小,我们不缓存
 	if memutils.SystemMemoryGB() < 3 {
 		return nil
 	}
@@ -132,7 +132,7 @@ func (this *SQLiteFileListHashMap) Clean() {
 		this.lockers[i].Lock()
 	}
 
-	// 这里不能简单清空 this.m ，避免导致别的数据无法写入 map 而产生 panic
+	// 这里不能简单清空 this.m ,避免导致别的数据无法写入 map 而产生 panic
 	for i := 0; i < HashMapSharding; i++ {
 		this.m[i] = map[uint64]zero.Zero{}
 	}

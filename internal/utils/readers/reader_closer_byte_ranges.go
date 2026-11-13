@@ -146,7 +146,7 @@ func (this *ByteRangesReaderCloser) read(p []byte) (n int, err error) {
 		this.part = nil
 		err = nil
 
-		// 如果没有读取到内容，则直接跳到下一个Part
+		// 如果没有读取到内容,则直接跳到下一个Part
 		if n == 0 {
 			return this.read(p)
 		}

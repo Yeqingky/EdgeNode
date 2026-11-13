@@ -27,7 +27,7 @@ type HTTPAccessLogQueue struct {
 
 // NewHTTPAccessLogQueue 获取新对象
 func NewHTTPAccessLogQueue() *HTTPAccessLogQueue {
-	// 队列中最大的值，超出此数量的访问日志会被丢弃
+	// 队列中最大的值,超出此数量的访问日志会被丢弃
 	var maxSize = 2_000 * (1 + memutils.SystemMemoryGB()/2)
 	if maxSize > 20_000 {
 		maxSize = 20_000
@@ -80,7 +80,7 @@ Loop:
 			accessLogs = append(accessLogs, accessLog)
 			count++
 
-			// 每次只提交 N 条访问日志，防止网络拥堵
+			// 每次只提交 N 条访问日志,防止网络拥堵
 			if count >= maxLen {
 				break Loop
 			}

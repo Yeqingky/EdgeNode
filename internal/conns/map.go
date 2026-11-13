@@ -77,14 +77,14 @@ func (this *Map) CloseIPConns(ip string) {
 	this.locker.RLock()
 	connMap, ok := this.m[ip]
 
-	// 复制，防止在Close时产生并发冲突
+	// 复制,防止在Close时产生并发冲突
 	if ok {
 		for _, conn := range connMap {
 			conns = append(conns, conn)
 		}
 	}
 
-	// 需要在Close之前结束，防止死循环
+	// 需要在Close之前结束,防止死循环
 	this.locker.RUnlock()
 
 	if ok {
@@ -99,7 +99,7 @@ func (this *Map) CloseIPConns(ip string) {
 			_ = conn.Close()
 		}
 
-		// 这里不需要从 m 中删除，因为关闭时会自然触发回调
+		// 这里不需要从 m 中删除,因为关闭时会自然触发回调
 	}
 }
 

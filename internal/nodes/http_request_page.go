@@ -121,7 +121,7 @@ func (this *HTTPRequest) doPageLookup(pages []*serverconfigs.HTTPPageConfig, sta
 
 				return true
 			} else if page.BodyType == serverconfigs.HTTPPageBodyTypeHTML {
-				// 这里需要实现设置Status，因为在Format()中可以获取${status}等变量
+				// 这里需要实现设置Status,因为在Format()中可以获取${status}等变量
 				if page.NewStatus > 0 {
 					this.writer.statusCode = page.NewStatus
 				} else {

@@ -56,7 +56,7 @@ const (
 )
 
 const (
-	FileStorageMaxIgnoreKeys        = 32768 // 最大可忽略的键值数（尺寸过大的键值）
+	FileStorageMaxIgnoreKeys        = 32768 // 最大可忽略的键值数(尺寸过大的键值)
 	HotItemSize                     = 1024  // 热点数据数量
 	HotItemLifeSeconds       int64  = 3600  // 热点数据生命周期
 	FileTmpSuffix                   = ".tmp"
@@ -85,7 +85,7 @@ var sharedWritingFileKeyLocker = sync.Mutex{}
 
 // FileStorage 文件缓存
 //
-//	文件结构：
+//	文件结构:
 //	 [expires time] | [ status ] | [url length] | [header length] | [body length] | [url] [header data] [body data]
 type FileStorage struct {
 	policy        *serverconfigs.HTTPCachePolicy
@@ -359,7 +359,7 @@ func (this *FileStorage) OpenReader(key string, useStale bool, isPartial bool) (
 }
 
 func (this *FileStorage) openReader(key string, allowMemory bool, useStale bool, isPartial bool) (Reader, error) {
-	// 使用陈旧缓存的时候，我们认为是短暂的，只需要从文件里检查即可
+	// 使用陈旧缓存的时候,我们认为是短暂的,只需要从文件里检查即可
 	if useStale {
 		allowMemory = false
 	}
@@ -408,7 +408,7 @@ func (this *FileStorage) openReader(key string, allowMemory bool, useStale bool,
 
 	var isOk = false
 	var openFile *OpenFile
-	var openFileCache = this.openFileCache // 因为中间可能有修改，所以先赋值再获取
+	var openFileCache = this.openFileCache // 因为中间可能有修改,所以先赋值再获取
 	if openFileCache != nil {
 		openFile = openFileCache.Get(path)
 	}
@@ -489,7 +489,7 @@ func (this *FileStorage) openWriter(key string, expiredAt int64, status int, hea
 	}
 
 	// 检查磁盘是否超出容量
-	// 需要在内存缓存之前执行，避免成功写进到了内存缓存，但无法刷到磁盘
+	// 需要在内存缓存之前执行,避免成功写进到了内存缓存,但无法刷到磁盘
 	var capacityBytes = this.diskCapacityBytes()
 	if capacityBytes > 0 && capacityBytes <= this.TotalDiskSize()+(32<<20 /** 余量 **/) {
 		return nil, NewCapacityError("write file cache failed: over disk size, current: " + types.String(this.TotalDiskSize()) + ", capacity: " + types.String(capacityBytes))
@@ -508,7 +508,7 @@ func (this *FileStorage) openWriter(key string, expiredAt int64, status int, hea
 			return writer, nil
 		}
 
-		// 如果队列满了，则等待
+		// 如果队列满了,则等待
 		if errors.Is(err, ErrWritingQueueFull) {
 			return nil, err
 		}
@@ -557,7 +557,7 @@ func (this *FileStorage) openWriter(key string, expiredAt int64, status int, hea
 	// 查询当前已有缓存文件
 	stat, err := os.Stat(cachePath)
 
-	// 检查两次写入缓存的时间是否过于相近，分片内容不受此限制
+	// 检查两次写入缓存的时间是否过于相近,分片内容不受此限制
 	if err == nil && !isPartial && time.Since(stat.ModTime()) <= 1*time.Second {
 		// 防止并发连续写入
 		return nil, fmt.Errorf("%w(002)", ErrFileIsWriting)
@@ -569,7 +569,7 @@ func (this *FileStorage) openWriter(key string, expiredAt int64, status int, hea
 	if stat != nil {
 		existsFile = true
 
-		// 如果已经存在，则增加一个.tmp后缀，防止读写冲突
+		// 如果已经存在,则增加一个.tmp后缀,防止读写冲突
 		tmpPath += FileTmpSuffix
 	}
 
@@ -657,7 +657,7 @@ func (this *FileStorage) openWriter(key string, expiredAt int64, status int, hea
 			isOk = false
 		}
 
-		// 如果出错了，就删除文件，避免写一半
+		// 如果出错了,就删除文件,避免写一半
 		if !isOk {
 			_ = writer.Close()
 			if removeOnFailure {
@@ -666,7 +666,7 @@ func (this *FileStorage) openWriter(key string, expiredAt int64, status int, hea
 		}
 	}()
 
-	// 尝试锁定，如果锁定失败，则直接返回
+	// 尝试锁定,如果锁定失败,则直接返回
 	fsutils.WriterLimiter.Ack()
 	err = syscall.Flock(int(writer.Fd()), syscall.LOCK_EX|syscall.LOCK_NB)
 	fsutils.WriterLimiter.Release()
@@ -799,7 +799,7 @@ func (this *FileStorage) CleanAll() error {
 	}
 
 	// 删除缓存和目录
-	// 不能直接删除子目录，比较危险
+	// 不能直接删除子目录,比较危险
 
 	var rootDirs = []string{this.options.Dir}
 	var subDirs = this.subDirs // copy slice
@@ -992,7 +992,7 @@ func (this *FileStorage) TotalMemorySize() int64 {
 	return memoryStorage.TotalMemorySize()
 }
 
-// IgnoreKey 忽略某个Key，即不缓存某个Key
+// IgnoreKey 忽略某个Key,即不缓存某个Key
 func (this *FileStorage) IgnoreKey(key string, maxSize int64) {
 	this.ignoreKeys.Push(types.String(maxSize) + "$" + key)
 }
@@ -1145,7 +1145,7 @@ func (this *FileStorage) purgeLoop() {
 			times *= 4
 		}
 
-		// 处于LFU阈值时，多清理
+		// 处于LFU阈值时,多清理
 		if startLFU {
 			times *= 5
 		}
@@ -1188,7 +1188,7 @@ func (this *FileStorage) purgeLoop() {
 		}
 	}
 
-	// 磁盘空间不足时，清除老旧的缓存
+	// 磁盘空间不足时,清除老旧的缓存
 	if startLFU {
 		var maxCount = 1000
 		var maxLoops = 5
@@ -1213,7 +1213,7 @@ func (this *FileStorage) purgeLoop() {
 					break
 				}
 
-				// 限制单次清理的条数，防止占用太多系统资源
+				// 限制单次清理的条数,防止占用太多系统资源
 				if count > maxCount {
 					count = maxCount
 				}
@@ -1304,7 +1304,7 @@ func (this *FileStorage) hotLoop() {
 				continue
 			}
 
-			// 如果即将过期，则忽略
+			// 如果即将过期,则忽略
 			var nowUnixTime = time.Now().Unix()
 			if reader.ExpiresAt() <= nowUnixTime+600 {
 				continue
@@ -1415,7 +1415,7 @@ func (this *FileStorage) cleanAllDeletedDirs() {
 }
 
 // 清理 *.trash 目录
-// 由于在很多硬盘上耗时非常久，所以应该放在后台运行
+// 由于在很多硬盘上耗时非常久,所以应该放在后台运行
 func (this *FileStorage) cleanDeletedDirs(dir string) error {
 	fp, err := os.Open(dir)
 	if err != nil {
@@ -1677,8 +1677,8 @@ func (this *FileStorage) subDir(hash string) (dirPath string, dirIsFull bool) {
 	return subDir.Path + suffix, subDir.IsFull
 }
 
-// ScanGarbageCaches 清理目录中“失联”的缓存文件
-// “失联”为不在HashMap中的文件
+// ScanGarbageCaches 清理目录中"失联"的缓存文件
+// "失联"为不在HashMap中的文件
 func (this *FileStorage) ScanGarbageCaches(fileCallback func(path string) error) error {
 	_, isSQLite := this.list.(*SQLiteFileList)
 	if isSQLite && !this.list.(*SQLiteFileList).HashMapIsLoaded() {

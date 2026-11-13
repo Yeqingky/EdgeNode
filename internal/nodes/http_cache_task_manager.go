@@ -244,7 +244,7 @@ func (this *HTTPCacheTaskManager) fetchKey(key *pb.HTTPCacheTaskKey) error {
 		return errors.New("read origin site timeout")
 	}
 
-	// 读取内容，以便于生成缓存
+	// 读取内容,以便于生成缓存
 	var buf = bytepool.Pool16k.Get()
 	_, err = io.CopyBuffer(io.Discard, resp.Body, buf.Bytes)
 	bytepool.Pool16k.Put(buf)

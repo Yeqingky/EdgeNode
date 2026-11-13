@@ -140,7 +140,7 @@ func (this *ClockManager) syncNtpdate(ntpdate string, server string) error {
 	return nil
 }
 
-// ReadServer 参考自：https://medium.com/learning-the-go-programming-language/lets-make-an-ntp-client-in-go-287c4b9a969f
+// ReadServer 参考自:https://medium.com/learning-the-go-programming-language/lets-make-an-ntp-client-in-go-287c4b9a969f
 func (this *ClockManager) ReadServer(server string) (time.Time, error) {
 	conn, err := net.Dial("udp", server+":123")
 	if err != nil {

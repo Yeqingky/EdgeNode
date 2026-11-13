@@ -15,19 +15,19 @@ import (
 )
 
 // IPSetAction IPSet动作
-// 相关命令：
-//   - 利用Firewalld管理set：
-//   - 添加：firewall-cmd --permanent --new-ipset=edge_ip_list --type=hash:ip --option="timeout=0"
-//   - 删除：firewall-cmd --permanent --delete-ipset=edge_ip_list
-//   - 重载：firewall-cmd --reload
+// 相关命令:
+//   - 利用Firewalld管理set:
+//   - 添加:firewall-cmd --permanent --new-ipset=edge_ip_list --type=hash:ip --option="timeout=0"
+//   - 删除:firewall-cmd --permanent --delete-ipset=edge_ip_list
+//   - 重载:firewall-cmd --reload
 //   - firewalld+ipset: firewall-cmd --permanent --add-rich-rule="rule source ipset='edge_ip_list' reject"
-//   - 利用IPTables管理set：
-//   - 添加：iptables -A INPUT -m set --match-set edge_ip_list src -j REJECT
-//   - 添加Item：ipset add edge_ip_list 192.168.2.32 timeout 30
+//   - 利用IPTables管理set:
+//   - 添加:iptables -A INPUT -m set --match-set edge_ip_list src -j REJECT
+//   - 添加Item:ipset add edge_ip_list 192.168.2.32 timeout 30
 //   - 删除Item: ipset del edge_ip_list 192.168.2.32
-//   - 创建set：ipset create edge_ip_list hash:ip timeout 0
-//   - 查看统计：ipset -t list edge_black_list
-//   - 删除set：ipset destroy edge_black_list
+//   - 创建set:ipset create edge_ip_list hash:ip timeout 0
+//   - 查看统计:ipset -t list edge_black_list
+//   - 删除set:ipset destroy edge_black_list
 type IPSetAction struct {
 	BaseAction
 

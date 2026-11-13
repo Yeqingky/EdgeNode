@@ -19,7 +19,7 @@ func OriginConnect(origin *serverconfigs.OriginConfig, serverPort int, remoteAdd
 	}
 
 	// 支持TOA的连接
-	// 这个条件很重要，如果没有传递remoteAddr，表示不使用TOA
+	// 这个条件很重要,如果没有传递remoteAddr,表示不使用TOA
 	if len(remoteAddr) > 0 {
 		var toaConfig = sharedTOAManager.Config()
 		if toaConfig != nil && toaConfig.IsOn {
@@ -127,7 +127,7 @@ func OriginConnect(origin *serverconfigs.OriginConfig, serverPort int, remoteAdd
 		return originConn, originAddr, err
 	}
 
-	// TODO 支持从Unix、Pipe、HTTP、HTTPS中读取数据
+	// TODO 支持从Unix,Pipe,HTTP,HTTPS中读取数据
 
 	return nil, originAddr, errors.New("invalid origin scheme '" + origin.Addr.Protocol.String() + "'")
 }

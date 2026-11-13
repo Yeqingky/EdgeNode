@@ -22,16 +22,16 @@ import (
 	"github.com/iwind/TeaGo/types"
 )
 
-const MaxQueueSize = 256 // TODO 可以配置，可以在单个任务里配置
+const MaxQueueSize = 256 // TODO 可以配置,可以在单个任务里配置
 
 // SQLiteTask 单个指标任务
-// 数据库存储：
+// 数据库存储:
 //
 //	data/
 //	   metric.$ID.db
 //	      stats
 //	         id, keys, value, time, serverId, hash
-//	原理：
+//	原理:
 //	   添加或者有变更时 isUploaded = false
 //	   上传时检查 isUploaded 状态
 //	   只上传每个服务中排序最前面的 N 个数据
@@ -373,7 +373,7 @@ func (this *SQLiteTask) Upload(pauseDuration time.Duration) error {
 						return nil, err
 					}
 
-					// TODO 先不判断是否已经上传，需要改造API进行配合
+					// TODO 先不判断是否已经上传,需要改造API进行配合
 					/**if isUploaded == 1 {
 						continue
 					}**/
@@ -421,7 +421,7 @@ func (this *SQLiteTask) Upload(pauseDuration time.Duration) error {
 
 			if len(idStrings) > 0 {
 				// 设置为已上传
-				// TODO 先不判断是否已经上传，需要改造API进行配合
+				// TODO 先不判断是否已经上传,需要改造API进行配合
 				/**_, err = this.db.Exec(`UPDATE "` + this.statTableName + `" SET isUploaded=1 WHERE id IN (` + strings.Join(idStrings, ",") + `)`)
 				if err != nil {
 					return err
@@ -429,7 +429,7 @@ func (this *SQLiteTask) Upload(pauseDuration time.Duration) error {
 			}
 		}
 
-		// 休息一下，防止短时间内上传数据过多
+		// 休息一下,防止短时间内上传数据过多
 		if pauseDuration > 0 {
 			time.Sleep(pauseDuration)
 			uploadTr.Add(-pauseDuration)

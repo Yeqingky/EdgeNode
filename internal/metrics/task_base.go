@@ -12,7 +12,7 @@ type BaseTask struct {
 	isLoaded   bool
 	isStopped  bool
 
-	statsMap    map[string]*Stat // 待写入队列，hash => *Stat
+	statsMap    map[string]*Stat // 待写入队列,hash => *Stat
 	statsLocker sync.RWMutex
 }
 

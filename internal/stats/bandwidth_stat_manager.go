@@ -22,7 +22,7 @@ import (
 
 var SharedBandwidthStatManager = NewBandwidthStatManager()
 
-const bandwidthTimestampDelim = 2 // N秒平均，更为精确
+const bandwidthTimestampDelim = 2 // N秒平均,更为精确
 
 func init() {
 	if !teaconst.IsMain {
@@ -208,7 +208,7 @@ func (this *BandwidthStatManager) AddBandwidth(userId int64, userPlanId int64, s
 	var timeAt = now.Round5Hi()
 	var key = types.String(serverId) + "@" + day + "@" + timeAt
 
-	// 增加TCP Header尺寸，这里默认MTU为1500，且默认为IPv4
+	// 增加TCP Header尺寸,这里默认MTU为1500,且默认为IPv4
 	const mtu = 1500
 	const tcpHeaderSize = 20
 	if peekBytes > mtu {
@@ -218,7 +218,7 @@ func (this *BandwidthStatManager) AddBandwidth(userId int64, userPlanId int64, s
 	this.locker.Lock()
 	stat, ok := this.m[key]
 	if ok {
-		// 此刻如果发生用户ID（userId）的变化也忽略，等N分钟后有新记录后再换
+		// 此刻如果发生用户ID(userId)的变化也忽略,等N分钟后有新记录后再换
 
 		if stat.CurrentTimestamp == timestamp {
 			stat.CurrentBytes += peekBytes

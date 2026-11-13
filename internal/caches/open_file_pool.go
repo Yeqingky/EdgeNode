@@ -29,7 +29,7 @@ func (this *OpenFilePool) Filename() string {
 }
 
 func (this *OpenFilePool) Get() (resultFile *OpenFile, consumed bool, consumedSize int64) {
-	// 如果已经关闭，直接返回
+	// 如果已经关闭,直接返回
 	if this.isClosed {
 		return nil, false, 0
 	}
@@ -55,7 +55,7 @@ func (this *OpenFilePool) Get() (resultFile *OpenFile, consumed bool, consumedSi
 }
 
 func (this *OpenFilePool) Put(file *OpenFile) bool {
-	// 如果已关闭，则不接受新的文件
+	// 如果已关闭,则不接受新的文件
 	if this.isClosed {
 		_ = file.Close()
 		return false

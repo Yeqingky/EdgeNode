@@ -123,7 +123,7 @@ func ContainsWordRunes(allRunes []rune, subRunes []rune, isCaseInsensitive bool)
 }
 
 // ContainsSubRunes 检查字符列表是否包含某个子子字符列表
-// 与 ContainsWordRunes 不同，这里不需要检查边界符号
+// 与 ContainsWordRunes 不同,这里不需要检查边界符号
 func ContainsSubRunes(allRunes []rune, subRunes []rune, isCaseInsensitive bool) bool {
 	var l = len(subRunes)
 	if l == 0 {

@@ -120,7 +120,7 @@ func (this *ListenerManager) Start(nodeConfig *nodeconfigs.NodeConfig) error {
 		var addr = group.FullAddr()
 		listener, ok := this.listenersMap[addr]
 		if ok {
-			// 不需要打印reload信息，防止日志数量过多
+			// 不需要打印reload信息,防止日志数量过多
 			listener.Reload(group)
 		} else {
 			remotelogs.Println("LISTENER_MANAGER", "listen '"+this.prettyAddress(addr)+"'")

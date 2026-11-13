@@ -48,14 +48,14 @@ func BenchmarkStringToBytes2(b *testing.B) {
 func TestFormatAddress(t *testing.T) {
 	t.Log(utils.FormatAddress("127.0.0.1:1234"))
 	t.Log(utils.FormatAddress("127.0.0.1 : 1234"))
-	t.Log(utils.FormatAddress("127.0.0.1：1234"))
+	t.Log(utils.FormatAddress("127.0.0.1:1234"))
 }
 
 func TestFormatAddressList(t *testing.T) {
 	t.Log(utils.FormatAddressList([]string{
 		"127.0.0.1:1234",
 		"127.0.0.1 : 1234",
-		"127.0.0.1：1234",
+		"127.0.0.1:1234",
 	}))
 }
 

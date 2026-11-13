@@ -27,7 +27,7 @@ var commonFileExtensionsMap = map[string]zero.Zero{
 }
 
 // IsCommonFileExtension 判断是否为常用文件扩展名
-// 不区分大小写，且不限于是否加点符号（.）
+// 不区分大小写,且不限于是否加点符号(.)
 func IsCommonFileExtension(ext string) bool {
 	if len(ext) == 0 {
 		return false

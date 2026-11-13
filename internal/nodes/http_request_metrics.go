@@ -16,7 +16,7 @@ func (this *HTTPRequest) MetricKey(key string) string {
 }
 
 func (this *HTTPRequest) MetricValue(value string) (result int64, ok bool) {
-	// TODO 需要忽略健康检查的请求，但是同时也要防止攻击者模拟健康检查
+	// TODO 需要忽略健康检查的请求,但是同时也要防止攻击者模拟健康检查
 	switch value {
 	case "${countRequest}":
 		return 1, true

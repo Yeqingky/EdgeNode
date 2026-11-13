@@ -2,7 +2,7 @@ package bfs
 
 import "git.ovh.im/yeqing/EdgeNode/internal/utils/zero"
 
-// TODO 线程数可以根据硬盘数量动态调整？
+// TODO 线程数可以根据硬盘数量动态调整?
 var readThreadsLimiter = make(chan zero.Zero, 8)
 var writeThreadsLimiter = make(chan zero.Zero, 8)
 

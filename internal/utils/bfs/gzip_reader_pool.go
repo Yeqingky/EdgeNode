@@ -52,7 +52,7 @@ func (this *GzipReaderPool) Put(reader *gzip.Reader) {
 	select {
 	case this.getC() <- reader:
 	default:
-		// 不需要close，因为已经在使用的时候调用了
+		// 不需要close,因为已经在使用的时候调用了
 	}
 }
 

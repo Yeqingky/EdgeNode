@@ -18,7 +18,7 @@ import (
 	"github.com/iwind/TeaGo/types"
 )
 
-var logChan = make(chan *pb.NodeLog, 64) // 队列数量不需要太长，因为日志通常仅仅为调试用
+var logChan = make(chan *pb.NodeLog, 64) // 队列数量不需要太长,因为日志通常仅仅为调试用
 
 func init() {
 	if !teaconst.IsMain {

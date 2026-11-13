@@ -16,7 +16,7 @@ const (
 )
 
 // Get302Action
-// 原理：  origin url --> 302 verify url --> origin url
+// 原理:  origin url --> 302 verify url --> origin url
 // TODO 将来支持meta refresh验证
 type Get302Action struct {
 	BaseAction

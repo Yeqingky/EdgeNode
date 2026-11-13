@@ -163,7 +163,7 @@ func (this *PartialFileWriter) WriteAt(offset int64, data []byte) error {
 
 	this.ranges.Add(offset, end)
 
-	// 保存ranges内容到文件，当新增数据达到一定量时就更新，是为了及时更新ranges文件，以便于其他请求能够及时读取到已经缓存的部分内容
+	// 保存ranges内容到文件,当新增数据达到一定量时就更新,是为了及时更新ranges文件,以便于其他请求能够及时读取到已经缓存的部分内容
 	this.writtenBytes += int64(n)
 	if this.writtenBytes > (1 << 20) {
 		this.writtenBytes = 0

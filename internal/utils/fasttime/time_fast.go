@@ -52,7 +52,7 @@ func NewFastTime() *FastTime {
 	}
 }
 
-// Unix 最快获取时间戳的方式，通常用在不需要特别精确时间戳的场景
+// Unix 最快获取时间戳的方式,通常用在不需要特别精确时间戳的场景
 func (this *FastTime) Unix() int64 {
 	return this.unixTime
 }
@@ -72,7 +72,7 @@ func (this *FastTime) UnixNextMinute() int64 {
 	return this.UnixCell(60)
 }
 
-// UnixMilli 获取时间戳，精确到毫秒
+// UnixMilli 获取时间戳,精确到毫秒
 func (this *FastTime) UnixMilli() int64 {
 	return this.unixTimeMilli
 }

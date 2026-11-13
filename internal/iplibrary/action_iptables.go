@@ -13,7 +13,7 @@ import (
 )
 
 // IPTablesAction IPTables动作
-// 相关命令：
+// 相关命令:
 //
 //	iptables -A INPUT -s "192.168.2.32" -j ACCEPT
 //	iptables -A INPUT -s "192.168.2.32" -j REJECT

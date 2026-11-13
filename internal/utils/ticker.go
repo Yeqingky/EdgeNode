@@ -7,7 +7,7 @@ import (
 	"git.ovh.im/yeqing/EdgeNode/internal/utils/zero"
 )
 
-// Ticker 类似于time.Ticker，但能够真正地停止
+// Ticker 类似于time.Ticker,但能够真正地停止
 type Ticker struct {
 	raw  *time.Ticker
 	done chan zero.Zero

@@ -38,7 +38,7 @@ func NewUpgradeManager() *UpgradeManager {
 
 // Start 启动升级
 func (this *UpgradeManager) Start() {
-	// 必须放在文件解压之前读取可执行文件路径，防止解析之后，当前的可执行文件路径发生改变
+	// 必须放在文件解压之前读取可执行文件路径,防止解析之后,当前的可执行文件路径发生改变
 	exe, err := os.Executable()
 	if err != nil {
 		remotelogs.Error("UPGRADE_MANAGER", "can not find current executable file name")
@@ -239,7 +239,7 @@ func (this *UpgradeManager) unzip(zipPath string) error {
 
 // 重启
 func (this *UpgradeManager) restart() error {
-	// 关闭当前sock，防止无法重启
+	// 关闭当前sock,防止无法重启
 	_ = gosock.NewTmpSock(teaconst.ProcessName).Close()
 
 	// 重新启动

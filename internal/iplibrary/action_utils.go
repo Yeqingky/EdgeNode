@@ -9,7 +9,7 @@ import (
 )
 
 // Convert IPv4 range into CIDR
-// 来自：https://gist.github.com/P-A-R-U-S/a090dd90c5104ce85a29c32669dac107
+// 来自:https://gist.github.com/P-A-R-U-S/a090dd90c5104ce85a29c32669dac107
 func iPv4RangeToCIDRRange(ipStart string, ipEnd string) (cidrs []string, err error) {
 
 	cidr2mask := []uint32{

@@ -18,7 +18,7 @@ type MetaFile struct {
 	fp        *os.File
 	filename  string
 	headerMap map[string]*LazyFileHeader // hash => *LazyFileHeader
-	mu        *sync.RWMutex              // TODO 考虑单独一个，不要和bFile共享？
+	mu        *sync.RWMutex              // TODO 考虑单独一个,不要和bFile共享?
 
 	isModified      bool
 	modifiedHashMap map[string]zero.Zero // hash => Zero
@@ -178,7 +178,7 @@ func (this *MetaFile) WriteClose(hash string, headerSize int64, bodySize int64) 
 
 	this.mu.Unlock()
 
-	// TODO 检查bodySize和expectedBodySize是否一致，如果不一致则从headerMap中删除
+	// TODO 检查bodySize和expectedBodySize是否一致,如果不一致则从headerMap中删除
 
 	header.ModifiedAt = fasttime.Now().Unix()
 	header.HeaderSize = headerSize
@@ -299,7 +299,7 @@ func (this *MetaFile) ExistFile(hash string) bool {
 }
 
 // Compact the meta file
-// TODO 考虑自动Compact的时机（脏数据比例？）
+// TODO 考虑自动Compact的时机(脏数据比例?)
 func (this *MetaFile) Compact() error {
 	this.mu.Lock()
 	defer this.mu.Unlock()

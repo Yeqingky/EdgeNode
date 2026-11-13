@@ -39,7 +39,7 @@ const (
 	CacheLongLife   CacheLife = 7200
 )
 
-// MatchStringCache 正则表达式匹配字符串，并缓存结果
+// MatchStringCache 正则表达式匹配字符串,并缓存结果
 func MatchStringCache(regex *re.Regexp, s string, cacheLife CacheLife) bool {
 	if regex == nil {
 		return false
@@ -47,7 +47,7 @@ func MatchStringCache(regex *re.Regexp, s string, cacheLife CacheLife) bool {
 
 	var regIdString = regex.IdString()
 
-	// 如果长度超过一定数量，大概率是不能重用的
+	// 如果长度超过一定数量,大概率是不能重用的
 	if cacheLife <= 0 || len(s) > MaxCacheDataSize || !cacheHits.IsGood(regIdString) {
 		return regex.MatchString(s)
 	}
@@ -69,7 +69,7 @@ func MatchStringCache(regex *re.Regexp, s string, cacheLife CacheLife) bool {
 	return b
 }
 
-// MatchBytesCache 正则表达式匹配字节slice，并缓存结果
+// MatchBytesCache 正则表达式匹配字节slice,并缓存结果
 func MatchBytesCache(regex *re.Regexp, byteSlice []byte, cacheLife CacheLife) bool {
 	if regex == nil {
 		return false
@@ -77,7 +77,7 @@ func MatchBytesCache(regex *re.Regexp, byteSlice []byte, cacheLife CacheLife) bo
 
 	var regIdString = regex.IdString()
 
-	// 如果长度超过一定数量，大概率是不能重用的
+	// 如果长度超过一定数量,大概率是不能重用的
 	if cacheLife <= 0 || len(byteSlice) > MaxCacheDataSize || !cacheHits.IsGood(regIdString) {
 		return regex.Match(byteSlice)
 	}

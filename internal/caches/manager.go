@@ -200,7 +200,7 @@ func (this *Manager) TotalDiskSize() int64 {
 	var total = int64(0)
 	var sidMap = map[string]bool{} // partition sid => bool
 	for _, storage := range this.storageMap {
-		// 这里不能直接用 storage.TotalDiskSize() 相加，因为多个缓存策略缓存目录可能处在同一个分区目录下
+		// 这里不能直接用 storage.TotalDiskSize() 相加,因为多个缓存策略缓存目录可能处在同一个分区目录下
 		fileStorage, ok := storage.(*FileStorage)
 		if ok {
 			var options = fileStorage.options // copy
@@ -277,7 +277,7 @@ func (this *Manager) FindAllStorages() []StorageInterface {
 	return storages
 }
 
-// ScanGarbageCaches 清理目录中“失联”的缓存文件
+// ScanGarbageCaches 清理目录中"失联"的缓存文件
 func (this *Manager) ScanGarbageCaches(callback func(path string) error) error {
 	var storages = this.FindAllStorages()
 	for _, storage := range storages {

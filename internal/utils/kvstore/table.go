@@ -436,7 +436,7 @@ func (this *Table[T]) set(tx *Tx[T], key string, valueBytes []byte, value T, ins
 	if countFields > 0 {
 		// add new field keys
 		for _, fieldName := range this.fieldNames {
-			// 把EncodeField放在TX里，是为了节约内存
+			// 把EncodeField放在TX里,是为了节约内存
 			fieldValueBytes, fieldErr := this.encoder.EncodeField(value, fieldName)
 			if fieldErr != nil {
 				return fieldErr

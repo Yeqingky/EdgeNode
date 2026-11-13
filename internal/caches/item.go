@@ -14,7 +14,7 @@ const (
 )
 
 // 计算当前周
-// 不要用YW，因为需要计算两周是否临近
+// 不要用YW,因为需要计算两周是否临近
 func currentWeek() int32 {
 	return int32(fasttime.Now().Unix() / 86400)
 }

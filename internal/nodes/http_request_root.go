@@ -41,7 +41,7 @@ var textMimeMap = map[string]zero.Zero{
 }
 
 // 调用本地静态资源
-// 如果返回true，则终止请求
+// 如果返回true,则终止请求
 func (this *HTTPRequest) doRoot() (isBreak bool) {
 	if this.web.Root == nil || !this.web.Root.IsOn {
 		return

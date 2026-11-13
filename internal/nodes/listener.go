@@ -101,7 +101,7 @@ func (this *Listener) listenTCP() error {
 	goman.New(func() {
 		err := this.listener.Serve()
 		if err != nil {
-			// 在这里屏蔽accept错误，防止在优雅关闭的时候有多余的提示
+			// 在这里屏蔽accept错误,防止在优雅关闭的时候有多余的提示
 			opErr, ok := err.(*net.OpError)
 			if ok && opErr.Op == "accept" {
 				return

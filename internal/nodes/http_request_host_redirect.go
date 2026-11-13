@@ -158,7 +158,7 @@ func (this *HTTPRequest) doHostRedirect() (blocked bool) {
 					return false
 				}
 
-				// 如果跳转前后域名一致，则终止
+				// 如果跳转前后域名一致,则终止
 				if u.DomainAfter == reqHost {
 					return false
 				}
@@ -197,7 +197,7 @@ func (this *HTTPRequest) doHostRedirect() (blocked bool) {
 				}
 			}
 
-			// 如果跳转前后端口一致，则终止
+			// 如果跳转前后端口一致,则终止
 			if reqPort == types.String(u.PortAfter) {
 				return false
 			}

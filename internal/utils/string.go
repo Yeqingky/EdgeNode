@@ -23,7 +23,7 @@ func FormatAddress(addr string) string {
 	}
 	addr = strings.Replace(addr, " ", "", -1)
 	addr = strings.Replace(addr, "\t", "", -1)
-	addr = strings.Replace(addr, "：", ":", -1)
+	addr = strings.Replace(addr, ":", ":", -1)
 	addr = strings.TrimSpace(addr)
 	return addr
 }

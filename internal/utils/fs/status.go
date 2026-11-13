@@ -102,7 +102,7 @@ func DiskIsFast() bool {
 }
 
 func DiskIsExtremelyFast() bool {
-	// 在开发环境下返回false，以便于测试
+	// 在开发环境下返回false,以便于测试
 	if Tea.IsTesting() {
 		return false
 	}

@@ -358,7 +358,7 @@ func (this *HTTPRequest) doOriginRequest(failedOriginIds []int64, failedLnNodeId
 	}
 
 	if requestErr != nil {
-		// 客户端取消请求，则不提示
+		// 客户端取消请求,则不提示
 		var httpErr *url.Error
 		var ok = errors.As(requestErr, &httpErr)
 		if !ok {
@@ -369,7 +369,7 @@ func (this *HTTPRequest) doOriginRequest(failedOriginIds []int64, failedLnNodeId
 			}
 
 			if len(requestErrCode) > 0 {
-				this.write50x(requestErr, http.StatusBadGateway, "Failed to read origin site (error code: "+requestErrCode+")", "源站读取失败（错误代号："+requestErrCode+"）", true)
+				this.write50x(requestErr, http.StatusBadGateway, "Failed to read origin site (error code: "+requestErrCode+")", "源站读取失败(错误代号:"+requestErrCode+")", true)
 			} else {
 				this.write50x(requestErr, http.StatusBadGateway, "Failed to read origin site", "源站读取失败", true)
 			}
@@ -407,7 +407,7 @@ func (this *HTTPRequest) doOriginRequest(failedOriginIds []int64, failedLnNodeId
 			// 是否为客户端方面的错误
 			var isClientError = false
 			if errors.Is(httpErr, context.Canceled) {
-				// 如果是服务器端主动关闭，则无需提示
+				// 如果是服务器端主动关闭,则无需提示
 				if this.isConnClosed() {
 					this.disableLog = true
 					return
@@ -493,7 +493,7 @@ func (this *HTTPRequest) doOriginRequest(failedOriginIds []int64, failedLnNodeId
 	if this.web.Optimization != nil && resp.Body != nil && this.cacheRef != nil /** must under cache **/ {
 		err := minifiers.MinifyResponse(this.web.Optimization, this.URL(), resp)
 		if err != nil {
-			this.write50x(err, http.StatusBadGateway, "Page Optimization: fail to read content from origin", "内容优化：从源站读取内容失败", false)
+			this.write50x(err, http.StatusBadGateway, "Page Optimization: fail to read content from origin", "内容优化:从源站读取内容失败", false)
 			return
 		}
 	}
@@ -505,7 +505,7 @@ func (this *HTTPRequest) doOriginRequest(failedOriginIds []int64, failedLnNodeId
 		resp.StatusCode == http.StatusOK {
 		m3u8Err := this.processM3u8Response(resp)
 		if m3u8Err != nil {
-			this.write50x(m3u8Err, http.StatusBadGateway, "m3u8 encrypt: fail to read content from origin", "m3u8加密：从源站读取内容失败", false)
+			this.write50x(m3u8Err, http.StatusBadGateway, "m3u8 encrypt: fail to read content from origin", "m3u8加密:从源站读取内容失败", false)
 			return
 		}
 	}
@@ -553,7 +553,7 @@ func (this *HTTPRequest) doOriginRequest(failedOriginIds []int64, failedLnNodeId
 					locationURL.Scheme = "https"
 				}
 
-				// 如果和当前URL一样，则可能是http -> https，防止无限循环
+				// 如果和当前URL一样,则可能是http -> https,防止无限循环
 				if locationURL.String() == this.URL() {
 					locationURL.Scheme = oldScheme
 					resp.Header.Set("Location", locationURL.String())
@@ -593,7 +593,7 @@ func (this *HTTPRequest) doOriginRequest(failedOriginIds []int64, failedLnNodeId
 
 	// 是否有内容
 	if resp.ContentLength == 0 && len(resp.TransferEncoding) == 0 {
-		// 即使内容为0，也需要读取一次，以便于触发相关事件
+		// 即使内容为0,也需要读取一次,以便于触发相关事件
 		var buf = bytepool.Pool4k.Get()
 		_, _ = io.CopyBuffer(this.writer, resp.Body, buf.Bytes)
 		bytepool.Pool4k.Put(buf)

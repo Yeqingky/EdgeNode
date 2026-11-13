@@ -827,14 +827,14 @@ func (this *CaptchaValidator) validateGeeTestForm(actionConfig *CaptchaAction, p
 		}
 	}()
 	if err != nil || resp.StatusCode != http.StatusOK {
-		// 放行，避免阻塞业务
+		// 放行,避免阻塞业务
 		allow = true
 		return
 	}
 
 	data, err = io.ReadAll(resp.Body)
 	if err != nil {
-		// 放行，避免阻塞业务
+		// 放行,避免阻塞业务
 		allow = true
 		return
 	}
@@ -842,7 +842,7 @@ func (this *CaptchaValidator) validateGeeTestForm(actionConfig *CaptchaAction, p
 	var resultMap = maps.Map{}
 	err = json.Unmarshal(data, &resultMap)
 	if err != nil {
-		// 放行，避免阻塞业务
+		// 放行,避免阻塞业务
 		allow = true
 		return
 	}

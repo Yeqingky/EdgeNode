@@ -115,7 +115,7 @@ func (this *IPListManager) Stop() {
 
 func (this *IPListManager) Init() {
 	// 从数据库中当中读取数据
-	// 检查sqlite文件是否存在，以便决定使用sqlite还是kv
+	// 检查sqlite文件是否存在,以便决定使用sqlite还是kv
 	var sqlitePath = Tea.Root + "/data/ip_list.db"
 	_, sqliteErr := os.Stat(sqlitePath)
 

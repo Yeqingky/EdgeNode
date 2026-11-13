@@ -265,7 +265,7 @@ func (this *RPCClient) init() error {
 		return errors.New("[RPC]no available endpoints")
 	}
 
-	// 这里不需要加锁，防止和pickConn()冲突
+	// 这里不需要加锁,防止和pickConn()冲突
 	this.conns = conns
 	return nil
 }

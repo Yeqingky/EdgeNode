@@ -35,7 +35,7 @@ func (this *Bandwidth) Ack(ctx context.Context, newBytes int) {
 		this.currentTimestamp = timestamp
 		this.currentBytes = int64(newBytes)
 
-		// 第一次发送直接放行，不需要判断
+		// 第一次发送直接放行,不需要判断
 		return
 	}
 

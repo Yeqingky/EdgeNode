@@ -104,7 +104,7 @@ func (this *HTTPRequest) write50x(err error, statusCode int, enMessage string, z
 				if index > 0 {
 					var firstLanguage = acceptLanguages[:index]
 					if firstLanguage == "zh-CN" {
-						return "网站出了一点小问题，原因：" + zhMessage + "。"
+						return "网站出了一点小问题,原因:" + zhMessage + "."
 					}
 				}
 			}

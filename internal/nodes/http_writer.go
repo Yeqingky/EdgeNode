@@ -104,7 +104,7 @@ func NewHTTPWriter(req *HTTPRequest, httpResponseWriter http.ResponseWriter) *HT
 
 // Prepare 准备输出
 func (this *HTTPWriter) Prepare(resp *http.Response, size int64, status int, enableCache bool) (delayHeaders bool) {
-	// 清理以前数据，防止重试时发生异常错误
+	// 清理以前数据,防止重试时发生异常错误
 	if this.compressionCacheWriter != nil {
 		_ = this.compressionCacheWriter.Discard()
 		this.compressionCacheWriter = nil
@@ -191,7 +191,7 @@ func (this *HTTPWriter) PrepareCache(resp *http.Response, size int64) {
 		}
 	}
 
-	// 如果允许 ChunkedEncoding，就无需尺寸的判断，因为此时的 size 为 -1
+	// 如果允许 ChunkedEncoding,就无需尺寸的判断,因为此时的 size 为 -1
 	if !cacheRef.AllowChunkedEncoding && size < 0 {
 		this.req.varMapping["cache.status"] = "BYPASS"
 		if addStatusHeader {
@@ -425,7 +425,7 @@ func (this *HTTPWriter) PrepareCache(resp *http.Response, size int64) {
 			this.cacheIsFinished = true
 			var hasError = false
 			filterReader.Add(func(p []byte, readErr error) error {
-				// 这里不用处理readErr，因为只要把成功读取的部分写入缓存即可
+				// 这里不用处理readErr,因为只要把成功读取的部分写入缓存即可
 
 				if hasError {
 					return nil
@@ -470,7 +470,7 @@ func (this *HTTPWriter) PrepareCache(resp *http.Response, size int64) {
 			var hasError = false
 			var writtenTotal = false
 			reader.OnPartRead(func(start int64, end int64, total int64, data []byte, header textproto.MIMEHeader) {
-				// TODO 如果 total 超出缓存限制，则不写入缓存数据，并且记录到某个内存表中，下次不再OpenWriter
+				// TODO 如果 total 超出缓存限制,则不写入缓存数据,并且记录到某个内存表中,下次不再OpenWriter
 
 				if hasError {
 					return
@@ -542,7 +542,7 @@ func (this *HTTPWriter) PrepareWebP(resp *http.Response, size int64) {
 		return
 	}
 
-	// 只有在开启了缓存之后，才会转换，防止占用的系统资源过高
+	// 只有在开启了缓存之后,才会转换,防止占用的系统资源过高
 	if policy.RequireCache && this.req.cacheRef == nil {
 		return
 	}
@@ -643,7 +643,7 @@ func (this *HTTPWriter) PrepareCompression(resp *http.Response, size int64) {
 		return
 	}
 
-	// 分区内容不压缩，防止读取失败
+	// 分区内容不压缩,防止读取失败
 	if !this.compressionConfig.EnablePartialContent && this.StatusCode() == http.StatusPartialContent {
 		return
 	}
@@ -665,7 +665,7 @@ func (this *HTTPWriter) PrepareCompression(resp *http.Response, size int64) {
 		return
 	}
 
-	// 压缩前后如果编码一致，则不处理
+	// 压缩前后如果编码一致,则不处理
 	if compressionEncoding == contentEncoding {
 		return
 	}
@@ -691,7 +691,7 @@ func (this *HTTPWriter) PrepareCompression(resp *http.Response, size int64) {
 	header.Del("Content-Length")
 
 	// compression cache writer
-	// 只有在本身内容已经缓存的情况下才会写入缓存，防止同时写入缓存导致IO负载升高
+	// 只有在本身内容已经缓存的情况下才会写入缓存,防止同时写入缓存导致IO负载升高
 	var cacheRef = this.req.cacheRef
 	if !this.isPartial &&
 		this.cacheStorage != nil &&
@@ -874,7 +874,7 @@ func (this *HTTPWriter) WriteHeader(statusCode int) {
 	this.statusCode = statusCode
 }
 
-// Send 直接发送内容，并终止请求
+// Send 直接发送内容,并终止请求
 func (this *HTTPWriter) Send(status int, body string) {
 	this.req.ProcessResponseHeaders(this.Header(), status)
 
@@ -889,7 +889,7 @@ func (this *HTTPWriter) Send(status int, body string) {
 	this.isFinished = true
 }
 
-// SendFile 发送文件内容，并终止请求
+// SendFile 发送文件内容,并终止请求
 func (this *HTTPWriter) SendFile(status int, path string) (int64, error) {
 	this.WriteHeader(status)
 	this.isFinished = true
@@ -967,7 +967,7 @@ func (this *HTTPWriter) HeaderData() []byte {
 	resp.ProtoMajor = 1
 	resp.ProtoMinor = 1
 
-	resp.ContentLength = 1 // Trick：这样可以屏蔽Content-Length
+	resp.ContentLength = 1 // Trick:这样可以屏蔽Content-Length
 
 	writer := bytes.NewBuffer([]byte{})
 	_ = resp.Write(writer)
@@ -1028,7 +1028,7 @@ func (this *HTTPWriter) calculateStaleLife() int {
 			for _, piece := range pieces {
 				var eqIndex = strings.Index(piece, "=")
 				if eqIndex > 0 && strings.TrimSpace(piece[:eqIndex]) == "stale-if-error" {
-					// 这里预示着如果stale-if-error=0，可以关闭stale功能
+					// 这里预示着如果stale-if-error=0,可以关闭stale功能
 					staleLife = types.Int(strings.TrimSpace(piece[eqIndex+1:]))
 					isDefinedInHeader = true
 					break
@@ -1076,7 +1076,7 @@ func (this *HTTPWriter) finishWebP() {
 						continue
 					}
 
-					// 这里是原始的数据，不需要内容编码
+					// 这里是原始的数据,不需要内容编码
 					if k == "Content-Encoding" || k == "Transfer-Encoding" {
 						continue
 					}

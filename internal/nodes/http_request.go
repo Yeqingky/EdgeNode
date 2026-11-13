@@ -62,15 +62,15 @@ type HTTPRequest struct {
 	// 内部参数
 	isSubRequest         bool
 	writer               *HTTPWriter
-	web                  *serverconfigs.HTTPWebConfig      // Web配置，重要提示：由于引用了别的共享的配置，所以操作中只能读取不要修改
+	web                  *serverconfigs.HTTPWebConfig      // Web配置,重要提示:由于引用了别的共享的配置,所以操作中只能读取不要修改
 	reverseProxyRef      *serverconfigs.ReverseProxyRef    // 反向代理引用
-	reverseProxy         *serverconfigs.ReverseProxyConfig // 反向代理配置，重要提示：由于引用了别的共享的配置，所以操作中只能读取不要修改
+	reverseProxy         *serverconfigs.ReverseProxyConfig // 反向代理配置,重要提示:由于引用了别的共享的配置,所以操作中只能读取不要修改
 	rawURI               string                            // 原始的URI
 	uri                  string                            // 经过rewrite等运算之后的URI
 	varMapping           map[string]string                 // 变量集合
 	requestFromTime      time.Time                         // 请求开始时间
 	requestCost          float64                           // 请求耗时
-	filePath             string                            // 请求的文件名，仅在读取Root目录下的内容时不为空
+	filePath             string                            // 请求的文件名,仅在读取Root目录下的内容时不为空
 	origin               *serverconfigs.OriginConfig       // 源站
 	originAddr           string                            // 源站实际地址
 	originStatus         int32                             // 源站响应代码
@@ -88,7 +88,7 @@ type HTTPRequest struct {
 	isAttack        bool   // 是否是攻击请求
 	requestBodyData []byte // 读取的Body内容
 
-	isWebsocketResponse bool // 是否为Websocket响应（非请求）
+	isWebsocketResponse bool // 是否为Websocket响应(非请求)
 
 	// WAF相关
 	firewallPolicyId    int64
@@ -121,7 +121,7 @@ func (this *HTTPRequest) init() {
 	}
 
 	// this.uri = this.RawReq.URL.RequestURI()
-	// 之所以不使用RequestURI()，是不想让URL中的Path被Encode
+	// 之所以不使用RequestURI(),是不想让URL中的Path被Encode
 	var urlPath = this.RawReq.URL.Path
 	if this.ReqServer.Web != nil && this.ReqServer.Web.MergeSlashes {
 		urlPath = utils.CleanPath(urlPath)
@@ -388,12 +388,12 @@ func (this *HTTPRequest) doBegin() {
 
 		// root
 		if this.web.Root != nil && this.web.Root.IsOn {
-			// 如果处理成功，则终止请求的处理
+			// 如果处理成功,则终止请求的处理
 			if this.doRoot() {
 				return
 			}
 
-			// 如果明确设置了终止，则也会自动终止
+			// 如果明确设置了终止,则也会自动终止
 			if this.web.Root.IsBreak {
 				return
 			}
@@ -424,7 +424,7 @@ func (this *HTTPRequest) doEnd() {
 		if requestConn != nil {
 			requestClientConn, ok := requestConn.(ClientConnInterface)
 			if ok {
-				// 这里读取的其实是上一个请求消耗的流量，不是当前请求消耗的流量，只不过单个请求的流量统计不需要特别精确，整体趋于一致即可
+				// 这里读取的其实是上一个请求消耗的流量,不是当前请求消耗的流量,只不过单个请求的流量统计不需要特别精确,整体趋于一致即可
 				totalBytes = requestClientConn.LastRequestBytes()
 			}
 		}
@@ -521,11 +521,11 @@ func (this *HTTPRequest) configureWeb(web *serverconfigs.HTTPWebConfig, isTop bo
 
 	// headers
 	if web.RequestHeaderPolicyRef != nil && (web.RequestHeaderPolicyRef.IsPrior || isTop) && web.RequestHeaderPolicy != nil {
-		// TODO 现在是只能选一个有效的设置，未来可以选择是否合并多级别的设置
+		// TODO 现在是只能选一个有效的设置,未来可以选择是否合并多级别的设置
 		this.web.RequestHeaderPolicy = web.RequestHeaderPolicy
 	}
 	if web.ResponseHeaderPolicyRef != nil && (web.ResponseHeaderPolicyRef.IsPrior || isTop) && web.ResponseHeaderPolicy != nil {
-		// TODO 现在是只能选一个有效的设置，未来可以选择是否合并多级别的设置
+		// TODO 现在是只能选一个有效的设置,未来可以选择是否合并多级别的设置
 		this.web.ResponseHeaderPolicy = web.ResponseHeaderPolicy
 	}
 
@@ -636,7 +636,7 @@ func (this *HTTPRequest) configureWeb(web *serverconfigs.HTTPWebConfig, isTop bo
 			this.web.RequestScripts = &serverconfigs.HTTPRequestScriptsConfig{
 				InitGroup:    web.RequestScripts.InitGroup,
 				RequestGroup: web.RequestScripts.RequestGroup,
-			} // 不要直接赋值，需要复制，防止在运行时被修改
+			} // 不要直接赋值,需要复制,防止在运行时被修改
 		} else {
 			if web.RequestScripts.InitGroup != nil && (web.RequestScripts.InitGroup.IsPrior || isTop) {
 				if this.web.RequestScripts == nil {
@@ -705,12 +705,12 @@ func (this *HTTPRequest) configureWeb(web *serverconfigs.HTTPWebConfig, isTop bo
 
 				// 如果是内部URL继续解析
 				if replace == this.uri {
-					// URL不变，则停止解析，防止无限循环跳转
+					// URL不变,则停止解析,防止无限循环跳转
 					return nil
 				}
 				this.uri = replace
 
-				// 终止解析的几个个条件：
+				// 终止解析的几个个条件:
 				//    isBreak = true
 				//    mode = redirect
 				//    replace = external url
@@ -1234,7 +1234,7 @@ func (this *HTTPRequest) requestRemoteAddr(supportVar bool) string {
 			}
 		}
 
-		// 如果是从Header中读取，则直接返回原始IP
+		// 如果是从Header中读取,则直接返回原始IP
 		if this.web.RemoteAddr.Type == serverconfigs.HTTPRemoteAddrTypeRequestHeader {
 			var remoteAddr = this.RawReq.RemoteAddr
 			host, _, err := net.SplitHostPort(remoteAddr)
@@ -1455,7 +1455,7 @@ func (this *HTTPRequest) requestContentType() string {
 	return this.RawReq.Header.Get("Content-Type")
 }
 
-// 获取请求的文件名，仅在请求是读取本地文件时不为空
+// 获取请求的文件名,仅在请求是读取本地文件时不为空
 func (this *HTTPRequest) requestFilename() string {
 	return this.filePath
 }
@@ -1560,7 +1560,7 @@ func (this *HTTPRequest) ContentLength() int64 {
 	return this.RawReq.ContentLength
 }
 
-// CalculateSize 计算当前请求的尺寸（预估）
+// CalculateSize 计算当前请求的尺寸(预估)
 func (this *HTTPRequest) CalculateSize() (size int64) {
 	// Get /xxx HTTP/1.1
 	size += int64(len(this.RawReq.Method)) + 1
@@ -1661,7 +1661,7 @@ func (this *HTTPRequest) Allow() {
 }
 
 // 设置代理相关头部信息
-// 参考：https://tools.ietf.org/html/rfc7239
+// 参考:https://tools.ietf.org/html/rfc7239
 func (this *HTTPRequest) setForwardHeaders(header http.Header) {
 	// TODO 做成可选项
 	if this.RawReq.Header.Get("Connection") == "close" {

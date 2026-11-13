@@ -177,7 +177,7 @@ func (this *HTTPRequest) checkWAFRemoteAddr(firewallPolicy *firewallconfigs.HTTP
 							}
 						}
 
-						// TODO 考虑是否需要记录日志信息吗，可能数据量非常庞大，所以暂时不记录
+						// TODO 考虑是否需要记录日志信息吗,可能数据量非常庞大,所以暂时不记录
 
 						this.writer.WriteHeader(http.StatusForbidden)
 						this.writer.Close()
@@ -248,7 +248,7 @@ func (this *HTTPRequest) checkWAFRequest(firewallPolicy *firewallconfigs.HTTPFir
 									this.writeCode(http.StatusForbidden, "The region has been denied.", "当前区域禁止访问")
 								}
 
-								// 延时返回，避免攻击
+								// 延时返回,避免攻击
 								time.Sleep(1 * time.Second)
 							}
 
@@ -288,7 +288,7 @@ func (this *HTTPRequest) checkWAFRequest(firewallPolicy *firewallconfigs.HTTPFir
 									this.writeCode(http.StatusForbidden, "The region has been denied.", "当前区域禁止访问")
 								}
 
-								// 延时返回，避免攻击
+								// 延时返回,避免攻击
 								time.Sleep(1 * time.Second)
 							}
 
@@ -326,7 +326,7 @@ func (this *HTTPRequest) checkWAFRequest(firewallPolicy *firewallconfigs.HTTPFir
 									this.writeCode(http.StatusForbidden, "The isp has been denied.", "当前运营商禁止访问")
 								}
 
-								// 延时返回，避免攻击
+								// 延时返回,避免攻击
 								time.Sleep(1 * time.Second)
 							}
 
@@ -529,7 +529,7 @@ func (this *HTTPRequest) WAFServerId() int64 {
 func (this *HTTPRequest) WAFClose() {
 	this.Close()
 
-	// 这里不要强关IP所有连接，避免因为单个服务而影响所有
+	// 这里不要强关IP所有连接,避免因为单个服务而影响所有
 }
 
 func (this *HTTPRequest) WAFOnAction(action interface{}) (goNext bool) {

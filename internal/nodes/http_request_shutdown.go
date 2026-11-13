@@ -27,7 +27,7 @@ func (this *HTTPRequest) doShutdown() {
 			return
 		}
 
-		// URL为空，则显示文本
+		// URL为空,则显示文本
 		if len(shutdown.URL) == 0 {
 			// 自定义响应Headers
 			if shutdown.Status > 0 {

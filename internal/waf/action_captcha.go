@@ -59,7 +59,7 @@ type CaptchaAction struct {
 
 	GeeTestConfig *firewallconfigs.GeeTestConfig `yaml:"geeTestConfig" json:"geeTestConfig"` // 极验设置 MUST be struct
 
-	Lang           string `yaml:"lang" json:"lang"`                     // 语言，zh-CN, en-US ...
+	Lang           string `yaml:"lang" json:"lang"`                     // 语言,zh-CN, en-US ...
 	AddToWhiteList bool   `yaml:"addToWhiteList" json:"addToWhiteList"` // 是否加入到白名单
 	Scope          string `yaml:"scope" json:"scope"`
 }

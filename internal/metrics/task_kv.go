@@ -247,7 +247,7 @@ func (this *KVTask) Upload(pauseDuration time.Duration) error {
 
 		totalCount += count
 
-		// 休息一下，防止短时间内上传数据过多
+		// 休息一下,防止短时间内上传数据过多
 		if pauseDuration > 0 && totalCount >= 100 {
 			time.Sleep(pauseDuration)
 			uploadTr.Add(-pauseDuration)

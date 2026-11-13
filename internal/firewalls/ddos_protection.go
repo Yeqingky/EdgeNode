@@ -298,7 +298,7 @@ func (this *DDoSProtectionManager) addTCPRules(tcpConfig *ddosconfigs.TCPConfig)
 				}
 			}
 
-			// 超过一定速率就drop或者加入黑名单（分钟）
+			// 超过一定速率就drop或者加入黑名单(分钟)
 			// TODO 让用户选择是drop还是reject
 			if newConnectionsMinutelyRate > 0 {
 				if newConnectionsMinutelyRateBlockTimeout > 0 {
@@ -318,7 +318,7 @@ func (this *DDoSProtectionManager) addTCPRules(tcpConfig *ddosconfigs.TCPConfig)
 				}
 			}
 
-			// 超过一定速率就drop或者加入黑名单（秒）
+			// 超过一定速率就drop或者加入黑名单(秒)
 			// TODO 让用户选择是drop还是reject
 			if newConnectionsSecondlyRate > 0 {
 				if newConnectionsSecondlyRateBlockTimeout > 0 {
@@ -359,7 +359,7 @@ func (this *DDoSProtectionManager) removeTCPRules() error {
 }
 
 // 组合user data
-// 数据中不能包含字母、数字、下划线以外的数据
+// 数据中不能包含字母,数字,下划线以外的数据
 func (this *DDoSProtectionManager) encodeUserData(attrs []string) string {
 	if attrs == nil {
 		return ""

@@ -41,7 +41,7 @@ func NewSingletonList() *List {
 }
 
 // Add 添加条目
-// 如果条目已经存在，则覆盖
+// 如果条目已经存在,则覆盖
 func (this *List) Add(itemId uint64, expiresAt int64) {
 	this.mu.Lock()
 	defer this.mu.Unlock()

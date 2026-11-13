@@ -21,7 +21,7 @@ import (
 var searchEngineRegex = regexp.MustCompile(`(?i)(60spider|adldxbot|adsbot-google|applebot|admantx|alexa|baidu|bingbot|bingpreview|facebookexternalhit|googlebot|proximic|slurp|sogou|twitterbot|yandex)`)
 var spiderRegexp = regexp.MustCompile(`(?i)(python|pycurl|http-client|httpclient|apachebench|nethttp|http_request|java|perl|ruby|scrapy|php|rust)`)
 
-// 内容范围正则，其中的每个括号里的内容都在被引用，不能轻易修改
+// 内容范围正则,其中的每个括号里的内容都在被引用,不能轻易修改
 var contentRangeRegexp = regexp.MustCompile(`^bytes (\d+)-(\d+)/(\d+|\*)`)
 
 // URL协议前缀
@@ -29,7 +29,7 @@ var urlSchemeRegexp = regexp.MustCompile("^(?i)(http|https|ftp)://")
 
 // 分解Range
 func httpRequestParseRangeHeader(rangeValue string) (result []rangeutils.Range, ok bool) {
-	// 参考RFC：https://tools.ietf.org/html/rfc7233
+	// 参考RFC:https://tools.ietf.org/html/rfc7233
 	index := strings.Index(rangeValue, "=")
 	if index == -1 {
 		return
@@ -150,7 +150,7 @@ func httpRequestParseContentRangeHeader(contentRange string) (start int64, total
 }
 
 // 生成boundary
-// 仿照Golang自带的函数（multipart包）
+// 仿照Golang自带的函数(multipart包)
 func httpRequestGenBoundary() string {
 	var buf [8]byte
 	_, err := io.ReadFull(rand.Reader, buf[:])
@@ -221,7 +221,7 @@ func httpAcceptEncoding(acceptEncodings string, encoding string) bool {
 // 跳转到某个URL
 func httpRedirect(writer http.ResponseWriter, req *http.Request, url string, code int) {
 	if len(writer.Header().Get("Content-Type")) == 0 {
-		// 设置Content-Type，是为了让页面不输出链接
+		// 设置Content-Type,是为了让页面不输出链接
 		writer.Header().Set("Content-Type", "text/html; charset=utf-8")
 	}
 

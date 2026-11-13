@@ -49,7 +49,7 @@ func (this *CallStat) Sum() (successPercent float64, avgCostSeconds float64) {
 	}
 
 	var totalItems = len(this.items)
-	if totalItems <= size/2 /** 低于一半的采样率，不计入统计 **/ {
+	if totalItems <= size/2 /** 低于一半的采样率,不计入统计 **/ {
 		successPercent = 100
 		return
 	}

@@ -101,7 +101,7 @@ func (this *HTTPClientPool) Client(req *HTTPRequest,
 		return client.RawClient(), nil
 	}
 
-	// 这里不能使用RLock，避免因为并发生成多个同样的client实例
+	// 这里不能使用RLock,避免因为并发生成多个同样的client实例
 	this.locker.Lock()
 	defer this.locker.Unlock()
 

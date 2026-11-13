@@ -35,7 +35,7 @@ func (this *IPLibraryUpdater) DataDir() string {
 
 	remotelogs.Error("IP_LIBRARY_UPDATER", "create directory '"+dir+"' failed: "+err.Error())
 
-	// 如果不能创建 data/ 目录，那么使用临时目录
+	// 如果不能创建 data/ 目录,那么使用临时目录
 	return os.TempDir()
 }
 
