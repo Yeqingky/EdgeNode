@@ -177,10 +177,7 @@ func (this *HTTPClientPool) Client(req *HTTPRequest,
 				}
 
 				// connect
-				conn, dialErr := (&net.Dialer{
-					Timeout:   connectionTimeout,
-					KeepAlive: 1 * time.Minute,
-				}).DialContext(ctx, network, realAddr)
+				conn, dialErr := dialOriginContext(ctx, origin, network, realAddr, connectionTimeout)
 				if dialErr != nil {
 					return nil, dialErr
 				}

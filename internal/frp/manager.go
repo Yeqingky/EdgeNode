@@ -32,10 +32,15 @@ type frpsConfig struct {
 }
 
 type Manager struct {
-	mu            sync.Mutex
-	cmd           *exec.Cmd
-	current       string
-	missingLogged bool
+	mu             sync.Mutex
+	cmd            *exec.Cmd
+	current        string
+	missingLogged  bool
+	visitorCmd     *exec.Cmd
+	visitorCurrent string
+	visitorDone    chan struct{}
+	visitorSockets []string
+	visitorPaths   map[int64][]string
 }
 
 var SharedManager = &Manager{}
@@ -52,6 +57,7 @@ func (m *Manager) Apply(config *nodeconfigs.FRPConfig) {
 	defer m.mu.Unlock()
 
 	if config == nil || !config.IsOn {
+		m.stopVisitorLocked()
 		m.stopLocked()
 		return
 	}
@@ -63,6 +69,7 @@ func (m *Manager) Apply(config *nodeconfigs.FRPConfig) {
 	}
 
 	if m.cmd != nil && m.current == string(configJSON) {
+		m.applyVisitorsLocked(config)
 		return
 	}
 
@@ -72,6 +79,7 @@ func (m *Manager) Apply(config *nodeconfigs.FRPConfig) {
 			remotelogs.Error("FRP", "frps binary not found: "+binaryPath)
 			m.missingLogged = true
 		}
+		m.stopVisitorLocked()
 		m.stopLocked()
 		return
 	}
@@ -87,6 +95,7 @@ func (m *Manager) Apply(config *nodeconfigs.FRPConfig) {
 		return
 	}
 
+	m.stopVisitorLocked()
 	m.stopLocked()
 
 	cmd := exec.Command(binaryPath, "-c", configPath)
@@ -110,12 +119,14 @@ func (m *Manager) Apply(config *nodeconfigs.FRPConfig) {
 	go m.readLogs("FRPS", stdout)
 	go m.readLogs("FRPS", stderr)
 	go m.wait(cmd)
+	m.applyVisitorsLocked(config)
 	remotelogs.Println("FRP", "frps started, pid: "+strconv.Itoa(cmd.Process.Pid))
 }
 
 func (m *Manager) Stop() {
 	m.mu.Lock()
 	defer m.mu.Unlock()
+	m.stopVisitorLocked()
 	m.stopLocked()
 }
 
