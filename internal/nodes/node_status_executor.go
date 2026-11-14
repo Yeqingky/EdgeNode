@@ -14,6 +14,7 @@ import (
 	teaconst "git.ovh.im/yeqing/EdgeNode/internal/const"
 	"git.ovh.im/yeqing/EdgeNode/internal/events"
 	"git.ovh.im/yeqing/EdgeNode/internal/firewalls"
+	"git.ovh.im/yeqing/EdgeNode/internal/frp"
 	"git.ovh.im/yeqing/EdgeNode/internal/monitor"
 	"git.ovh.im/yeqing/EdgeNode/internal/remotelogs"
 	"git.ovh.im/yeqing/EdgeNode/internal/rpc"
@@ -85,6 +86,7 @@ func (this *NodeStatusExecutor) update() {
 	status.Arch = runtime.GOARCH
 	status.ExePath, _ = os.Executable()
 	status.ConfigVersion = sharedNodeConfig.Version
+	status.FRPS = frp.SharedManager.Status()
 	status.IsActive = true
 	status.ConnectionCount = sharedListenerManager.TotalActiveConnections()
 	status.CacheTotalDiskSize = caches.SharedManager.TotalDiskSize()

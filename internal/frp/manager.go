@@ -35,6 +35,7 @@ type Manager struct {
 	mu             sync.Mutex
 	cmd            *exec.Cmd
 	current        string
+	status         *nodeconfigs.FRPSStatus
 	missingLogged  bool
 	visitorCmd     *exec.Cmd
 	visitorCurrent string
@@ -57,6 +58,7 @@ func (m *Manager) Apply(config *nodeconfigs.FRPConfig) {
 	defer m.mu.Unlock()
 
 	if config == nil || !config.IsOn {
+		m.status = &nodeconfigs.FRPSStatus{}
 		m.stopVisitorLocked()
 		m.stopLocked()
 		return
@@ -69,12 +71,16 @@ func (m *Manager) Apply(config *nodeconfigs.FRPConfig) {
 	}
 
 	if m.cmd != nil && m.current == string(configJSON) {
+		if m.status == nil {
+			m.status = &nodeconfigs.FRPSStatus{IsEnabled: true, BindAddr: config.BindAddr, BindPort: config.BindPort}
+		}
 		m.applyVisitorsLocked(config)
 		return
 	}
 
 	binaryPath := m.binaryPath()
 	if _, err := os.Stat(binaryPath); err != nil {
+		m.status = &nodeconfigs.FRPSStatus{IsEnabled: true, BindAddr: config.BindAddr, BindPort: config.BindPort}
 		if !m.missingLogged {
 			remotelogs.Error("FRP", "frps binary not found: "+binaryPath)
 			m.missingLogged = true
@@ -94,6 +100,7 @@ func (m *Manager) Apply(config *nodeconfigs.FRPConfig) {
 		remotelogs.Error("FRP", "write frps config failed: "+err.Error())
 		return
 	}
+	m.status = &nodeconfigs.FRPSStatus{IsEnabled: true, BindAddr: config.BindAddr, BindPort: config.BindPort}
 
 	m.stopVisitorLocked()
 	m.stopLocked()
@@ -116,6 +123,8 @@ func (m *Manager) Apply(config *nodeconfigs.FRPConfig) {
 
 	m.cmd = cmd
 	m.current = string(configJSON)
+	m.status.IsRunning = true
+	m.status.PID = cmd.Process.Pid
 	go m.readLogs("FRPS", stdout)
 	go m.readLogs("FRPS", stderr)
 	go m.wait(cmd)
@@ -128,6 +137,18 @@ func (m *Manager) Stop() {
 	defer m.mu.Unlock()
 	m.stopVisitorLocked()
 	m.stopLocked()
+	m.status = &nodeconfigs.FRPSStatus{}
+}
+
+// Status returns a copy of the managed FRPS process status.
+func (m *Manager) Status() *nodeconfigs.FRPSStatus {
+	m.mu.Lock()
+	defer m.mu.Unlock()
+	if m.status == nil {
+		return nil
+	}
+	status := *m.status
+	return &status
 }
 
 func (m *Manager) stopLocked() {
@@ -148,6 +169,10 @@ func (m *Manager) wait(cmd *exec.Cmd) {
 	if !expected {
 		m.cmd = nil
 		m.current = ""
+		if m.status != nil {
+			m.status.IsRunning = false
+			m.status.PID = 0
+		}
 	}
 	m.mu.Unlock()
 	if err != nil && !expected {
