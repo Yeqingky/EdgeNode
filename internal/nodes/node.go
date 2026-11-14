@@ -31,6 +31,7 @@ import (
 	teaconst "git.ovh.im/yeqing/EdgeNode/internal/const"
 	"git.ovh.im/yeqing/EdgeNode/internal/events"
 	"git.ovh.im/yeqing/EdgeNode/internal/firewalls"
+	"git.ovh.im/yeqing/EdgeNode/internal/frp"
 	"git.ovh.im/yeqing/EdgeNode/internal/iplibrary"
 	"git.ovh.im/yeqing/EdgeNode/internal/metrics"
 	"git.ovh.im/yeqing/EdgeNode/internal/remotelogs"
@@ -883,6 +884,8 @@ func (this *Node) listenSock() error {
 func (this *Node) onReload(config *nodeconfigs.NodeConfig, reloadAll bool) {
 	nodeconfigs.ResetNodeConfig(config)
 	sharedNodeConfig = config
+
+	frp.SharedManager.Apply(config.FRP)
 
 	// 并发读写数
 	fsutils.ReaderLimiter.SetThreads(config.MaxConcurrentReads)

@@ -1,5 +1,9 @@
 # Changelog
 
+## v1.4.3-rc.1 (2026-11-15)
+
+- 新增 frps 进程管理: 根据集群 FRP 配置启动/停止/热重载内置 frps, 默认关闭
+
 ## v1.4.2-rc.1 (2026-11-13)
 
 - 新增 Gitea 工作流 mirror-to-github: 全部分支和标签强制镜像到 github.com/Yeqingky/EdgeNode, 推送前过滤 AGENTS.md 和 .gitea, 并删除 GitHub 端多余的分支和标签
