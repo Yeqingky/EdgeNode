@@ -67,6 +67,22 @@ function build() {
 		cp "${ROOT}/edge-toa/edge-toa-${ARCH}" "$DIST/edge-toa/edge-toa"
 	fi
 
+	echo "building frps ..."
+	FRPS_NAME="frps"
+	if [ "$OS" == "windows" ]; then
+		FRPS_NAME="frps.exe"
+	fi
+	FRPS_SRC="$(realpath "$ROOT/../../EdgeTunnel")"
+	if [ ! -d "$FRPS_SRC" ]; then
+		echo "can not find EdgeTunnel at $FRPS_SRC"
+		exit 1
+	fi
+	env GOOS="${OS}" GOARCH="${ARCH}" CGO_ENABLED=0 go build -C "$FRPS_SRC" -trimpath -ldflags="-s -w" -o "$(realpath "$DIST")/bin/${FRPS_NAME}" ./cmd/frps
+	if [ ! -f "$(realpath "$DIST")/bin/${FRPS_NAME}" ]; then
+		echo "build frps failed!"
+		exit 1
+	fi
+
 	echo "building ..."
 
 	CC_PATH=""
