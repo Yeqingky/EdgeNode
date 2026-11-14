@@ -4,7 +4,7 @@
 
 - 新增 frps 进程管理: 根据集群 FRP 配置启动/停止/热重载内置 frps, 默认关闭
 - 内置 frpc 通过加密 STCP 访问隧道源站, 集群节点之间支持备用路径
-- 新增 HTTP 和 HTTPS 隧道回源的 Gitea 端到端工作流
+- HTTP/HTTPS 隧道回源 E2E 同时纳入独立和 Admin 总工作流
 - 节点状态新增不含 Token 的 FRPS 进程状态, PID 和监听配置
 
 ## v1.4.2-rc.1 (2026-11-13)
